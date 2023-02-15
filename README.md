@@ -1,2 +1,2 @@
-# qchau-software
-Repository for the class TC3004B Planeación de Sistemas de Software, team 3.
+# QChau Software
+Repository for the class TC3004B Planeación de Sistemas de Software. Team 3.
