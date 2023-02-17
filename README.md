@@ -6,7 +6,8 @@
 - Generate High Quality State of the Art Software Products
 
 ### Vision
-- 
+- Become the best, most reliable and innovative software company in Mexico
+- Update and create new industry standards for software development
 
 ### Values
 - Quality
