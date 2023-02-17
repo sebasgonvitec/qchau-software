@@ -1,5 +1,6 @@
 # QChau Software
 
+![company logo](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Logo.png)
 ### Mission
 - Facilitate the process of buying a car with different agencies in Mexico
 - Generate High Quality State of the Art Software Products
