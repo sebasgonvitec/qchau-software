@@ -30,6 +30,7 @@ _Preparado por:_
 |--------------|-----------|------------|------|
 |  |  |  |  |
 
+---
 ## _Introducción_
 NDS Cognitive Labs es una empresa dedicada a la implementación de soluciones digitales en México. De manera específica, la empresa trabaja en temas tales como Inteligencia Artificial, Internet de las Cosas, la nube y analítica. Actualmente, NDS busca una plataforma capaz de facilitar la adquisición digital de autos.
 
@@ -64,4 +65,5 @@ En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta
 
 ### _Referencias_
 
+---
 ## _Descripción General_
