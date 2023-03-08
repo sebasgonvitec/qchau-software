@@ -32,6 +32,7 @@ _Preparado por:_
 ## _Historial de Versiones_
 | Nombre       | Fecha     | Razones de cambios | Version |
 |--------------|-----------|------------|------|
+| Ana Paula Katsuda Zalce | 6 de Marzo del 2023 | Comienzo de redacción de las secciones introducción y descripción general | v1.0 |
 |  |  |  |  |
 
 ---
