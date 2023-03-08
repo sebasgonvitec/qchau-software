@@ -29,6 +29,9 @@ _Preparado por:_
     4. [Asunciones y Dependencias](#asunciones-y-dependencias)
 3. [Características del Sistema](#caracteristicas-del-sistema)
 4. [Requerimientos de Datos](#requerimientos-de-datos)
+    1. [Estructura Lógica de los Datos](#estructura-lógica-de-los-datos)
+    2. [Características de la Base de Datos](#características-de-la-base-de-datos)
+    3. [Integridad y Seguridad de los Datos](#integridad-y-seguridad-de-los-datos)
 
 ---
 ## _Historial de Versiones_
