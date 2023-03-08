@@ -27,12 +27,15 @@ _Preparado por:_
         - [Arquitectura](#arquitectura)
         - [Tech Stack](#tech-stack)
     4. [Asunciones y Dependencias](#asunciones-y-dependencias)
+3. [Características del Sistema](#caracteristicas-del-sistema)
+4. [Requerimientos de Datos](#requerimientos-de-datos)
 
 ---
 ## _Historial de Versiones_
 | Nombre       | Fecha     | Razones de cambios | Version |
 |--------------|-----------|------------|------|
 | Ana Paula Katsuda Zalce | 6 de Marzo del 2023 | Comienzo de redacción de las secciones introducción y descripción general | v1.0 |
+| Sebastián González Villacorta | 8 de Marzo del 2023 | Comienzo de redacción de sección Requerimientos de Datos | v1.0 |
 |  |  |  |  |
 
 ---
@@ -123,3 +126,187 @@ Regresando a la idea de utilizar microservicios, se consideran los mismos dadas 
 En el caso de las asumpciones que se consideran para la creación del presente documento son las siguientes: 
 - Las agencias y grupos automotrices tienen la apertura de transformar digitalmente sus negocios. 
 - 
+## _Características del Sistema_
+
+## _Requerimientos de Datos_
+En esta sección se describiran a detalle los requerimientos sobre los datos que se manejarán en el sistema.
+
+### _Estructura Lógica de los Datos_
+Los datos con los que se almacenarán en la base de datos de la aplicación las relaciones entre si se describen con el siguiente diagrama de entidad relación.
+![Diagrama ER](Media/SRSmedia/Diagrama_ER_BD.png)
+A continuación se hace una descripción de cada una de las entidades
+
+**Grupo_Automotriz**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del Grupo Automotriz | PK |
+| Nombre | string | Nombre del Grupo | |
+| Dirección | string | Dirección del Grupo | |
+| Telefono1 | int | Teléfono principal del Grupo Automotriz | |
+| Telefono2 | int | Teléfono secundario del Grupo Automotriz | |
+| Estatus | string | Estatus del grupo en términos de procesos de dada de alta y baja | |
+
+**Agencia**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único de la Agencia | PK |
+| Nombre | string | Nombre de la Agencia | |
+| Dirección | string | Dirección de la Agencia | |
+| Telefono1 | int | Teléfono principal de la Agencia | |
+| Telefono2 | int | Teléfono secundario de la Agencia | |
+| Estatus | string | Estatus de la Agencia en términos de procesos de dada de alta y baja | |
+| GrupoAutomotriz | int | ID del Grupo Automotriz al que pertence | FK |
+
+**Usuario_GA**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del Usuario administrador de Grupo Automotriz | PK |
+| GrupoAutomotriz | int | ID del Grupo Automotriz al que pertence | FK |
+| Nombre | string | Nombre del administrador del grupo | |
+| Apellidos | string | Apellidos del administrador del grupo | |
+| Telefono1 | int | Teléfono principal del administrador del grupo | |
+| Telefono2 | int | Teléfono secundario del administrador del grupo | |
+| Email1 | string | Dirección de correo primaria del administrador del grupo | |
+| Email2 | string | Dirección de correo secundaria del administrador del grupo | |
+
+**Usuario_Gerente**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del Usuario administrador de Agencia (Gerente)| PK |
+| Agencia | int | ID de la Agencia a la que pertence | FK |
+| Nombre | string | Nombre del gerente | |
+| Apellidos | string | Apellidos del gerente | |
+| Telefono1 | int | Teléfono principal del gerente | |
+| Telefono2 | int | Teléfono secundario del gerente | |
+| Email1 | string | Dirección de correo primaria del gerente | |
+| Email2 | string | Dirección de correo secundaria del gerente | |
+
+**Usuario_Vendedor**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del Usuario Vendedor| PK |
+| Agencia | int | ID de la Agencia a la que pertence | FK |
+| Nombre | string | Nombre del vendedor | |
+| Apellidos | string | Apellidos del vendedor | |
+| Telefono1 | int | Teléfono principal del vendedor | |
+| Telefono2 | int | Teléfono secundario del vendedor | |
+| Email1 | string | Dirección de correo primaria del vendedor | |
+| Email2 | string | Dirección de correo secundaria del vendedor | |
+
+**Usuario_Final**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del Usuario Final| PK |
+| Nombre | string | Nombre del usuario final | |
+| Apellidos | string | Apellidos del usuario final | |
+| Domicilio | string | Domicilio del usuario final | |
+| Telefono1 | int | Teléfono principal del usuario final | |
+| Telefono2 | int | Teléfono secundario del usuario final | |
+| Email1 | string | Dirección de correo primaria del usuario final | |
+| Email2 | string | Dirección de correo secundaria del usuario final | |
+
+**Usuario_Admin**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del Usuario Administrador de plataforma| PK |
+| Nombre | string | Nombre del administrador | |
+| Apellidos | string | Apellidos del administrador | |
+| Telefono1 | int | Teléfono principal del administrador | |
+| Telefono2 | int | Teléfono secundario del administrador | |
+| Email1 | string | Dirección de correo primaria del administrador | |
+| Email2 | string | Dirección de correo secundaria del administrador | |
+
+**Listing_Coche**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único de la publicación del coche| PK |
+| Agencia | int | ID de la Agencia a la que pertenece | FK |
+| Gerente | int | ID del gerente que realizó la publicación del coche | FK |
+| Fecha | dateTime | Fecha en la que se realizó la publicación| |
+| Visibilidad | bool | Estado de visibilidad de la publicación en el catálogo| |
+| Marca | string | Marca del coche | |
+| Modelo | string | Modelo del coche | |
+| Año | int | Año del modelo del coche | |
+| Precio | float | Precio del coche en pesos mexicanos | |
+| Color | string | Color del coche | |
+| Tipo | string | Tipo de coche (Sedán, Van, Hatchback, etc.) | |
+| Combustible | string | Combustible del coche | |
+| Localización | string | Lugar en donde se encuentra el coche (agencia) | |
+
+**Orden_de_Compra**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único de la orden de compra | PK |
+| Comprador | int | ID del usuario que realiza la orden de compra | FK |
+| Vendedor | int | ID del usuario vendedor al que se le asigna la orden de compra para dar seguimiento| FK |
+| Coche | int | ID del coche que se quiere comprar | FK |
+| Estatus | string | Estatus del proceso de compra | | 
+
+**Orden_PruebaManejo**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único de la solicitud de prueba de manejo | PK |
+| Solicitante | int | ID del usuario que realiza la solicitud de prueba de manejo | FK |
+| Vendedor | int | ID del usuario vendedor al que se le asigna la solicitud de prueba de manejo | FK |
+| Coche | int | ID del coche que se quiere probar | FK |
+| Estatus | string | Estatus del proceso de prueba de manejo | | 
+
+**Opciones_Financiamiento**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único de la opción de financiamiento | PK |
+| Agencia | int | ID de la Agencia que ofrece la opción | FK |
+| NombreProveedor | string | Nombre de la empresa que provee el financiamiento| |
+| Tasa | float | Tasa de interés de la opción de financiamiento | |
+| Enganche | int | Porcentaje de enganche mínimo de la opción de financiamiento | |
+
+**Opciones_Seguros**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único de la opción de seguro | PK |
+| Agencia | int | ID de la Agencia que ofrece la opción | FK |
+| NombreProveedor | string | Nombre de la aseguradora| |
+| Cobertura | string | Cobertura de la opción | |
+| PlazoMínimo | int | Plazo mínimo de la opción | |
+
+**Chats**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del chat | PK |
+| Usuario | int | ID del usuario que participa en el chat | FK |
+| Vendedor | int | ID del vendedor que participa en el chat| FK |
+
+**Chat_Msgs**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del mensaje del chat | PK |
+| Chat | int | ID del chat al que pertenece el mensaje | FK |
+| Remitente | int | ID del remitente del mensaje (cliente o vendedor)| FK |
+| Destinatario | int | ID del destinatario del mensaje (cliente o vendedor)| FK |
+| ContenidoMsg | string | Contenido del mensaje enviado | |
+| Fecha | dateTime | Fecha en la que se envió el mensaje | |
+
+**Documentos_Usuario**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del documento subido por el usuario | PK |
+| Usuario | int | ID del usuario que subió el documento | FK |
+| Título | string | Título que le da el usuario al archivo | |
+| Descripción | string | Descripción que le da el usuario al archivo | |
+| Retroalimentación | string | Retroalimentación que da el vendedor sobre el documento | |
+| Estatus | string | Estado de aceptación del documento | |
+
+**Documentos_GA**
+| Atributo       | Tipo     | Descripción | Comentario |
+|----------------|----------|-------------|------------|
+| ID | int | Identificador único del documento subido por el usuario administrador de Grupo Automotriz | PK |
+| GrupoAutomotriz | int | ID del administrador de GA que subió el documento | FK |
+| Título | string | Título que le da el usuario al archivo | |
+| Descripción | string | Descripción que le da el usuario al archivo | |
+| Retroalimentación | string | Retroalimentación que da el administrador de la plataforma sobre el documento | |
+| Estatus | string | Estado de aceptación del documento | |
+
+
+
+
+
