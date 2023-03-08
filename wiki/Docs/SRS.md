@@ -132,7 +132,7 @@ En el caso de las asumpciones que se consideran para la creación del presente d
 En esta sección se describiran a detalle los requerimientos sobre los datos que se manejarán en el sistema.
 
 ### _Estructura Lógica de los Datos_
-Los datos con los que se almacenarán en la base de datos de la aplicación las relaciones entre si se describen con el siguiente diagrama de entidad relación.
+Los dato que se almacenarán en la base de datos de la aplicación y las relaciones entre si se describen en el siguiente diagrama de entidad relación.
 ![Diagrama ER](Media/SRSmedia/Diagrama_ER_BD.png)
 A continuación se hace una descripción de cada una de las entidades
 
