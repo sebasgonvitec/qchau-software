@@ -19,10 +19,14 @@ _Preparado por:_
     3. [Alcance del Proyecto](#alcance-del-proyecto)
     4. [Objetivos de QChau Software](#objetivos-de-qchau-software)
     5. [Referencias](#referencias)
-2. [Descripción General]()
-    1. [Perspectiva de Producto]()
-    2. [Clases de Usuario y Características]()
-    3. [Ambiente de Operación]()
+2. [Descripción General](#descripción-general)
+    1. [Perspectiva de Producto](#perspectiva-del-producto)
+    2. [Clases de Usuario y Características](#clases-de-usuario-y-características)
+    3. [Ambiente de Operación](#ambiente-de-operación)
+        - [Interaccionescon la Aplicación](#interacciones-con-la-aplicación)
+        - [Arquitectura](#arquitectura)
+        - [Tech Stack](#tech-stack)
+    4. [Asunciones y Dependencias](#asunciones-y-dependencias)
 
 ---
 ## _Historial de Versiones_
@@ -67,3 +71,54 @@ En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta
 
 ---
 ## _Descripción General_
+En la presente sección se incluyen las especificaciones generales del producto final, en donde se describirán detalles tales como los tipos de usuarios definidos para el proyecto, el ambiente del software, limitaciones, asumpciones, y dependencias. Lo anterior con la finalidad de obtener una mejor idea de las características y las consideraciones que se tienen que tomar para un correcto desarrollo. 
+
+### _Perspectiva del Producto_
+La necesidad del producto nace del proceso inconveniente para muchos clientes en la adquisición de un auto. En muchos casos, los clientes tienen que asistir múltiples veces a las agencias para resolver temas que podrían ser solucionados de manera remota, ahorrando tiempo y recursos al cliente y generando la posibilidad de realizar más ventas por parte de las agencias. 
+
+El producto propuesto, es completamente nuevo, compartiendo características con páginas tales como Kavak o Tesla. Se planea tener una aplicación completamente transparente e interactiva con los usuarios de manera que reciban la misma experiencia o una mejor que en las agencias. Más adelante, se describirán las funcionalidades del sistema y la manera en la que otorgarán un valor agregado a la aplicación.
+
+### _Clases de Usuario y Características_
+En cuanto a los usuarios que utilizarían el sistema, se identificaron cinco principales como se describe a continuación.
+- *Usuario Final*: este es el usuario que quiere comprar un auto, cotizar, solicitar una prueba de manejo, comunicarse con su agente, o revisar su proceso de compra. Es el usuario que se beneficia de llevar al proceso de manera digital, por lo que se busca que su interacción con la aplicación sea sencilla e intuitiva. 
+- *Usuario Vendedor*: este es el usuario que tiene contacto directo con el usuario final, que lleva el proceso de compra de los usuarios, y que le da la atención necesaria a los mismos. Como en una agencia tradicional, la labor de este usuario es brindar confianza y comodidad a los compradores a lo largo de sus adquisiciones. 
+- *Usuario Gerente*: este es el usuario que supervisa la evolución de las compras y a los vendedores mientras administra temas relacionados con la agencia (tales como el catálogo que se maneja). Su principal labor dentro de la aplicación, es mantener actualizado su catálogo, visualizar y administrar a sus agentes y planes de financiamiento. 
+- *Usuario Grupo Automotriz*: este es el usuario que se inscribe en la plataforma para permitir que sus agencias participen en la misma. Su principal labor es mantener la documentación de sus agencias y tendrá la capacidad de revisar algunas estadísticas referentes a las mismas.
+- *Usuario Administrador de la Plataforma*: este usuario es el encargado de revisar todos los temas administrativos de la plataforma. Lo previo incluye verificar el alta de los distintos grupos automotrices con sus agencias, gestionar datos y visualizar información relevante del sistema. 
+
+### _Ambiente de Operación_
+La presente sección contiene los aspectos técnicos que se requieren para la operación de la aplicación. Es relevante mencionar que se trata de una aplicación web que será albergada en la nube y será útil para la venta de coches en la República Mexicana.  
+
+#### **Interacciones con la Aplicación**
+En cuanto a las interacciones con la aplicación, también consideradas ambiente de sistema, se plasman los actores principales (usuarios) mencionados anteriormente   la manera en la que tendrán acceso a las distintas funcionalidades de la plataforma.
+
+![Ambiente Del Sistema](Media/SRSmedia/AmbienteDelSistema.png)
+
+Figura 1. Ambiente del Sistema
+
+En la figura del ambiente del sistema, es posible observar que la administración del sistema (controlada por el usuario administrador de la plataforma) tiene acceso a todas las áreas del sistema. Por otro lado, se tiene la interfaz de ventas en donde el usuario vendedor puede tener un manejo de sus funciones de venta y su interacción con el usuario final en el área comercial. Finalmente, la administración de negocio (que gestiona el usuario grupo automotriz) involucra la revisión de estadísticas y la gestión de administración de ventas (utilizada por el usuario gerente).
+
+#### **Arquitectura**
+En cuanto a la arquitectura del sistema, se plantea una solución en la nube y se considera el uso de una estructura de microservicios.
+
+![Arquitectura en la Nube](Media/SRSmedia/ArquitecturaNube.png)
+Figura 2. Propuesta de Arquitectura en la Nube
+
+Es posible notar en el diagrama, el uso de distintas tecnologías en la nube. En primer lugar, se tienen los servidores web que servirán para correr la aplicación junto con el servidor de aplicación (lógica) de manera que pueda ser posible escalar tanto horizontal (agregando más servidores) como verticalmente (agregando recursos a los servidores). 
+
+Asimismo, se agregaron bases de datos tanto relacionales como no relacionales considerando que parte de los datos puede ser altamente flexible (por lo tanto escalabes) mientras otros datos son más fijos y se relacionan altamente entre ellos. Se plantea adicionalmente, un servicio que contenga copias de seguridad de los datos para protegerlos en caso de que algo suceda a las bases de datos.
+
+En cuanto a el análisis de datos, se planea tener seguimiento de funciones que responden a eventos (colección y warehouse) acompañados de un servicio de inteligencia de negocios para el análisis. 
+
+Considerando los servicios de mensajería se plantea agregar al servidor de la aplicación servicios tanto de correo electrónico como de chat. 
+
+Haciendo referencia a la salida al público, se planea tener un balanceador de carga con el fin de distribuir el tráfico a los servidores. De igual manera, se planea utilizar un servicio de firewall para monitorear el tráfico de la red y un servicio de autenticación de usuarios para la administración de identidad de los usuarios. Se quiere utilizar el servicio de CDN para, junto con un cache, alojar ahí los medios que se utilizarán en la plataforma. Finalmente, se tiene un proveedor de DNS para resolver los dominios de los sitios web a usar. 
+
+Regresando a la idea de utilizar microservicios, se consideran los mismos dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de microservicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
+
+#### **Tech Stack**
+
+### _Asunciones y Dependencias_
+En el caso de las asumpciones que se consideran para la creación del presente documento son las siguientes: 
+- Las agencias y grupos automotrices tienen la apertura de transformar digitalmente sus negocios. 
+- 
