@@ -306,6 +306,23 @@ A continuación se hace una descripción de cada una de las entidades
 | Retroalimentación | string | Retroalimentación que da el administrador de la plataforma sobre el documento | |
 | Estatus | string | Estado de aceptación del documento | |
 
+### _Características de la Base de Datos_
+Debido a la naturaleza del sistema que se desarrollará en donde se cuentan con múltiples funcionalidades o módulos, se requiere una base de datos híbrida - una combinación entre relacional y no relacional. La parte relacional de la base de datos se utilizará para el manejo de datos que sean constantes y que tengan la mayor cantidad de accesos según la prioridad de las funcionalidades de la aplicación. Por otro lado la parte no relacional de la base de datos será utilizada para el manejo de datos cuya naturaleza sea de cache, es decir que cambien constantemente y que no tengan una gran cantidad de accesos.
+
+Para el almacenamiento de documentos se utilizará la herramienta DynamoDB de Amazon Web Services o en el caso de usar otro proveedor Buckets de Google Cloud Platform.
+
+De igual manera se utilizarán Bases de Datos Gestionadas como Firebase para algunas funcionalidades de la aplicación como el chat.
+
+### _Integridad y Seguridad de los Datos_
+Debido al carácter de los datos que estará manejando el sistema y la importancia de la información que se manejará, se tomarán diferentes medidas para garantizar la integridad y seguridad de los datos.
+
+**Integridad de los datos** <br/>
+Una de estas medidas es una base de datos de repaldo que se actualice cada cierto tiempo, esto con el fin de que en caso de que se presente algún problema con la base de datos principal, se pueda recuperar la información de la base de datos de respaldo.
+
+**Seguridad de los datos** <br/>
+La seguridad de los datos será manejada con productos del proveedor de nube que se elija para el desarrollo del programa. Se utilizarán herramientas de seguridad como el cifrado de datos, autenticación de usuarios, etc. De igual manera se pondrán restricciones de leido/borrado de datos para los usuarios que no tengan permiso para realizar dichas acciones.
+
+
 
 
 
