@@ -342,4 +342,65 @@ Asimismo, se planea utilizar distintos símbolos con el fin de hacer que la inte
 Es relevante reiterar que se trata de una aplicación web por lo que todos los diseños que se generen posteriormente (considerando lo mencionado previamente) serán orientados a un navegador web.
 
 ### _Mapa de Navegación General_
-En cuanto al mapa de navegación, este describe de una manera visual y muy general las pantallas que serán mostradas a los usuarios en un flujo. 
+En cuanto al mapa de navegación, este describe de una manera visual y muy general las pantallas que serán mostradas a los usuarios en un flujo.
+
+## _Diagramas de Casos de Uso_
+
+### _Diagramas de Usuario Final_
+
+**Compra de un Auto**
+![Compra de un Auto](/wiki\Docs\Media\CasosDeUso\compra_auto_uf.png)
+
+**Contacto con un Agente**
+![Contacto con un Agente](/wiki\Docs\Media\CasosDeUso\contacto_agente_uf.png)
+
+**Gestión de Cuenta**
+![Gestión de Cuenta](/wiki\Docs\Media\CasosDeUso\cuenta_uf.png)
+
+**Herramientas de Consulta**
+![Herramientas de Consulta](/wiki\Docs\Media\CasosDeUso\herramientas_consuta_uf.png)
+
+**Notificaciones**
+![Notificaciones](/wiki\Docs\Media\CasosDeUso\notificaciones_uf.png)
+
+**Navegación del Catálogo**
+![Navegación del Catálogo](/wiki\Docs\Media\CasosDeUso\nav_catalogo.png)
+
+**Solicitud de Prueba de Manejo**
+![Solicitud de Prueba de Manejo](/wiki\Docs\Media\CasosDeUso\prueba_manejo_uf.png)
+
+### _Diagramas de Usuario Gerente_
+
+**Registro de Autos**
+![Registro de Autos](/wiki\Docs\Media\CasosDeUso\registro_autos_ug.png)
+
+**Registro de Vendedores**
+![Registro de Vendedores](/wiki\Docs\Media\CasosDeUso\registro_vendedores_ug.png)
+
+****
+
+### _Diagramas de Usuario Vendedor_
+
+**Control de Venta**
+![Control de Venta](/wiki\Docs\Media\CasosDeUso\control_venta_uv.png)
+
+**Gestión Perfil**
+![Gestión Perfil](/wiki\Docs\Media\CasosDeUso\gestion_perfil_uv.png)
+
+**Gestión de Solicitudes de Pruebas de Manejo**
+![Gestión de Solicitudes de Pruebas de Manejo](/wiki\Docs\Media\CasosDeUso\pruebas_manejo_uv.png)
+
+### _Diagramas de Usuario Administrador Grupo Automotriz_
+
+**Gestión de Grupo Automotriz**
+![Gestión de Grupo Automotriz](/wiki\Docs\Media\CasosDeUso\gestion_uga.png)
+
+
+
+### _Diagramas de Usuario Admin Plataforma_
+
+**Administración de Agencias y Grupos Automotrices**
+![Administración de Agencias y Grupos Automotrices](/wiki\Docs\Media\CasosDeUso\admin_uga_ua_uadmin.png)
+
+
+
