@@ -333,7 +333,7 @@ En la presente sección, se incluyen las características principales de la inte
 ### _Elementos Relevantes del Diseño de la Interfaz de Usuario_
 Puesto a que se busca una experiencia de usuario altamente óptima, se consideran distinos aspectos en el diseño de la interfaz. En primer lugar, se plantea trabajar con tarjetas para facilitar la vista de elementos en la página (en la visualización de catálogos tanto de coches como de usuarios) como se muestra en el siguiente boceto.
 
-![Boceto para catálogo](/wiki/Docs/Media/SRSmedia/BocetoCat%C3%A1logos.png)
+![Boceto para catálogo](/wiki\Docs\Media\SRSmedia\BocetoCatálogos.png)
 
 Como es posible observar, las pantallas están diseñadas para observar mediante tarjetas los catálogos, incluyendo filtros en la parte izquierda de la pantalla, una barra de búsqueda arriba y una barra de navegación que estará presente en todas las vistas del usuario. 
 
