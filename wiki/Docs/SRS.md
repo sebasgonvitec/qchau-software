@@ -32,6 +32,7 @@ _Preparado por:_
     1. [Estructura Lógica de los Datos](#estructura-lógica-de-los-datos)
     2. [Características de la Base de Datos](#características-de-la-base-de-datos)
     3. [Integridad y Seguridad de los Datos](#integridad-y-seguridad-de-los-datos)
+5. [Requerimientos de la Interfaz Externa]()
 
 ---
 ## _Historial de Versiones_
@@ -130,7 +131,7 @@ En el caso de las asumpciones que se consideran para la creación del presente d
 - Las agencias y grupos automotrices tienen la apertura de transformar digitalmente sus negocios. 
 - 
 ## _Características del Sistema_
-
+---
 ## _Requerimientos de Datos_
 En esta sección se describiran a detalle los requerimientos sobre los datos que se manejarán en el sistema.
 
@@ -325,8 +326,20 @@ Una de estas medidas es una base de datos de repaldo que se actualice cada ciert
 **Seguridad de los datos** <br/>
 La seguridad de los datos será manejada con productos del proveedor de nube que se elija para el desarrollo del programa. Se utilizarán herramientas de seguridad como el cifrado de datos, autenticación de usuarios, etc. De igual manera se pondrán restricciones de leido/borrado de datos para los usuarios que no tengan permiso para realizar dichas acciones.
 
+---
+## _Requerimientos de la Interfaz Externa_
+En la presente sección, se incluyen las características principales de la interfaz de usuario, explicando el flujo general que tendrá cada tipo de usuario y asegurando una interacción agradable con el sistema. A continuación, se explican elementos esenciales del diseño de la interfaz y se muestran los flujos que seguirá el usuario al ingresar en la aplicación. 
 
+### _Elementos Relevantes del Diseño de la Interfaz de Usuario_
+Puesto a que se busca una experiencia de usuario altamente óptima, se consideran distinos aspectos en el diseño de la interfaz. En primer lugar, se plantea trabajar con tarjetas para facilitar la vista de elementos en la página (en la visualización de catálogos tanto de coches como de usuarios) como se muestra en el siguiente boceto.
 
+![Boceto establecido para catálogos](Media/SRSmedia/BocetoCat%C3%A1logos.png)
 
+Como es posible observar, las pantallas están diseñadas para observar mediante tarjetas los catálogos, incluyendo filtros en la parte izquierda de la pantalla, una barra de búsqueda arriba y una barra de navegación que estará presente en todas las vistas del usuario. 
 
+Asimismo, se planea utilizar distintos símbolos con el fin de hacer que la interacción sea más simple e intuitiva. 
 
+Es relevante reiterar que se trata de una aplicación web por lo que todos los diseños que se generen posteriormente (considerando lo mencionado previamente) serán orientados a un navegador web.
+
+### _Mapa de Navegación General_
+En cuanto al mapa de navegación, este describe de una manera visual y muy general las pantallas que serán mostradas a los usuarios en un flujo. 
