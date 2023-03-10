@@ -419,7 +419,7 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 
 
 | ID | Requirimiento | Descripción |
------------------------------------------------------
+|-----|-----------------|------------------------|
 | 001 | Cumplimiento Normativo de LFPDPPP | Debido a que el sistema gestiona la información identificable de las personas mexicanas - la Ley Federal de Protección Personales en Posesión de Particulares obliga al sistema a regularse frente a los articulos que hacen referencia al los derechos ARCO del ciudadano. |
 | 002 | Modelo Opt-In de Cookies | Debido a la tendencia internacional de gestión de cookies que varios servicios estan obligados a hacer por regulaciones como el GDPR, el sistema debe seguir un modelo de consentimiento explicito para la gestión de cookies no funcionales. |
 | 003 | Estandár de Accesibilidad | Para una promoción sustentable de los servicios de Internet, el sistema debe ofrecer alternativas de accesibilidad para usuarios con dificultades - e.j. reCAPTCHA |
