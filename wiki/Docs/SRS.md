@@ -403,18 +403,18 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 ## _Diagramas de Actividad_ ##
 
 **Usuario Final**
-![Usuario Final](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioFinal.jpg)
+![Usuario Final](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioFinal.png)
 
 **Usuario Administrador**
-![Usuario Administrador](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioAdministrador.jpg)
+![Usuario Administrador](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioAdministrador.png)
 
 **Usuario Vendedor**
-![Usuario Vendedor](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioVendedor.jpg)
+![Usuario Vendedor](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioVendedor.png)
     
 **Usuario Gerente**
-![Usuario Gerente](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioGerente.jpg)
+![Usuario Gerente](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioGerente.png)
 
 **Usuario Grupo Automotriz**
-![Usuario Grupo Automotriz](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_GrupoAutomotriz.jpg)
+![Usuario Grupo Automotriz](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_GrupoAutomotriz.png)
 
 
