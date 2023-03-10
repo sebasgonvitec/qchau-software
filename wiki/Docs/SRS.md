@@ -535,9 +535,8 @@ En cuanto la protección de posibles pérdidas o daños de información, especí
 
 | ID | Requirimiento | Descripción |
 |-----|-----------------|------------------------|
-| 001 | Cumplimiento Normativo de LFPDPPP | Debido a que el sistema gestiona la información identificable de las personas mexicanas - la Ley Federal de Protección Personales en Posesión de Particulares obliga al sistema a regularse frente a los articulos que hacen referencia al los derechos ARCO del ciudadano. |
-| 002 | Modelo Opt-In de Cookies | Debido a la tendencia internacional de gestión de cookies que varios servicios estan obligados a hacer por regulaciones como el GDPR, el sistema debe seguir un modelo de consentimiento explicito para la gestión de cookies no funcionales. |
-| 003 | Estandár de Accesibilidad | Para una promoción sustentable de los servicios de Internet, el sistema debe ofrecer alternativas de accesibilidad para usuarios con dificultades - e.j. reCAPTCHA |
-| 004 | Cumplimiento de Estandares de la Procuraduría Federal de Protección al Consumidor | Debido a que el sistema conduce un sistema de ofertas y ventas, debe intentar apegarse a la buena conducta referida por la PROFECO - para así minimizar riesgos o pérdida de reputación | 
-| 005 | Selección de Vocabulario Accesible | Para que el sistema pueda ser rentable y accesible para todos los usuarios, debe usar vocabulario común pero llamativo - facilitando la actividad de indización de los Motores de Busquéda y ser promovido mas fácilmente.|
-| 002 | 
+| 6001 | Cumplimiento Normativo de LFPDPPP | Debido a que el sistema gestiona la información identificable de las personas mexicanas - la Ley Federal de Protección Personales en Posesión de Particulares obliga al sistema a regularse frente a los articulos que hacen referencia al los derechos ARCO del ciudadano. |
+| 6002 | Modelo Opt-In de Cookies | Debido a la tendencia internacional de gestión de cookies que varios servicios estan obligados a hacer por regulaciones como el GDPR, el sistema debe seguir un modelo de consentimiento explicito para la gestión de cookies no funcionales. |
+| 6003 | Estandár de Accesibilidad | Para una promoción sustentable de los servicios de Internet, el sistema debe ofrecer alternativas de accesibilidad para usuarios con dificultades - e.j. reCAPTCHA |
+| 6004 | Cumplimiento de Estandares de la Procuraduría Federal de Protección al Consumidor | Debido a que el sistema conduce un sistema de ofertas y ventas, debe intentar apegarse a la buena conducta referida por la PROFECO - para así minimizar riesgos o pérdida de reputación | 
+| 6005 | Selección de Vocabulario Accesible | Para que el sistema pueda ser rentable y accesible para todos los usuarios, debe usar vocabulario común pero llamativo - facilitando la actividad de indización de los Motores de Busquéda y ser promovido mas fácilmente.|
