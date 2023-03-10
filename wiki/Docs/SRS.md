@@ -398,7 +398,7 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 ### _Diagramas de Usuario Admin Plataforma_
 
 **Administración de Agencias y Grupos Automotrices**
-![Administración de Agencias y Grupos Automotrices](/wiki\Docs\Media\CasosDeUso\admin_uga_ua_uadmin.png)
+![Administración de Agencias y Grupos Automotrices](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/admin_uga_ua_uadmin.png)
 
 ## _Diagramas de Actividad_ ##
 
