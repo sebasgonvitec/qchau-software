@@ -369,7 +369,7 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 **Solicitud de Prueba de Manejo**
 ![Solicitud de Prueba de Manejo](/wiki\Docs\Media\CasosDeUso\prueba_manejo_uf.png)
 
-### _Diagramas de Actividad_ 
+### _Diagramas de Actividad_ ###
 
 **Usuario Final**
 ![Usuario Final](/wiki\Docs\Media\DiagramaActividad\Diagrama Actividad_ Usuario Final.jpg)
