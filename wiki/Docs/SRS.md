@@ -35,7 +35,9 @@ _Preparado por:_
     1. [Estructura Lógica de los Datos](#estructura-lógica-de-los-datos)
     2. [Características de la Base de Datos](#características-de-la-base-de-datos)
     3. [Integridad y Seguridad de los Datos](#integridad-y-seguridad-de-los-datos)
-5. [Requerimientos de la Interfaz Externa]()
+5. [Requerimientos de la Interfaz Externa](#requerimientos-de-la-interfaz-externa)
+    1. [Elementos Relevantes del Diseño de la Interfaz de Usuario](#elementos-relevantes-del-diseño-de-la-interfaz-de-usuario)
+    2. [Mapa de Navegación General](#mapa-de-navegación-general)
 
 ---
 ## _Historial de Versiones_
@@ -430,4 +432,7 @@ Asimismo, se planea utilizar distintos símbolos con el fin de hacer que la inte
 Es relevante reiterar que se trata de una aplicación web por lo que todos los diseños que se generen posteriormente (considerando lo mencionado previamente) serán orientados a un navegador web.
 
 ### _Mapa de Navegación General_
-En cuanto al mapa de navegación, este describe de una manera visual y muy general las pantallas que serán mostradas a los usuarios en un flujo. 
+En cuanto al mapa de navegación, este describe de una manera visual y muy general las pantallas que serán mostradas a los usuarios en un flujo. Es importante comentar que se trata únicamente de un esquema de pantallas, por lo que no contiene diseño y es general. Para ver dicho mapa, es necesario acceder al siguiente link:
+[Mapa de Navegación Primera Versión](https://www.figma.com/proto/NRQZxBVY6hrFFCrxHObOMm/QChau-Mockup?node-id=2%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1)
+
+Para poder acceder a los flujos de los distintos usuarios, es necesario ingresar al usuario deseado mediante los botones que se encuentran en la ventana emergente izquierda. 
