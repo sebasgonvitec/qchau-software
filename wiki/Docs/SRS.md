@@ -439,33 +439,42 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 ### _Diagramas de Usuario Final_
 
 **Compra de un Auto**
-![Compra de un Auto](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/compra_auto_uf.png)
+![Compra de un Auto
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/compra_auto_uf.png)
 
 **Contacto con un Agente**
-![Contacto con un Agente](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/contacto_agente_uf.png)
+![Contacto con un Agente
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/contacto_agente_uf.png)
 
 **Gestión de Cuenta**
-![Gestión de Cuenta](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/cuenta_uf.png)
+![Gestión de Cuenta
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/cuenta_uf.png)
 
 **Herramientas de Consulta**
-![Herramientas de Consulta](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/herramientas_consuta_uf.png)
+![Herramientas de Consulta
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/herramientas_consuta_uf.png)
 
 **Notificaciones**
-![Notificaciones](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/notificaciones_uf.png)
+![Notificaciones
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/notificaciones_uf.png)
 
 **Navegación del Catálogo**
-![Navegación del Catálogo](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/nav_catalogo.png)
+![Navegación del Catálogo
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/nav_catalogo.png)
 
 **Solicitud de Prueba de Manejo**
-![Solicitud de Prueba de Manejo](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/prueba_manejo_uf.png)
+![Solicitud de Prueba de Manejo
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/prueba_manejo_uf.png)
 
 ### _Diagramas de Usuario Gerente_
 
 **Registro de Autos**
-![Registro de Autos](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/registro_autos_ug.png)
+![Registro de Autos
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/registro_autos_ug.png)
 
 **Registro de Vendedores**
-![Registro de Vendedores](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/registro_vendedores_ug.png)
+![Registro de Vendedores
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/registro_vendedores_ug.png)
 
 ### _Diagramas de Usuario Vendedor_
 
