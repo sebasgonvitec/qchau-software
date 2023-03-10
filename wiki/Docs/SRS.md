@@ -15,10 +15,8 @@ _Preparado por:_
 ## _Tabla de Contenidos_
 1. [Introducción](#introducción)
     1. [Propósito](#propósito)
-    2. [Convenciones del Documento](#convenciones-del-documento)
-    3. [Alcance del Proyecto](#alcance-del-proyecto)
-    4. [Objetivos de QChau Software](#objetivos-de-qchau-software)
-    5. [Referencias](#referencias)
+    2. [Alcance del Proyecto](#alcance-del-proyecto)
+    3. [Objetivos de QChau Software](#objetivos-de-qchau-software)
 2. [Descripción General](#descripción-general)
     1. [Perspectiva de Producto](#perspectiva-del-producto)
     2. [Clases de Usuario y Características](#clases-de-usuario-y-características)
@@ -45,7 +43,7 @@ _Preparado por:_
 |--------------|-----------|------------|------|
 | Ana Paula Katsuda Zalce | 6 de Marzo del 2023 | Comienzo de redacción de las secciones introducción y descripción general | v1.0 |
 | Sebastián González Villacorta | 8 de Marzo del 2023 | Comienzo de redacción de sección Requerimientos de Datos | v1.0 |
-|  |  |  |  |
+| Ana Paula Katsuda Zalce | 9 de Marzo del 2023 | Redacción de parte de la interfaz externa del usuario y agregación de características del sistema | v1.0 |
 
 ---
 ## _Introducción_
@@ -60,13 +58,6 @@ El propósito de este documento es detallar, analizar y definir el sistema de ad
 
 El documento será de gran utilidad para los Project Owners, Project Managers, desarrolladores y cualquier entidad que participe en la creación de la aplicación puesto a que se puede utilizar como un punto de partida para la misma.
 
-### _Convenciones del Documento_
-| Término | Definición |
-|---------|------------|
-|Especificación de Requerimientos de Software (SRS)| Un documento en el que se detallan las funcionalidades de un software.|
-| PO | Product Owner |
-| PM | Project Manager |
-
 ### _Alcance del Proyecto_
 La aplicación planteada involucra un sistema de adquisición de autos de manera mayormente digital. El sistema será diseñado de manera que un usuario comprador pueda revisar catálogos de las marcas registradas (distintos grupos automotrices y agencias), solicitar pruebas de manejo, comparar autos, obtener estimaciones de precios (cotización), comenzar su proceso de compra desde la plataforma, subir la documentación necesaria, obtener retroalimentación de su documentación, comunicarse con agentes, y mantener un seguimiento de su compra.  
 Asimismo, permitirá a grupos automotrices inscribirse y registrar sus agencias con sus respectivos gerentes y vendedores. De esta manera, los vendedores podrán dar seguimiento a las compras de sus clientes y los gerentes podrán tener un seguimiento administrativo (tal como la gestión de catálogos de autos) desde una plataforma intuitiva. 
@@ -74,13 +65,12 @@ Asimismo, permitirá a grupos automotrices inscribirse y registrar sus agencias 
 La aplicación será de gran utilidad no solo para los compradores que quieran realizar sus compras digitalmente de una manera fácil y segura, sino también para las agencias y grupos automotrices que quieran aumentar el alcance de sus ventas utilizando herramientas tecnológicas. Todos los autos registrados en la plataforma estarán al alcance del usuario y se tendrá una atención con la misma calidad que la que se ofrece en una agencia. 
 
 En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta es principalmente un medio de contacto digital y publicación de productos únicamente de agencias, por lo que no se gestionan procesos internos de cada agencia y grupo automotriz. Ahondando en lo anterior, las entidades involucradas en el desarrollo de la plataforma no tienen responsabilidades en cuanto a los acuerdos de pagos de mensualidades, las negociaciones realizadas por la agencia, la entrega ni el mantenimiento de los vehículos. 
+
 ### _Objetivos de QChau Software_
 
 - Asegurar la integridad y accesibilidad de los sistemas informáticos involucrados.
 - Diseñar el sistema de tal manera que la integración a través del mercado automovilístico sea fácil e intuitiva. 
 - Desplegar los listados e información de una manera agradable, útil y eficiente para el usuario. 
-
-### _Referencias_
 
 ---
 ## _Descripción General_
