@@ -377,8 +377,6 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 **Registro de Vendedores**
 ![Registro de Vendedores](/wiki\Docs\Media\CasosDeUso\registro_vendedores_ug.png)
 
-****
-
 ### _Diagramas de Usuario Vendedor_
 
 **Control de Venta**
