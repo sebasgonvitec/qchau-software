@@ -28,6 +28,9 @@ _Preparado por:_
         - [Tech Stack](#tech-stack)
     4. [Asunciones y Dependencias](#asunciones-y-dependencias)
 3. [Características del Sistema](#caracteristicas-del-sistema)
+    1. [Historias de Usuario](#historias-de-usuario)
+    2. [Requerimientos Funcionales](#requerimientos-funcionales)
+    3. [Requerimientos No Funcionales](#requerimientos-no-funcionales)
 4. [Requerimientos de Datos](#requerimientos-de-datos)
     1. [Estructura Lógica de los Datos](#estructura-lógica-de-los-datos)
     2. [Características de la Base de Datos](#características-de-la-base-de-datos)
@@ -129,8 +132,93 @@ Regresando a la idea de utilizar microservicios, se consideran los mismos dadas 
 ### _Asunciones y Dependencias_
 En el caso de las asumpciones que se consideran para la creación del presente documento son las siguientes: 
 - Las agencias y grupos automotrices tienen la apertura de transformar digitalmente sus negocios. 
-- 
+---
 ## _Características del Sistema_
+En la presente sección se describirán las características que serán planteadas para el sistema. Éstas incluyen los requerimientos funcionales, los requerimientos no funcionales, las historias de usuario y los casos de uso. Es relevante mencionar, que todas las anteriores fueron organizadas basadas en el tipo de usuario.
+
+### _Historias de Usuario_
+En el caso de las historias de usuario, se utilizaron para definir las necesidades en cuanto a funcionalidad de lo que requiere cada usaurio. Además, son de gran utilidad para realizar estimaciones y priorizar tareas, pues fueron diseñadas de manera que un EPIC (una tarea muy grande) se granulara lo suficiente para tener pequeñas tareas. Es posible ver las historias de usuario en el siguiente link: 
+[Link a Historias de Usuario](https://docs.google.com/spreadsheets/d/1OA5w8ZCMMJ0BG5iCwsFjzHLo56HG9Y7ydczv7Ib8RqM/edit?usp=sharing)
+
+### _Requerimientos Funcionales_
+En cuanto a los requerimientos funcionales de la plataforma por tipo de usuario, se establecieron los siguientes.
+
+#### **Usuario Final**
+| ID | Concepto | Descripción |
+|----|----------|-------------|
+| REQ_FUN[1001] | Filtrar catálogo de autos | La búsqueda de autos debe ser posible a través de múltiples filtros por categoría que involucren características del auto al igual que sus usos y aspectos relacionados |
+| REQ_FUN[1002] | Solicitud de prueba de manejo | El usuario debe tener la posibilidad de solicitar una prueba de manejo del auto que está interesado al lugar de su conveniencia |
+| REQ_FUN[1003] | Administrar documentos del usuario | La plataforma debe permitir que el usuario suba los documentos requeridos para la compra de coches con el fin de autorizar dichos documentos |
+| REQ_FUN[1004] | Comparar de autos | La plataforma debe permitir al usuario comparar las distintas opciones de autos (con diferentes modelos, dos ofertas del mismo auto, etc) con un máximo de 5 coches a comparar a la vez |
+| REQ_FUN[1005] | Iniciar el proceso de orden de compra | La plataforma debe permitir al usuario elegir el coche que desea comprar, visualizar su orden de compra y confirmarla para posterior asignación a un agente |
+| REQ_FUN[1006] | Seguimiento de orden de compra | La plataforma debe permitir que el usuario suba los documentos requeridos, conozca el estatus de su orden y los pasos requeridos para dar continuidad a su compra |
+| REQ_FUN[1007] | Comunicación con agentes | La plataforma debe permitir al usuario contacto con el agente asignado por medio de la plataforma a manera de contacto inicial |
+| REQ_FUN[1008] | Notificaciones | La plataforma debe mostrar las notificaciones correspondientes al usuario y enviar correos con las mismas |
+| REQ_FUN[1009] | Registrar usuario | La plataforma debe solicitar el registro de usuario una vez que pide cotización o prueba de manejo. Debe ser posible que el usuario ingrese sus datos para crear una cuenta |
+| REQ_FUN[1010] | Actividad de usuario | El usuario debe poder revisar información acerca de su actividad en la plataforma desde la vista de su perfil. Incluye compras, pruebas de manejo, comunicación con agentes y posibles estatus de cualquier movimiento mencionado anteriormente |
+| REQ_FUN[1011] | Portal de usuario con expediente | El usuario debe poder ver, editar, borrar y actualizar su información de contacto, documentos, y otros datos desde la vista del portal de usuario |
+| REQ_FUN[1012] | Asignación automática de vendedor | La plataforma debe asignar a la orden de compra que solicite el usuario un vendedor de manera automática (utilizando FIFO) |
+| REQ_FUN[1013] | Historial de autos revisados | La plataforma debe mostrar al usuario los últimos autos que revisó |
+| REQ_FUN[1014] | Cotizar automáticamente | La plataforma debe permitir al usuario cambiar ciertos parámetros tales como enganche y mensualidades para obtener un estimado del costo del auto de su interés |
+| REQ_FUN[1015] | Listas de espera con emails desde la plataforma | La plataforma debe permitir al usuario inscribirse a una lista de espera para recibir notificaciones de disponibilidad de los autos de su interés |
+| REQ_FUN[1016] | Agregar autos como favoritos | Los usuarios registrados deben poder añadir autos a un apartado de favoritos para futura referencia |
+| REQ_FUN[1017] | Borrar usuario | La plataforma debe permitir al usuario borrar su cuenta |
+
+#### **Usuario Gerente**
+| ID | Concepto | Descripción |
+|----|----------|-------------|
+| REQ_FUN[2001] | Subir coches nuevos | El gerente debe tener la capacidad de dar de alta distintos coches con sus respectivas características y posibles accesorios mediante un formulario |
+| REQ_FUN[2002] | Gestionar usuarios vendedores | El gerente debe poder hacer la alta y baja de sus vendedores de la plataforma |
+| REQ_FUN[2003] | Subir coches nuevos mediante un archivo de tipo csv, excel y/o json | El gerente debe de tener la capacidad de dar de alta múltiples coches a la vez mediante un archivo de tipo csv, excel y/o json. Las plantillas estandarizadas serán provistas por el sistema |
+| REQ_FUN[2004] | Visualizar ventas | La plataforma debe permitir al gerente visualizar las ventas activas |
+| REQ_FUN[2005] | Reasignar vendedores | La plataforma debe permitir al gerente reasignar a una orden de compra a los vendedores |
+| REQ_FUN[2006] | Gestionar publicaciones de autos | La plataforma debe permitir ocultar, editar y borrar publicaciones de autos que sube el usuario gerente |
+| REQ_FUN[2007] | Registrar opciones de financiamiento | La plataforma debe permitir al usuario gerente registrar las opciones de financiamiento que quiere ofrecer para sus autos |
+| REQ_FUN[2008] | Registrar opciones de seguros | La plataforma debe permitir al usuario gerente registrar las opciones de seguro que quiere ofrecer para sus autos |
+
+#### **Usuario Vendedor**
+| ID | Concepto | Descripción |
+|----|----------|-------------|
+| REQ_FUN[3001] | Revisar de documentación del cliente | La plataforma debe permitir que el vendedor visualice, descargue, dé retroalimentación, decline o acepte los documentos de los clientes |
+| REQ_FUN[3002] | Gestionar órdenes de compra | La plataforma debe permitir que el vendedor gestione órdenes de compra y ver su histórico |
+| REQ_FUN[3003] | Gestionar solicitudes de cita | La plataforma debe permitir que el vendedor acepte, decline y dé seguimiento a las solicitudes de cita para ver el auto o revisar otro tema |
+| REQ_FUN[3004] | Gestionar avance de compra | La plataforma debe permitir que el vendedor cambie el estado de avance de compra de sus respectivos compradores |
+
+#### **Usuario Grupo Automotriz**
+| ID | Concepto | Descripción |
+|----|----------|-------------|
+| REQ_FUN[4001] | Crear perfil para grupo automotriz | La plataforma debe permitir a los grupos automotrices darse de alta y subir toda la información necesaria para ser verificada |
+| REQ_FUN[4002] | Estadísticas del Grupo | El grupo automotriz debe tener acceso a estadísticas relevantes de sus agencias, por ejemplo: resumen del perfil de sus agencias, ventas totales, ventas por agencia. También deberá poder acomodar y filtrar esta información dependiendo de sus necesidades|
+| REQ_FUN[4003] | Exportar estadísticas del Grupo | La plataforma debe permitir al grupo automotriz la descarga de sus estadísticas |
+| REQ_FUN[4004] | Solicitar la creación del dominio de agencias | Los grupos automotrices deben poder proporcionar la información de sus agencias con el fin de crear un dominio una vez que se verifique la información |
+| REQ_FUN[4005] | Solicitar la creación del usuario gerente | La plataforma debe permitir al grupo proporcionar la información de sus gerentes para que sean agregados a cierto dominio de agencia |
+
+#### **Usuario Administración de la Plataforma**
+| ID | Concepto | Descripción |
+|----|----------|-------------|
+| REQ_FUN[5001] | Coleccionar de datos | Se deben coleccionar y almacenar datos como: número de vehículos en un catálogo por agencia, clicks de usuarios en compra/prueba de vehículo, agencias con mayor número de ventas, vehículos más vendidos, número de agencias, número de grupos|
+| REQ_FUN[5002] | Verificar | La plataforma debe permitir la verificación de dada de alta tanto de grupos automotrices como de agencias y gerentes |
+| REQ_FUN[5003] | Gestionar datos | La plataforma debe permitir agregar, editar y borrar datos |
+| REQ_FUN[5004] | Exportar información de usuarios | La plataforma debe permitir la exportación de datos generales del usuario |
+
+### _Requerimientos No Funcionales_
+
+Para los requerimientos no funcionales, se consideraron los siguientes: 
+| ID | Concepto | Descripción |
+|----|----------|-------------|
+| REQ_NO_FUN[0001] | Diseño intuitivo | La plataforma debe ser sencilla de utilizar y debe incluir elementos que faciliten el entendimiento de uso |
+| REQ_NO_FUN[0002] | Diseño de UX armonioso | Se debe crear una interfaz armoniosa entre el tamaño, color y diseño de cada aspecto de la plataforma |
+| REQ_NO_FUN[0003] | Transparencia | La plataforma debe mostrar los datos de todos los coches de manera que los usuarios puedan tomar la decisión más informada posible |
+| REQ_NO_FUN[0004] | Divulgación de la información legal pertinente al usuario | El usuario debe poder acceder a los términos y condiciones redactadas por el equipo legal de NDS |
+| REQ_NO_FUN[0005] | Compra a cualquier agencia | La plataforma debe permitir que los usuarios compren de cualquier agencia sin importar en dónde se encuentre |
+| REQ_NO_FUN[0006] | Esquema de datos estandarizado | Debe existir un estándar de datos a través de la plataforma que permita una inteligibilidad mutua entre usuarios |
+| REQ_NO_FUN[0007] | Asegurar que la información de ventas y usuarios sea guardada por lo menos cinco (5) años antes de ser descartada | Por motivos legales y de auditoría, los datos que se utilicen en la plataforma deben ser guardados de manera segura por lo menos cinco años. No borrar información, deshabilitar cuentas inactivas únicamente |
+| REQ_NO_FUN[0008] | Protección de información | El sistema debe ser capaz de proteger la integridad de la información de los usuarios. Se deben integrar técnicas de cifrado y seguridad |
+| REQ_NO_FUN[0009] | Tutoriales y sección de FAQ | La plataforma debe mostrar al usuario distintos tutoriales y preguntas frecuentes respecto a la aplicación |
+| REQ_NO_FUN[0010] | Política de Privacidad | La plataforma muestra y es transparente con su política de privacidad |
+| REQ_NO_FUN[1011] | Visualización predeterminada del catálogo | La plataforma, al iniciar una búsqueda, debe mostrar el catálogo completo de forma ordenada |
+| REQ_NO_FUN[1012] | Método de autorización | La plataforma debe tener incluido un método de autorización para cada usuario, para manejar accesos |
+
 ---
 ## _Requerimientos de Datos_
 En esta sección se describiran a detalle los requerimientos sobre los datos que se manejarán en el sistema.
