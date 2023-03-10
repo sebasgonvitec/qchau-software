@@ -476,7 +476,8 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 ![Gestión Perfil](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/gestion_perfil_uv.png)
 
 **Gestión de Solicitudes de Pruebas de Manejo**
-![Gestión de Solicitudes de Pruebas de Manejo](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/pruebas_manejo_uv.png)
+![Gestión de Solicitudes de Pruebas de Manejo
+](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/pruebas_manejo_uv.png)
 
 ### _Diagramas de Usuario Administrador Grupo Automotriz_
 
