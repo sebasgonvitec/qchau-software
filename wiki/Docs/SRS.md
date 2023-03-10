@@ -349,60 +349,75 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 ### _Diagramas de Usuario Final_
 
 **Compra de un Auto**
-![Compra de un Auto](/wiki\Docs\Media\CasosDeUso\compra_auto_uf.png)
+![Compra de un Auto](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/compra_auto_uf.png)
 
 **Contacto con un Agente**
-![Contacto con un Agente](/wiki\Docs\Media\CasosDeUso\contacto_agente_uf.png)
+![Contacto con un Agente](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/contacto_agente_uf.png)
 
 **Gestión de Cuenta**
-![Gestión de Cuenta](/wiki\Docs\Media\CasosDeUso\cuenta_uf.png)
+![Gestión de Cuenta](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/cuenta_uf.png)
 
 **Herramientas de Consulta**
-![Herramientas de Consulta](/wiki\Docs\Media\CasosDeUso\herramientas_consuta_uf.png)
+![Herramientas de Consulta](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/herramientas_consuta_uf.png)
 
 **Notificaciones**
-![Notificaciones](/wiki\Docs\Media\CasosDeUso\notificaciones_uf.png)
+![Notificaciones](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/notificaciones_uf.png)
 
 **Navegación del Catálogo**
-![Navegación del Catálogo](/wiki\Docs\Media\CasosDeUso\nav_catalogo.png)
+![Navegación del Catálogo](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/nav_catalogo.png)
 
 **Solicitud de Prueba de Manejo**
-![Solicitud de Prueba de Manejo](/wiki\Docs\Media\CasosDeUso\prueba_manejo_uf.png)
+![Solicitud de Prueba de Manejo](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/prueba_manejo_uf.png)
 
 ### _Diagramas de Usuario Gerente_
 
 **Registro de Autos**
-![Registro de Autos](/wiki\Docs\Media\CasosDeUso\registro_autos_ug.png)
+![Registro de Autos](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/registro_autos_ug.png)
 
 **Registro de Vendedores**
-![Registro de Vendedores](/wiki\Docs\Media\CasosDeUso\registro_vendedores_ug.png)
-
-****
+![Registro de Vendedores](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/registro_vendedores_ug.png)
 
 ### _Diagramas de Usuario Vendedor_
 
 **Control de Venta**
-![Control de Venta](/wiki\Docs\Media\CasosDeUso\control_venta_uv.png)
+![Control de Venta](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/control_venta_uv.png)
 
 **Gestión Perfil**
-![Gestión Perfil](/wiki\Docs\Media\CasosDeUso\gestion_perfil_uv.png)
+![Gestión Perfil](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/gestion_perfil_uv.png)
 
 **Gestión de Solicitudes de Pruebas de Manejo**
-![Gestión de Solicitudes de Pruebas de Manejo](/wiki\Docs\Media\CasosDeUso\pruebas_manejo_uv.png)
+![Gestión de Solicitudes de Pruebas de Manejo](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/pruebas_manejo_uv.png)
 
 ### _Diagramas de Usuario Administrador Grupo Automotriz_
 
 **Gestión de Grupo Automotriz**
-![Gestión de Grupo Automotriz](/wiki\Docs\Media\CasosDeUso\gestion_uga.png)
+![Gestión de Grupo Automotriz](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/admin_uga_ua_uadmin.png)
 
 
 
 ### _Diagramas de Usuario Admin Plataforma_
 
 **Administración de Agencias y Grupos Automotrices**
-![Administración de Agencias y Grupos Automotrices](/wiki\Docs\Media\CasosDeUso\admin_uga_ua_uadmin.png)
+![Administración de Agencias y Grupos Automotrices](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/CasosDeUso/admin_uga_ua_uadmin.png)
 
-###  _Dia
+## _Diagramas de Actividad_ ##
+
+**Usuario Final**
+![Usuario Final](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioFinal.png)
+
+**Usuario Administrador**
+![Usuario Administrador](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioAdministrador.png)
+
+**Usuario Vendedor**
+![Usuario Vendedor](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioVendedor.png)
+    
+**Usuario Gerente**
+![Usuario Gerente](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioGerente.png)
+
+**Usuario Grupo Automotriz**
+![Usuario Grupo Automotriz](https://github.com/sebasgonvitec/qchau-software/blob/Diagramas-de-actividad/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_GrupoAutomotriz.png)
+
+
 | ID | Requirimiento | Descripción |
 -----------------------------------------------------
 | 001 | Cumplimiento Normativo de LFPDPPP | Debido a que el sistema gestiona la información identificable de las personas mexicanas - la Ley Federal de Protección Personales en Posesión de Particulares obliga al sistema a regularse frente a los articulos que hacen referencia al los derechos ARCO del ciudadano. |
@@ -411,4 +426,4 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 | 004 | Cumplimiento de Estandares de la Procuraduría Federal de Protección al Consumidor | Debido a que el sistema conduce un sistema de ofertas y ventas, debe intentar apegarse a la buena conducta referida por la PROFECO - para así minimizar riesgos o pérdida de reputación | 
 | 005 | Selección de Vocabulario Accesible | Para que el sistema pueda ser rentable y accesible para todos los usuarios, debe usar vocabulario común pero llamativo - facilitando la actividad de indización de los Motores de Busquéda y ser promovido mas fácilmente.|
 | 002 | 
-
+=======
