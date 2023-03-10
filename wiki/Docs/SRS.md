@@ -369,23 +369,6 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 **Solicitud de Prueba de Manejo**
 ![Solicitud de Prueba de Manejo](/wiki\Docs\Media\CasosDeUso\prueba_manejo_uf.png)
 
-### _Diagramas de Actividad_ ###
-
-**Usuario Final**
-![Usuario Final](/wiki\Docs\Media\DiagramaActividad\Diagrama Actividad_ Usuario Final.jpg)
-
-**Usuario Administrador**
-![Usuario Administrador](/wiki\Docs\Media\DiagramaActividad\Diagrama Actividad_ Usuario Administrador.jpg)
-
-**Usuario Vendedor**
-![Usuario Vendedor](/wiki\Docs\Media\DiagramaActividad\Diagrama Actividad_ Usuario Vendedor.jpg)
-    
-**Usuario Gerente**
-![Usuario Gerente](/wiki\Docs\Media\DiagramaActividad\Diagrama Actividad_ Usuario Gerente.jpg)
-
-**Usuario Grupo Automotriz**
-![Usuario Grupo Automotriz](/wiki\Docs\Media\DiagramaActividad\Diagrama actividad_ Grupo Automotriz.jpg)
-
 ### _Diagramas de Usuario Gerente_
 
 **Registro de Autos**
@@ -419,5 +402,21 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 **Administración de Agencias y Grupos Automotrices**
 ![Administración de Agencias y Grupos Automotrices](/wiki\Docs\Media\CasosDeUso\admin_uga_ua_uadmin.png)
 
+## _Diagramas de Actividad_ ##
+
+**Usuario Final**
+![Usuario Final](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioFinal.jpg)
+
+**Usuario Administrador**
+![Usuario Administrador](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioAdministrador.jpg)
+
+**Usuario Vendedor**
+![Usuario Vendedor](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioVendedor.jpg)
+    
+**Usuario Gerente**
+![Usuario Gerente](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioGerente.jpg)
+
+**Usuario Grupo Automotriz**
+![Usuario Grupo Automotriz](/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_GrupoAutomotriz.jpg)
 
 
