@@ -34,6 +34,12 @@ _Preparado por:_
     3. [Integridad y Seguridad de los Datos](#integridad-y-seguridad-de-los-datos)
 5. [Requerimientos de la Interfaz Externa]()
 
+6. [Atributos de Calidad](#atributos-de-calidad)
+	1. [Usabilidad](#usabilidad)
+	2. [Desempeño](#desempeño)
+	3. [Seguridad](#seguridad) 
+	4. [Protección](#proteccion)
+
 ---
 ## _Historial de Versiones_
 | Nombre       | Fecha     | Razones de cambios | Version |
@@ -402,5 +408,31 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 **Administración de Agencias y Grupos Automotrices**
 ![Administración de Agencias y Grupos Automotrices](/wiki\Docs\Media\CasosDeUso\admin_uga_ua_uadmin.png)
 
+
+## _Atributos de Calidad_
+
+### _Usabilidad_
+Uno de los requerimientos (REQ_FUN[1001]) que harán a este software más user-friendly e intuitivo es del sistema de filtrado para el catálogo de autos. No solo se incluyen filtros tradicionales por modelo o marca, sino que se puede contestar un cuestionario con el fin de encontrar autos que cumplan con las necesidades que se buscan.
+Otro requerimiento (REQ_FUN[1005]) que hará que la plataforma tenga un valor agregado sobre las demás de su tipo es la característica de poder comparar los autos que se encuentran dentro del catálogo, señalando diferencias entre estos y entre la información de compra que tengan.
+
+Adicionalmente a las características de navegación, requerimientos (REQ_FUN[1008]) como poder comunicarse con un agente asignado al seguimiento de la compra hacen la diferencia en la experiencia de usuario, impulsando el trato y servicio de un vendedor junto con la versatilidad y simplicidad de un proceso digitalizado.
+
+Con la intención de mejorar la experiencia del usuario en la etapa de navegación previa a la compra, tenemos un sistema de cotización semiautomática (REQ_FUN[1015]), con el fin ofrecer transparencia en el precio real que conlleva la compra completa de un vehículo. 
+
+### _Desempeño_
+Es necesario señalar algunos objetivos de desempeño para los requerimientos del software; comenzando por el sistema de administración de documentos referentes a la compra de autos (REQ_FUN[1012]), donde el usuario final debe poder subir los documentos necesarios y adicionales a la plataforma, se espera que se pueda manejar un espacio de almacenamiento flexible y que se pueda hacer consulta constante de estos documentos por parte del usuario vendedor.
+
+Otro objetivo de rendimiento en el sistema es tener los medios de recopilar información (REQ_FUN[5000], ) del mismo para ser después analizada y explotada por los usuarios administradores de la plataforma, buscando así mejorar el software y tomar decisiones informadas para el negocio.
+
+### _Seguridad_
+Dado que se van a estar manejando datos sensibles de los usuarios al momento de realizar una acción avanzada dentro de la plataforma, el usuario final tiene el control completo de su información (REQ_FUN[1012], REQ_FUN[1018], REQ_FUN[5002]), dejando disponible la opción de borrar y editar datos o documentos, al igual que borrar la cuenta por completo.
+
+Al mismo tiempo que se respeta la decisión de divulgación de datos de cada usuario, también se busca proteger estos datos mediante la integración de técnicas de cifrado y seguridad (REQ_NO_FUN[0010]), de manera que se pueda mantener la integridad de la información que guardamos como plataforma.
+
+Por todo lo anterior y más, se va a tener una política de privacidad (REQ_NO_FUN[0010]), que a través de los términos y condiciones de uso exprese toda la información que debe saber el usuario a cerca de su información, actividad en la plataforma y datos adicionales.
+
+### _Protección_
+
+En cuanto la protección de posibles pérdidas o daños de información, específicamente cuando un usuario opta por borrar su información de la plataforma; se respetará el borrado de los datos de cuenta, sin embargo, en caso de que el usuario haya hecho una compra, esta información será guardada completamente por lo menos cinco años (REQ_NO_FUN[0009]). Lo anterior principalmente por motivos legales y de auditoría. 
 
 
