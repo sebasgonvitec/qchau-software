@@ -15,8 +15,9 @@ _Preparado por:_
 ## _Tabla de Contenidos_
 1. [Introducción](#introducción)
     1. [Propósito](#propósito)
-    2. [Alcance del Proyecto](#alcance-del-proyecto)
-    3. [Objetivos de QChau Software](#objetivos-de-qchau-software)
+    2. [Convenciones del Documento](#convenciones-del-documento)
+    3. [Alcance del Proyecto](#alcance-del-proyecto)
+    4. [Referencias](#referencias)
 2. [Descripción General](#descripción-general)
     1. [Perspectiva de Producto](#perspectiva-del-producto)
     2. [Clases de Usuario y Características](#clases-de-usuario-y-características)
@@ -24,32 +25,43 @@ _Preparado por:_
         - [Interaccionescon la Aplicación](#interacciones-con-la-aplicación)
         - [Arquitectura](#arquitectura)
         - [Tech Stack](#tech-stack)
-    4. [Asunciones y Dependencias](#asunciones-y-dependencias)
-3. [Características del Sistema](#caracteristicas-del-sistema)
+    4. [Restricciones de Diseño e Implementación](#restricciones-de-diseño-e-implementación)
+    5. [Supuestos y Dependencias](#supuestos-y-dependencias)
+3. [Características del Sistema](#características-del-sistema)
     1. [Historias de Usuario](#historias-de-usuario)
     2. [Requerimientos Funcionales](#requerimientos-funcionales)
     3. [Requerimientos No Funcionales](#requerimientos-no-funcionales)
 4. [Requerimientos de Datos](#requerimientos-de-datos)
     1. [Estructura Lógica de los Datos](#estructura-lógica-de-los-datos)
-    2. [Características de la Base de Datos](#características-de-la-base-de-datos)
-    3. [Integridad y Seguridad de los Datos](#integridad-y-seguridad-de-los-datos)
+    2. [Diccionarios de Datos](#diccionarios-de-datos)
+    3. [Características de la Base de Datos](#características-de-la-base-de-datos)
+    4. [Reportes](#reportes)
+    5. [Adquisición, Integridad, Retención, y Disposición de los Datos](#adquisición-integridad-retención-y-disposición)
 5. [Requerimientos de la Interfaz Externa](#requerimientos-de-la-interfaz-externa)
     1. [Elementos Relevantes del Diseño de la Interfaz de Usuario](#elementos-relevantes-del-diseño-de-la-interfaz-de-usuario)
     2. [Mapa de Navegación General](#mapa-de-navegación-general)
+    3. [Interfaces de Software](#interfaces-de-software)
+    4. [Interfaces de Hardware](#interfaces-de-hardware)
+    5. [Interfaces de Comunicación](#interfaces-de-comunicación)
+    6. [Diagramas de Casos de Uso](#diagramas-de-casos-de-uso)
+    7. [Diagramas de Actividad](#diagramas-de-actividad)
 
 6. [Atributos de Calidad](#atributos-de-calidad)
 	1. [Usabilidad](#usabilidad)
 	2. [Desempeño](#desempeño)
 	3. [Seguridad](#seguridad) 
 	4. [Protección](#proteccion)
-
+7. [Requerimientos de Internacionalización y Localización]()
+8. [Otros Requerimientos]()
+9. [Apéndices]()
+    1. 
 ---
 ## _Historial de Versiones_
 | Nombre       | Fecha     | Razones de cambios | Version |
 |--------------|-----------|------------|------|
-| Ana Paula Katsuda Zalce | 6 de Marzo del 2023 | Comienzo de redacción de las secciones introducción y descripción general | v1.0 |
-| Sebastián González Villacorta | 8 de Marzo del 2023 | Comienzo de redacción de sección Requerimientos de Datos | v1.0 |
-| Ana Paula Katsuda Zalce | 9 de Marzo del 2023 | Redacción de parte de la interfaz externa del usuario y agregación de características del sistema | v1.0 |
+| Ana Paula Katsuda Zalce | 6 de Marzo del 2023 | Comienzo de redacción de las secciones introducción y descripción general | v1.1 |
+| Sebastián González Villacorta | 8 de Marzo del 2023 | Comienzo de redacción de sección Requerimientos de Datos | v1.2 |
+| Ana Paula Katsuda Zalce | 9 de Marzo del 2023 | Redacción de parte de la interfaz externa del usuario y agregación de características del sistema | v1.3 |
 
 ---
 ## _Introducción_
@@ -64,6 +76,13 @@ El propósito de este documento es detallar, analizar y definir el sistema de ad
 
 El documento será de gran utilidad para los Project Owners, Project Managers, desarrolladores y cualquier entidad que participe en la creación de la aplicación puesto a que se puede utilizar como un punto de partida para la misma.
 
+### _Convenciones del Documento_
+| Término | Definición |
+|---------|------------|
+| SRS | Documento de Especificación de Requerimientos de Software en el que se describen las funcionalidades necesarias para un proyecto de desarrollo de software |
+| Project Manager | Se entiende como la persona responsable de dar seguimiento y gestionar las actividades al desarrollar un proyecto |
+| Product Owner | Se entiende como la persona que representa las necesidades del cliente de cara al equipo de desarrollo |
+
 ### _Alcance del Proyecto_
 La aplicación planteada involucra un sistema de adquisición de autos de manera mayormente digital. El sistema será diseñado de manera que un usuario comprador pueda revisar catálogos de las marcas registradas (distintos grupos automotrices y agencias), solicitar pruebas de manejo, comparar autos, obtener estimaciones de precios (cotización), comenzar su proceso de compra desde la plataforma, subir la documentación necesaria, obtener retroalimentación de su documentación, comunicarse con agentes, y mantener un seguimiento de su compra.  
 Asimismo, permitirá a grupos automotrices inscribirse y registrar sus agencias con sus respectivos gerentes y vendedores. De esta manera, los vendedores podrán dar seguimiento a las compras de sus clientes y los gerentes podrán tener un seguimiento administrativo (tal como la gestión de catálogos de autos) desde una plataforma intuitiva. 
@@ -72,20 +91,17 @@ La aplicación será de gran utilidad no solo para los compradores que quieran r
 
 En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta es principalmente un medio de contacto digital y publicación de productos únicamente de agencias, por lo que no se gestionan procesos internos de cada agencia y grupo automotriz. Ahondando en lo anterior, las entidades involucradas en el desarrollo de la plataforma no tienen responsabilidades en cuanto a los acuerdos de pagos de mensualidades, las negociaciones realizadas por la agencia, la entrega ni el mantenimiento de los vehículos. 
 
-### _Objetivos de QChau Software_
+### _Referencias_
 
-- Asegurar la integridad y accesibilidad de los sistemas informáticos involucrados.
-- Diseñar el sistema de tal manera que la integración a través del mercado automovilístico sea fácil e intuitiva. 
-- Desplegar los listados e información de una manera agradable, útil y eficiente para el usuario. 
 
 ---
 ## _Descripción General_
-En la presente sección se incluyen las especificaciones generales del producto final, en donde se describirán detalles tales como los tipos de usuarios definidos para el proyecto, el ambiente del software, limitaciones, asumpciones, y dependencias. Lo anterior con la finalidad de obtener una mejor idea de las características y las consideraciones que se tienen que tomar para un correcto desarrollo. 
+En la presente sección se incluyen las especificaciones generales del producto final, en donde se describirán detalles tales como los tipos de usuarios definidos para el proyecto, el ambiente del software, limitaciones, asunciones, y dependencias. Lo anterior con la finalidad de obtener una mejor idea de las características y las consideraciones que se tienen que tomar para un correcto desarrollo. 
 
 ### _Perspectiva del Producto_
-La necesidad del producto nace del proceso inconveniente para muchos clientes en la adquisición de un auto. En muchos casos, los clientes tienen que asistir múltiples veces a las agencias para resolver temas que podrían ser solucionados de manera remota, ahorrando tiempo y recursos al cliente y generando la posibilidad de realizar más ventas por parte de las agencias. 
+La necesidad del producto nace del proceso inconveniente que sufren muchos clientes en la adquisición de un auto. En muchos casos, los clientes tienen que asistir múltiples veces a las agencias para resolver temas que podrían ser solucionados de manera remota, ahorrando tiempo y recursos al cliente y generando la posibilidad de realizar más ventas por parte de los grupos automotrices. 
 
-El producto propuesto, es completamente nuevo, compartiendo características con páginas tales como Kavak o Tesla. Se planea tener una aplicación completamente transparente e interactiva con los usuarios de manera que reciban la misma experiencia o una mejor que en las agencias. Más adelante, se describirán las funcionalidades del sistema y la manera en la que otorgarán un valor agregado a la aplicación.
+El producto propuesto, es nuevo (es decir, no es la extensión ni desarrollo de un proyecto ya iniciado), compartiendo características con páginas tales como la de Kavak o la de Tesla. Se planea tener una aplicación transparente e interactiva con los usuarios de manera que reciban la misma experiencia o una mejor que en las agencias. Más adelante, se describirán las funcionalidades del sistema y la manera en la que otorgarán un valor agregado a la aplicación.
 
 ### _Clases de Usuario y Características_
 En cuanto a los usuarios que utilizarían el sistema, se identificaron cinco principales como se describe a continuación.
@@ -127,9 +143,15 @@ Regresando a la idea de utilizar microservicios, se consideran los mismos dadas 
 
 #### **Tech Stack**
 
-### _Asunciones y Dependencias_
-En el caso de las asumpciones que se consideran para la creación del presente documento son las siguientes: 
-- Las agencias y grupos automotrices tienen la apertura de transformar digitalmente sus negocios. 
+### _Restricciones de Diseño e Implementación_
+En cuanto a las posibles restricciones que se tienen en el desarrollo de la aplicación, una de las más relevantes es el acceso a los servicios de la nube. En este caso, se tienen algunos créditos para AWS o Google Cloud, sin embargo, no necesariamente son suficientes. Similarmente, más adelante en el desarrollo, se podrían encontrar limitaciones de tecnologías tales como APIs que puedan no ser open source. 
+
+### _Supuestos y Dependencias_
+En el caso de las suposiciones y dependencias que se consideran para la creación del presente documento son las siguientes: 
+- Las agencias y grupos automotrices tienen la disposición de transformar digitalmente sus negocios. 
+- Una sección creciente de clientes prefieren hacer sus compras de coches en línea.
+- Se buscarán ciertas tecnologías externas tales como verificadores de INE o procesadores de pago. 
+
 ---
 ## _Características del Sistema_
 En la presente sección se describirán las características que serán planteadas para el sistema. Éstas incluyen los requerimientos funcionales, los requerimientos no funcionales, las historias de usuario y los casos de uso. Es relevante mencionar, que todas las anteriores fueron organizadas basadas en el tipo de usuario.
@@ -226,6 +248,7 @@ Los dato que se almacenarán en la base de datos de la aplicación y las relacio
 ![Diagrama ER](Media/SRSmedia/Diagrama_ER_BD.png)
 A continuación se hace una descripción de cada una de las entidades
 
+### _Diccionarios de Datos_
 **Grupo_Automotriz**
 | Atributo       | Tipo     | Descripción | Comentario |
 |----------------|----------|-------------|------------|
@@ -403,14 +426,19 @@ Para el almacenamiento de documentos se utilizará la herramienta DynamoDB de Am
 
 De igual manera se utilizarán Bases de Datos Gestionadas como Firebase para algunas funcionalidades de la aplicación como el chat.
 
-### _Integridad y Seguridad de los Datos_
-Debido al carácter de los datos que estará manejando el sistema y la importancia de la información que se manejará, se tomarán diferentes medidas para garantizar la integridad y seguridad de los datos.
+### _Reportes_
+En el caso de los reportes, no se planea generarlos directamente. Sin embargo, se harán consultas de las ventas mensuales de cada agencia, así como de la actividad de los usuarios en la plataforma. 
+
+### _Adquisición, Integridad, Retención y Disposición_
+Debido al carácter de los datos que estará manejando el sistema y la importancia de la información que se manejará, se tomarán diferentes medidas para garantizar la integridad y seguridad de los datos. 
 
 **Integridad de los datos** <br/>
 Una de estas medidas es una base de datos de repaldo que se actualice cada cierto tiempo, esto con el fin de que en caso de que se presente algún problema con la base de datos principal, se pueda recuperar la información de la base de datos de respaldo.
 
 **Seguridad de los datos** <br/>
 La seguridad de los datos será manejada con productos del proveedor de nube que se elija para el desarrollo del programa. Se utilizarán herramientas de seguridad como el cifrado de datos, autenticación de usuarios, etc. De igual manera se pondrán restricciones de leido/borrado de datos para los usuarios que no tengan permiso para realizar dichas acciones.
+
+Asimismo, la adquisición de los datos será a través de las interacciones de los usuarios con la plataforma y se planea tener dichos datos en la nube de manera que estén altamente disponibles.
 
 ---
 ## _Requerimientos de la Interfaz Externa_
@@ -434,7 +462,18 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 Para poder acceder a los flujos de los distintos usuarios, es necesario ingresar al usuario deseado mediante los botones que se encuentran en la ventana emergente izquierda. 
 En cuanto al mapa de navegación, este describe de una manera visual y muy general las pantallas que serán mostradas a los usuarios en un flujo.
 
+### _Interfaces de Software_
+En cuanto a las interfaces de software se utilizarán distintas APIs para llevar a cabo distintas funcionalidades. 
+
+### _Interfaces de Hardware_
+En este caso, no aplican las interfaces de hardware por lo que no se explicará. 
+
+### _Interfaces de Comunicación_
+Las interfaces de comunicación con el cliente consistirán en el navegador web y el correo electrónico. Además de las anteriores, no aplica ninguna otra descripción. 
+
 ## _Diagramas de Casos de Uso_
+
+A continuación, se muestran los diagramas de caso de uso para el presente proyecto: 
 
 ### _Diagramas de Usuario Final_
 
@@ -490,6 +529,7 @@ En cuanto al mapa de navegación, este describe de una manera visual y muy gener
 ![Administración de Agencias y Grupos Automotrices](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/CasosDeUso/admin_uga_ua_uadmin.png)
 
 ## _Diagramas de Actividad_ ##
+A continuación se muestran los diagramas de actividad que describen los flujos principales en la aplicación: 
 
 **Usuario Final**
 ![Usuario Final](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/DiagramaActividad/DiagramaActividad_UsuarioFinal.png)
@@ -514,7 +554,7 @@ Otro requerimiento (REQ_FUN[1005]) que hará que la plataforma tenga un valor ag
 
 Adicionalmente a las características de navegación, requerimientos (REQ_FUN[1008]) como poder comunicarse con un agente asignado al seguimiento de la compra hacen la diferencia en la experiencia de usuario, impulsando el trato y servicio de un vendedor junto con la versatilidad y simplicidad de un proceso digitalizado.
 
-Con la intención de mejorar la experiencia del usuario en la etapa de navegación previa a la compra, tenemos un sistema de cotización semiautomática (REQ_FUN[1015]), con el fin ofrecer transparencia en el precio real que conlleva la compra completa de un vehículo. 
+Con la intención de mejorar la experiencia del usuario en la etapa de navegación previa a la compra, tenemos un sistema de cotización semiautomática (REQ_FUN[1015]), con el fin ofrecer transparencia en el precio real que conlleva la compra de un vehículo. 
 
 ### _Desempeño_
 Es necesario señalar algunos objetivos de desempeño para los requerimientos del software; comenzando por el sistema de administración de documentos referentes a la compra de autos (REQ_FUN[1012]), donde el usuario final debe poder subir los documentos necesarios y adicionales a la plataforma, se espera que se pueda manejar un espacio de almacenamiento flexible y que se pueda hacer consulta constante de estos documentos por parte del usuario vendedor.
@@ -530,8 +570,13 @@ Por todo lo anterior y más, se va a tener una política de privacidad (REQ_NO_F
 
 ### _Protección_
 
-En cuanto la protección de posibles pérdidas o daños de información, específicamente cuando un usuario opta por borrar su información de la plataforma; se respetará el borrado de los datos de cuenta, sin embargo, en caso de que el usuario haya hecho una compra, esta información será guardada completamente por lo menos cinco años (REQ_NO_FUN[0009]). Lo anterior principalmente por motivos legales y de auditoría. 
+En cuanto la protección de posibles pérdidas o daños de información, específicamente cuando un usuario opta por borrar su información de la plataforma; se respetará el borrado de los datos de cuenta, sin embargo, en caso de que el usuario haya hecho una compra, esta información será guardada por lo menos cinco años (REQ_NO_FUN[0009]). Lo anterior principalmente por motivos legales y de auditoría. 
 
+## _Requerimientos de Internacionalización y Localización_
+En este caso, se trata de una aplicación con alcance a la República Mexicana, por lo que esta sección no aplica. 
+
+## _Otros Requerimientos_
+En cuanto a requerimientos adicionales encontrados, se tienen los siguientes. 
 
 | ID | Requirimiento | Descripción |
 |-----|-----------------|------------------------|
