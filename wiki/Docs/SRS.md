@@ -50,11 +50,17 @@ _Preparado por:_
 	1. [Usabilidad](#usabilidad)
 	2. [Desempeño](#desempeño)
 	3. [Seguridad](#seguridad) 
-	4. [Protección](#proteccion)
-7. [Requerimientos de Internacionalización y Localización]()
-8. [Otros Requerimientos]()
-9. [Apéndices]()
-    1. 
+	4. [Protección](#protección)
+7. [Requerimientos de Internacionalización y Localización](#requerimientos-de-internacionalización-y-localización)
+8. [Otros Requerimientos](#otros-requerimientos)
+9. [Apéndices](#apéndices)
+    1. [Apéndice A: WBS](#apéndice-a-wbs)
+    2. [Apéndice B: Diagrama de Gantt](#apéndice-b-diagrama-de-gantt)
+    3. [Apéndice C: Tableros de Kanban](#apéndice-c-tableros-de-kanban)
+    4. [Apéndice D: Análisis de Margen](#apéndice-d-análisis-de-margen)
+    5. [Apéndice E: Análisis de Riesgos](#apéndice-e-análisis-de-riesgos)
+    6. [Apéndice F: Documento de Historias de Usuario](#apéndice-f-documento-de-historias-de-usuario)
+
 ---
 ## _Historial de Versiones_
 | Nombre       | Fecha     | Razones de cambios | Version |
@@ -62,6 +68,7 @@ _Preparado por:_
 | Ana Paula Katsuda Zalce | 6 de Marzo del 2023 | Comienzo de redacción de las secciones introducción y descripción general | v1.1 |
 | Sebastián González Villacorta | 8 de Marzo del 2023 | Comienzo de redacción de sección Requerimientos de Datos | v1.2 |
 | Ana Paula Katsuda Zalce | 9 de Marzo del 2023 | Redacción de parte de la interfaz externa del usuario y agregación de características del sistema | v1.3 |
+| Gerardo Gutiérrez Paniagua | 10 de Marzo del 2023 | Adicion de apéndices y corrección de referencias a los requerimientos en los atributos de calidad | v1.4 |
 
 ---
 ## _Introducción_
@@ -563,9 +570,10 @@ A continuación se muestran los diagramas de actividad que describen los flujos 
 
 ### _Usabilidad_
 Uno de los requerimientos (REQ_FUN[1001]) que harán a este software más user-friendly e intuitivo es del sistema de filtrado para el catálogo de autos. No solo se incluyen filtros tradicionales por modelo o marca, sino que se puede contestar un cuestionario con el fin de encontrar autos que cumplan con las necesidades que se buscan.
-Otro requerimiento (REQ_FUN[1005]) que hará que la plataforma tenga un valor agregado sobre las demás de su tipo es la característica de poder comparar los autos que se encuentran dentro del catálogo, señalando diferencias entre estos y entre la información de compra que tengan.
 
-Adicionalmente a las características de navegación, requerimientos (REQ_FUN[1008]) como poder comunicarse con un agente asignado al seguimiento de la compra hacen la diferencia en la experiencia de usuario, impulsando el trato y servicio de un vendedor junto con la versatilidad y simplicidad de un proceso digitalizado.
+Otro requerimiento que hará que la plataforma tenga un valor agregado sobre las demás de su tipo es la característica de poder comparar los autos que se encuentran dentro del catálogo (REQ_FUN[1005]), señalando diferencias entre estos y entre la información de compra que tengan.
+
+Adicionalmente a las características de navegación, requerimientos como poder comunicarse con un agente asignado (REQ_FUN[1008]) al seguimiento de la compra hacen la diferencia en la experiencia de usuario, impulsando el trato y servicio de un vendedor junto con la versatilidad y simplicidad de un proceso digitalizado.
 
 Con la intención de mejorar la experiencia del usuario en la etapa de navegación previa a la compra, tenemos un sistema de cotización semiautomática (REQ_FUN[1015]), con el fin ofrecer transparencia en el precio real que conlleva la compra de un vehículo. 
 
@@ -577,13 +585,13 @@ Otro objetivo de rendimiento en el sistema es tener los medios de recopilar info
 ### _Seguridad_
 Dado que se van a estar manejando datos sensibles de los usuarios al momento de realizar una acción avanzada dentro de la plataforma, el usuario final tiene el control completo de su información (REQ_FUN[1012], REQ_FUN[1018], REQ_FUN[5002]), dejando disponible la opción de borrar y editar datos o documentos, al igual que borrar la cuenta por completo.
 
-Al mismo tiempo que se respeta la decisión de divulgación de datos de cada usuario, también se busca proteger estos datos mediante la integración de técnicas de cifrado y seguridad (REQ_NO_FUN[0010]), de manera que se pueda mantener la integridad de la información que guardamos como plataforma.
+Al mismo tiempo que se respeta la decisión de divulgación de datos de cada usuario, también se busca proteger estos datos mediante la integración de técnicas de cifrado y seguridad (REQ_NO_FUN[0008]), de manera que se pueda mantener la integridad de la información que guardamos como plataforma.
 
 Por todo lo anterior y más, se va a tener una política de privacidad (REQ_NO_FUN[0010]), que a través de los términos y condiciones de uso exprese toda la información que debe saber el usuario a cerca de su información, actividad en la plataforma y datos adicionales.
 
 ### _Protección_
 
-En cuanto la protección de posibles pérdidas o daños de información, específicamente cuando un usuario opta por borrar su información de la plataforma; se respetará el borrado de los datos de cuenta, sin embargo, en caso de que el usuario haya hecho una compra, esta información será guardada por lo menos cinco años (REQ_NO_FUN[0009]). Lo anterior principalmente por motivos legales y de auditoría. 
+En cuanto la protección de posibles pérdidas o daños de información, específicamente cuando un usuario opta por borrar su información de la plataforma; se respetará el borrado de los datos de cuenta, sin embargo, en caso de que el usuario haya hecho una compra, esta información será guardada por lo menos cinco años (REQ_NO_FUN[0007]). Lo anterior principalmente por motivos legales y de auditoría. 
 
 ## _Requerimientos de Internacionalización y Localización_
 En este caso, se trata de una aplicación con alcance a la República Mexicana, por lo que esta sección no aplica. 
@@ -598,3 +606,35 @@ En cuanto a requerimientos adicionales encontrados, se tienen los siguientes.
 | 6003 | Estandár de Accesibilidad | Para una promoción sustentable de los servicios de Internet, el sistema debe ofrecer alternativas de accesibilidad para usuarios con dificultades - e.j. reCAPTCHA |
 | 6004 | Cumplimiento de Estandares de la Procuraduría Federal de Protección al Consumidor | Debido a que el sistema conduce un sistema de ofertas y ventas, debe intentar apegarse a la buena conducta referida por la PROFECO - para así minimizar riesgos o pérdida de reputación | 
 | 6005 | Selección de Vocabulario Accesible | Para que el sistema pueda ser rentable y accesible para todos los usuarios, debe usar vocabulario común pero llamativo - facilitando la actividad de indización de los Motores de Busquéda y ser promovido mas fácilmente.|
+
+## _Apéndices_
+
+### _Apéndice A: WBS_
+<!-- ![WBS](../Docs/Media/SRSmedia/wbs.png) -->
+
+![WBS](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/SRSmedia/wbs.png)
+
+### _Apéndice B: Diagrama de Gantt_
+
+<!-- ![diagrama de Gantt](../Docs/Media/SRSmedia/Gantt_parte1.png) -->
+
+<!-- ![diagrama de Gantt](../Docs/Media/SRSmedia/Gantt_parte2.png) -->
+
+![diagrama de Gantt](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/SRSmedia/Gantt_parte1.png)
+
+![diagrama de Gantt](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/SRSmedia/Gantt_parte2.png)
+
+### _Apéndice C: Tableros de Kanban_
+Enlace al
+[Tablero de Kanban](https://trello.com/w/qchausoftware)
+
+### _Apéndice D: Análisis de Margen_
+Enlace al
+[Análisis de Margen](https://docs.google.com/spreadsheets/d/1UTt1D2rFVk_DhkA7mzKPPlH6Srpp3uOx5DZERmDJf3g/edit?usp=sharing)
+
+### _Apéndice E: Análisis de Riesgos_
+Enlace al 
+[Análisis de Riesgos](https://docs.google.com/document/d/1PCigrMcjWb4i5g_0i9aFNPFGGtTjEMCb-dS_vvqyhmA/edit?usp=sharing)
+
+### _Apéndice F: Documento de Historias de Usuario_
+[Link a Historias de Usuario](https://docs.google.com/spreadsheets/d/1OA5w8ZCMMJ0BG5iCwsFjzHLo56HG9Y7ydczv7Ib8RqM/edit?usp=sharing)
