@@ -18,10 +18,6 @@ _Preparado por:_
     2. [Convenciones del Documento](#convenciones-del-documento)
     3. [Alcance del Proyecto](#alcance-del-proyecto)
     4. [Referencias](#referencias)
-    https://www.youtube.com/watch?v=9kRgVxULbag
-    https://firebase.google.com/codelabs/firebase-android#0
-    https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
-    https://blog.logrocket.com/how-to-build-chatroom-app-react-firebase/
 2. [Descripción General](#descripción-general)
     1. [Perspectiva de Producto](#perspectiva-del-producto)
     2. [Clases de Usuario y Características](#clases-de-usuario-y-características)
@@ -103,7 +99,10 @@ La aplicación será de gran utilidad no solo para los compradores que quieran r
 En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta es principalmente un medio de contacto digital y publicación de productos únicamente de agencias, por lo que no se gestionan procesos internos de cada agencia y grupo automotriz. Ahondando en lo anterior, las entidades involucradas en el desarrollo de la plataforma no tienen responsabilidades en cuanto a los acuerdos de pagos de mensualidades, las negociaciones realizadas por la agencia, la entrega ni el mantenimiento de los vehículos. 
 
 ### _Referencias_
-
+https://www.youtube.com/watch?v=9kRgVxULbag
+https://firebase.google.com/codelabs/firebase-android#0
+https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
+https://blog.logrocket.com/how-to-build-chatroom-app-react-firebase/
 
 ---
 ## _Descripción General_
