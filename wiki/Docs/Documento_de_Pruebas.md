@@ -156,85 +156,47 @@ failed tests that are stated
 v. The Business analyst will provide inputs on functional changes and ensure the stakeholders are
 informed and agree with any potential changes
 
-## 2. TEST STRATEGY
-### 2.1. Test Description
-Our strategy is to start doing unit tests simultaneously within the early development of the project,
-concentrating on black box tests on each software component if possible, specifically reviewing the
-expected input and output. In parallel with the input and output tests, we will agree with Amazon
-user story tests so that they can provide us with their acceptance criteria.
+## 2. Estrategia de Pruebas
+### 2.1. Descripción de las Pruebas
+Para asegurar la calidad y funcionalidad de nuestro producto, se llevarán a cabo diferentes tipos de pruebas en diferentes etapas del desarrollo del proyecto. Primero, conforme el desarrollo vaya avanzando se harán pruebas informales sobre los componentes que se estén trabajando. Solo unas cuantas de estas pruebas informales serán documentadas. 
 
-If the black box tests generate dissatisfaction with Amazon or if the error persists, the white box
-testing stage will begin, only on the critical components, checking that the code is reachable at least
-once, thus eliminating any redundancy.
+Igualmente durante el proceso de desarrollo se llevarán a cabo pruebas unitarias en cada uno de los componentes del software. Entiendase por componentes a segmentos del código que cumplan una funcionalidad crítica. Con estas procederemos de la siguiente manera:
+1. Se llevan a cabo pruebas de caja negra, validando que las entradas y salidas sean correctas. Para estas se utilizarán pruebas de cobertura.
+2. Una vez se cumpla esta cobertura, el componente quedará listo.
+3. En caso de que el componente no cumpla con las especificaciones, se procederá a realizar pruebas de caja blanca, validando que el componente cumpla con las especificaciones de usuario. Para estas pruebas se utilizarán pruebas de Casos de Uso.
 
-Every time a test is carried out, the test specification document will be updated, where it can be
-seen here and in the appendix.
+Después de este proceso de pruebas unitarias se pasará a hacer pruebas de integración en donde se definirán por lo menos 2 caminos que representen una funcionalidad de cada usuario. Estos caminos estarán conformados por varios de módulos probados anteriormente.
 
-When several unit tests validate the correct operation of a specific component, it will advance to the
-next level of testing, which in this case will be to perform integration tests in an ascending manner,
-coupling individual elements in clusters using controllers as needed to test the components. of
-software, and if it was done successfully, the next level of testing, validation, will be entered.
+Por último, se harán pruebas de aceptación en donde ciertos candidatos cumplirán la función del usuario final y probaran el sistema. De estas pruebas obtendremos información de retroalimentación con la que podremos mejorar el sistema y sobre todo, asegurarnos de que los caminos que decida tomar el usuario cumplan con su funcionalidad.
 
-We will show it to Amazon as a more joint and complete software, waiting for an accepted validation
-to finally enter the last level of tests, the system level, where we will verify the complete behavior of
-the software. If not, we will return to the test that generated dissatisfaction and review it in detail
-with white box tests.
+Todas las pruebas que se realicen -a excepción de las informales- serán documentadas en la sección de pruebas de este documento.
+<!-- NOTA: Ver si agregar pruebas de rendimiento o algún otro tipo de pruebas -->
 
-### 2.2. Test Objectives
-The objective of the tests are to identify that each of the functional requirements of Datamatics are
-accounted for and work as expected. These includes:
 
-● Tests to identify that the agent’s screen, voice, and keyboard are recorded and correctly saved into
-the expected file type
+### 2.2. Objetivos de las Pruebas
+El objetivo de estas pruebas es validar la funcionalidad de cada uno de los requerimientos funcionales del sistema y obtener retroalimentación del usuario para hacer las modificaciones necesarias y mejorar su experiencia. Algunas de las acciones fundamentales que se estarán midiendo son las siguientes:
+- Funcionalidad de los filtros de búsqueda.
+- Correcto almacenamiento de archivos de los usuarios.
+- Comunicación entre el cliente y el vendedor en tiempo real.
+- Experiencia de usuario y usabilidad de la plataforma.
+- Estabilidad del producto.
 
-● Tests to check whether the recordings are being sent to the database as expected with the
-appropriate and standardized tags
+### 2.3. Suposiciones sobre Pruebas
 
-● Tests to check whether the filtering of recordings from the database is accurate and performs at the
-expected level of performance
+- Se omitirán pruebas de humo.
+- Todas las pruebas se llevarán a cabo en el mismo ambiente.
+- Se realizarán limitadas pruebas no funcionales -de estrés, escalabilidad, etc.- debido al tiempo y recursos con los que se cuenta.
+- Las mismas pruebas deben de tener los mismos resultados.
+- Los casos de prueba deben de ser aptos para probar los componentes.
+- Los datos utilizados en los casos de prueba deben de ser accesibles.
+- Si el ambiente de pruebas idóneo no se encuentra disponible, se utilizará un ambiente lo más parecido posible para las pruebas.
+- Se probarán todas las funciones individuales.
+- Únicamente se llevarán a cabo pruebas de caja blanca si en cualquier etapa de pruebas se obtiene un resultado no deseado.
+- Se documentarán todas las pruebas menos las informales.
+- Se llevará a cabo una revisión de los entregables de cada prueba.
+- Todos los casos de prueba deberán ser revisados con anterioridad.
 
-● Tests to check whether the statistical analysis generated for the supervisor is accurate and shows the
-data that is expected to be taken into account for that particular instance
-
-● Final tests to ensure that the software is stable and production-ready
-
-### 2.3. Test Assumptions
-**Key Assumptions**
-
-- Only the functional tests will be performed due to time and budget constraints.
-
-i. All tests will be done in the same environment.
-
-ii. All tests were initially performed with black box testing.
-General
-
-iii. The functional test will be the most important section in the test plan.
-
-iv. The same tests should allow the same results.
-
-v. If the environment is inaccessible for any reason, the testing team will try to generate an
-environment as similar to the testing environment as possible.
-
-vi. All individual functions were tested thoroughly
-
-vii. White box and step-by-step testing will only be done if the results are not what were expected.
-
-viii. Testing team will be documenting their tests accordingly.
-
-ix. The Test Team assumes all necessary inputs required during Test design and execution
-will be supported by Development/Business Analysts appropriately.
-
-x. All the video will be saved in MP4 format
-
-xi. The Project Manager/Business Analyst will review and sign-off all test deliverables
-
-xii. The Business Analyst will review and sign-off all Test cases prepared by Test Team prior to start of
-Test execution
-
-xiii. Test team will manage the testing effort with close coordination with Project Manager and
-Business Analyst
-
-### 2.4. Test Objects
+### 2.4. Objetos de Prueba
 - Testing the login functionality
 
 i. Testing the video recording functionality
