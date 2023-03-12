@@ -197,76 +197,39 @@ El objetivo de estas pruebas es validar la funcionalidad de cada uno de los requ
 - Todos los casos de prueba deberán ser revisados con anterioridad.
 
 ### 2.4. Objetos de Prueba
-- Testing the login functionality
+**Todos los Usuarios**
+1. Funcionalidad de Login.
+2. Funcionalidad de Registro de Usuarios (cualquier usuario).
+3. Funcionalidad de almacenamiento y descarga de archivos.
+4. Funcionalidad de modificación de información del perfil
 
-i. Testing the video recording functionality
+**Usuario Final**
+1. Funcionalidad de filtros de catálogo.
+2. Funcionalidad de comunicación con el vendedor.
+3. Funcionalidad de comparación de autos.
+4. Funcionalidad de cotización automática.
+5. Funcionalidad de pago.
 
-ii. Testing the video saving functionality
+**Usuario Vendedor**
+1. Funcionalidad de asignación de ordenes.
+2. Funcionalidad de visualización de compras activas.
+3. Funcionalidad de comunicación con el cliente.
 
-iii. Testing the analysis functionality
+**Usuario Gerente**
+1. Funcionalidad de registro de autos.
 
-### 2.5. Scope
-Web app functionality to be tested will include:
+**Usuario Administrador de Grupo Automotriz**
+1. Funcionalidad de registro de agencias.
+2. Funcionalidad de obtención de estadísticas.
 
-    ● User authentication
+**Usuario Administrador de Plataforma**
+1. Funcionalidad de registro de agencia o grupo automotriz.
+2. Funcionalidad de obtención de estadísticas de la plataforma.
 
-    ● Video & audio automatic recording start/end
-
-    ● Recording filtering and search
-
-    ● Dashboard display
-
-● Login functionality will involve the following tests
-
-    ○ User logs in correctly and can see the main screen.
-
-    ○ The user logged in is authenticated with Cognito.
-
-    ○ In the case of not including a user, it will not allow a login.
-
-    ○ In the case of an invalid, or nonexistent user, it will display an error message.
-
-    ○ The authenticated user is correctly identified as an Agent, Supervisor, or Administrator.
-
-● Video Recording functionality will involve the following tests
-
-    ○ User able to record screen is an Agent, not a Supervisor or an Administrator.
-
-    ○ The video is recorded through Chime.
-
-    ○ The keystrokes are recorded.
-
-    ○ The recording starts automatically after beginning the 
-    Amazon Connect call.
-    ○ The recording ends when the Amazon Connect call ends.
-
-● Video Saving functionality will involve the following tests:
-    ○ A rating and tagging prompt is offered.
-
-    ○ The prompt shows up immediately after the recording ends.
-
-    ○ The saving will not happen until the Agent finishes the prompt.
-
-    ○ Rating will go from 1 to 5
-
-    ○ Tagging will allow multiple options.
-
-    ○ Name, ID, Caller, Date, and Time will be registered automatically.
-
-    ○ It will save properly in the Dynamo database.
-
-● Analysis functionality will involve the following tests:
-
-    ○ The functionality only exists for Supervisors and Administrators.
-
-    ○ The videos are properly retrieved from the database.
-
-    ○ A dashboard will be shown, describing ratings based on different conditions.
-
-    ○ Supervisors will only be able to see their own agents’ videos, while Administrators will be able to see
-    all their company’s videos.
-
-    ○ Users will be able to view the recordings online.
+<!-- 
+### 2.5. Scope 
+Creo que esta sección se puede omitir, el diseño de los diferentes casos de prueba se hará después
+-->
 
 ### 2.6. Levels of Testing
 
