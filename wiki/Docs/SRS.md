@@ -18,6 +18,10 @@ _Preparado por:_
     2. [Convenciones del Documento](#convenciones-del-documento)
     3. [Alcance del Proyecto](#alcance-del-proyecto)
     4. [Referencias](#referencias)
+    https://www.youtube.com/watch?v=9kRgVxULbag
+    https://firebase.google.com/codelabs/firebase-android#0
+    https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
+    https://blog.logrocket.com/how-to-build-chatroom-app-react-firebase/
 2. [Descripción General](#descripción-general)
     1. [Perspectiva de Producto](#perspectiva-del-producto)
     2. [Clases de Usuario y Características](#clases-de-usuario-y-características)
