@@ -146,18 +146,46 @@ Considerando los servicios de mensajería se plantea agregar al servidor de la a
 
 Haciendo referencia a la salida al público, se planea tener un balanceador de carga con el fin de distribuir el tráfico a los servidores. De igual manera, se planea utilizar un servicio de firewall para monitorear el tráfico de la red y un servicio de autenticación de usuarios para la administración de identidad de los usuarios. Se quiere utilizar el servicio de CDN para, junto con un cache, alojar ahí los medios que se utilizarán en la plataforma. Finalmente, se tiene un proveedor de DNS para resolver los dominios de los sitios web a usar. 
 
-Regresando a la idea de utilizar microservicios, se consideran los mismos dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de microservicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
+Asimismo se plantea el uso de una arquitectura enfocada en servicios (muy similar a microservicios pero con servicios compartiendo las bases de datos), se considera esto dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de la aruitectura orientada a servicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
 
 #### **Tech Stack**
+En la presente sección se definen las tecnologías que serán utilizadas para el desarrollo y operación del servicio propuesto. A su vez, cada tecnología definida muestra sus principales beneficios para el servicio propuesto por razones de soporte, operatividad y diseño.
+
+_Componentes de Desarrollo Frontal_
+
+Interfaz de usuario
+
+- HTML5, CSS3, ECMAScript 2021: Estos son los lenguajes y estándares a utilizar - son virtualmente el método universal de desarrollo en un ambiente web. HTML5 y CSS3 son las versiones más extendidas a través de los navegadores en actual uso. ECMAScript 2021 es el último versionamiento del estándar para JavaScript - extendido en múltiples navegadores modernos.
+
+Estructuras de Frontend
+
+- React: es una librería de JavaScript enfocada en el desarrollo frontal de aplicaciones Web. Está enfocada meramente en el desarrollo frontal, lo que la habilita en perder enfoque a otras partes del desarrollo y maximizar su potencial de uso para el mismo.
+A pesar de ser una librería de código abierto, es mantenida por Meta (anteriormente Facebook) - una empresa líder en servicios de redes sociales en Internet. Meta, utiliza esta librería para el desarrollo frontal de sus aplicaciones como Facebook e Instagram: servicios que son reconocidos por promover una UX/UI intuitiva, fácil de utilizar y escalable.
+El poder apalancarse del soporte y métodos de las redes sociales mas utilizadas en Internet - permite al equipo poder solventar la dirección de UX/UI del servicio - haciendo al servicio uno más familiar para el usuario.
+
+Estilo
+
+- React Bootstrap: Bootstrap es una librería de HTML/CSS enfocada en el diseño del desarrollo frontal de aplicaciones Web. Siendo una librería de código abierto, es utilizada por alrededor del 15% de los sitios de Internet disponibles.
+Su potencial está en la longevidad y soporte continuo en la comunidad de desarrollo - existen formatos y métodos probados por múltiples desarrolladores: quitándole al equipo el tiempo y esfuerzo necesario para planear la implementación de diseño y dar más tiempo al diseño mismo (que termina siendo una característica crítica en el servicio).
+
+_Componentes de Desarrollo de Servidor_
+
+Lenguajes de Programación y Ambiente de Ejecución
+- Node.JS:  es un ambiente de ejecución de JavaScript multiplataforma que opera código fuera del navegador utilizado.
+NodeJS se ha convertido en un estándar global para el desarrollo de aplicaciones tanto de escritorio como aplicaciones web. Operado y mantenido por OpenJS Foundation, el ambiente se apalanca del liderazgo de sus empresas fundadoras para su soporte.
+Corre sobre el motor V8 del proyecto Chromium - base de dos de los navegadores más populares en el mundo: Chrome y Edge.
+Su potencial está en el diseño del ambiente que permite una eficiente E/S asíncrona - permitiendo que el servicio pueda soportar múltiples peticiones de múltiples usuarios sin afectar el rendimiento y experiencia del usuario de los demás. La escalabilidad es un patrón en los servicios que corren en NodeJS.
+
+
 
 ### _Restricciones de Diseño e Implementación_
 En cuanto a las posibles restricciones que se tienen en el desarrollo de la aplicación, una de las más relevantes es el acceso a los servicios de la nube. En este caso, se tienen algunos créditos para AWS o Google Cloud, sin embargo, no necesariamente son suficientes. Similarmente, más adelante en el desarrollo, se podrían encontrar limitaciones de tecnologías tales como APIs que puedan no ser open source. 
 
 ### _Supuestos y Dependencias_
 En el caso de las suposiciones y dependencias que se consideran para la creación del presente documento son las siguientes: 
-- Las agencias y grupos automotrices tienen la disposición de transformar digitalmente sus negocios. 
-- Una sección creciente de clientes prefieren hacer sus compras de coches en línea.
-- Se buscarán ciertas tecnologías externas tales como verificadores de INE o procesadores de pago. 
+1.  Las agencias y grupos automotrices tienen la disposición de transformar digitalmente sus negocios. 
+2. Una sección creciente de clientes prefieren hacer sus compras de coches en línea.
+3. Se buscarán ciertas tecnologías externas tales como verificadores de INE o procesadores de pago. 
 
 ---
 ## _Características del Sistema_
