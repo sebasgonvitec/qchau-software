@@ -100,9 +100,18 @@ En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta
 
 ### _Referencias_
 https://www.youtube.com/watch?v=9kRgVxULbag
+
 https://firebase.google.com/codelabs/firebase-android#0
+
 https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
-https://blog.logrocket.com/how-to-build-chatroom-app-react-firebase/
+
+https://blog.logrocket.com/how-to-build-chatroom-app-react-firebase/ 
+
+https://nodejs.org/en/docs/
+
+https://www.freecodecamp.org/learn/back-end-development-and-apis/
+
+https://cloud.google.com/products#section-1
 
 ---
 ## _Descripción General_
