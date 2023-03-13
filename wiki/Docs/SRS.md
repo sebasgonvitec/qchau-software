@@ -118,7 +118,7 @@ https://cloud.google.com/products#section-1
 En la presente sección se incluyen las especificaciones generales del producto final, en donde se describirán detalles tales como los tipos de usuarios definidos para el proyecto, el ambiente del software, limitaciones, asunciones, y dependencias. Lo anterior con la finalidad de obtener una mejor idea de las características y las consideraciones que se tienen que tomar para un correcto desarrollo. 
 
 ### _Perspectiva del Producto_
-La necesidad del producto nace del proceso inconveniente que sufren muchos clientes en la adquisición de un auto. En muchos casos, los clientes tienen que asistir múltiples veces a las agencias para resolver temas que podrían ser solucionados de manera remota, ahorrando tiempo y recursos al cliente y generando la posibilidad de realizar más ventas por parte de los grupos automotrices. 
+La necesidad del producto nace del proceso inconveniente que sufren muchos clientes en la adquisición de un auto. En muchos casos, los clientes tienen que asistir múltiples veces a las agencias para resolver temas que podrían ser solucionados de manera remota. De esta manera, la solución le ahorrará tiempo y recursos al cliente y generará la posibilidad de realizar más ventas por parte de los grupos automotrices. 
 
 El producto propuesto, es nuevo (es decir, no es la extensión ni desarrollo de un proyecto ya iniciado), compartiendo características con páginas tales como la de Kavak o la de Tesla. Se planea tener una aplicación transparente e interactiva con los usuarios de manera que reciban la misma experiencia o una mejor que en las agencias. Más adelante, se describirán las funcionalidades del sistema y la manera en la que otorgarán un valor agregado a la aplicación.
 
