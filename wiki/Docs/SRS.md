@@ -133,20 +133,50 @@ En cuanto a los usuarios que utilizarían el sistema, se identificaron cinco pri
 ### _Ambiente de Operación_
 La presente sección contiene los aspectos técnicos que se requieren para la operación de la aplicación. Es relevante mencionar que se trata de una aplicación web que será albergada en la nube y será útil para la venta de coches en la República Mexicana.
 
-## Tech Stack
+#### **Interacciones con la Aplicación**
+En cuanto a las interacciones con la aplicación, también consideradas ambiente de sistema, se plasman los actores principales (usuarios) mencionados anteriormente   la manera en la que tendrán acceso a las distintas funcionalidades de la plataforma.
 
-A continuación, se definen las tecnologías que serán utilizadas para el desarrollo y operación del servicio propuesto. A su vez, cada tecnología definida muestra sus principales beneficios para el servicio propuesto por razones de soporte, operatividad y diseño.
+![Ambiente Del Sistema](Media/SRSmedia/AmbienteDelSistema.png)
+
+Figura 1. Ambiente del Sistema
+
+En la figura del ambiente del sistema, es posible observar que la administración del sistema (controlada por el usuario administrador de la plataforma) tiene acceso a todas las áreas del sistema. Por otro lado, se tiene la interfaz de ventas en donde el usuario vendedor puede tener un manejo de sus funciones de venta y su interacción con el usuario final en el área comercial. Finalmente, la administración de negocio (que gestiona el usuario grupo automotriz) involucra la revisión de estadísticas y la gestión de administración de ventas (utilizada por el usuario gerente).
+
+---
+
+#### **Arquitectura**
+En cuanto a la arquitectura del sistema, se plantea una solución en la nube y se considera el uso de una estructura de microservicios.
+
+![Arquitectura en la Nube](Media/SRSmedia/ArquitecturaNube.png)
+Figura 2. Propuesta de Arquitectura en la Nube
+
+Es posible notar en el diagrama, el uso de distintas tecnologías en la nube. En primer lugar, se tienen los servidores web que servirán para correr la aplicación junto con el servidor de aplicación (lógica) de manera que pueda ser posible escalar tanto horizontal (agregando más servidores) como verticalmente (agregando recursos a los servidores). 
+
+Asimismo, se agregaron bases de datos tanto relacionales como no relacionales considerando que parte de los datos puede ser altamente flexible (por lo tanto escalabes) mientras otros datos son más fijos y se relacionan altamente entre ellos. Se plantea adicionalmente, un servicio que contenga copias de seguridad de los datos para protegerlos en caso de que algo suceda a las bases de datos.
+
+En cuanto a el análisis de datos, se planea tener seguimiento de funciones que responden a eventos (colección y warehouse) acompañados de un servicio de inteligencia de negocios para el análisis. 
+
+Considerando los servicios de mensajería se plantea agregar al servidor de la aplicación servicios tanto de correo electrónico como de chat. 
+
+Haciendo referencia a la salida al público, se planea tener un balanceador de carga con el fin de distribuir el tráfico a los servidores. De igual manera, se planea utilizar un servicio de firewall para monitorear el tráfico de la red y un servicio de autenticación de usuarios para la administración de identidad de los usuarios. Se quiere utilizar el servicio de CDN para, junto con un cache, alojar ahí los medios que se utilizarán en la plataforma. Finalmente, se tiene un proveedor de DNS para resolver los dominios de los sitios web a usar. 
+
+Asimismo se plantea el uso de una arquitectura enfocada en servicios (muy similar a microservicios pero con servicios compartiendo las bases de datos), se considera esto dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de la aruitectura orientada a servicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
+
+---
+
+#### **Tech Stack**
+En la presente sección se definen las tecnologías que serán utilizadas para el desarrollo y operación del servicio propuesto. A su vez, cada tecnología definida muestra sus principales beneficios para el servicio propuesto por razones de soporte, operatividad y diseño.
+
 
 **Componentes de Desarrollo Frontal**
 
+_Interfaz de Usuario_
 
-1. _Interfaz de Usuario_
-
-**HTML5, CSS3, ECMAScript 2021**
+HTML5, CSS3, ECMAScript 2021
 
 Estos son los lenguajes y estándares a utilizar - son virtualmente el método universal de desarrollo en un ambiente web. HTML5 y CSS3 son las versiones más extendidas a través de los navegadores en actual uso. ECMAScript 2021 es el último versionamiento del estándar para JavaScript - extendido en múltiples navegadores modernos.
 
-1. _Estructuras de Front-End_
+_Estructuras de Front-End_
 
 **React**
 
@@ -156,7 +186,7 @@ A pesar de ser una librería de código abierto, es mantenida por Meta (anterior
 
 El poder apalancarse del soporte y métodos de las redes sociales mas utilizadas en Internet - permite al equipo poder solventar la dirección de UX/UI del servicio - haciendo al servicio uno más familiar para el usuario.
 
-1. _Estilo_
+_Estilo_
 
 **React-Bootstrap**
 
@@ -166,7 +196,7 @@ Su potencial está en la longevidad y soporte continuo en la comunidad de desarr
 
 **Componentes de Desarrollo Servidor**
 
-1. _Lenguajes de Programación y Ambientes de Ejecución_
+_Lenguajes de Programación y Ambientes de Ejecución_
 
 **Node.JS**
 
@@ -178,7 +208,7 @@ Corre sobre el motor V8 del proyecto Chromium - base de dos de los navegadores m
 
 Su potencial está en el diseño del ambiente que permite una eficiente E/S asíncrona - permitiendo que el servicio pueda soportar múltiples peticiones de múltiples usuarios sin afectar el rendimiento y experiencia del usuario de los demás. La escalabilidad es un patrón en los servicios que corren en NodeJS.
 
-1. _Estructuras de Aplicación Web_
+_Estructuras de Aplicación Web_
 
 **Express**
 
@@ -190,7 +220,7 @@ La estructura es de código abierto y es mantenida regularmente por StrongLoop -
 
 Express es reconocido por su concentración en proveer alto rendimiento: considerando que el proyecto abarcaría toda la República Méxicana - un país con un porcentaje de penetración de 71% - es probable que el servicio requiera mantener la integralidad y accesibilidad a pesar del flujo de usuarios.
 
-1. _Base de Datos_
+_Base de Datos_
 
 **MongoDB**
 
@@ -212,7 +242,7 @@ Se usará MySQL en este proyecto para almacenar los datos que no necesiten const
 
 **Componentes de Infraestructura**
 
-1. _Virtualización_
+_Virtualización_
 
 **Docker**
 
@@ -230,7 +260,7 @@ Es una herramienta de orquestación de despliegue y uso de contenedores que perm
 
 Se utilizará como opción de despliegue junto con Docker para asegurar la escalabilidad de la aplicación.
 
-1. _Servicio de Nube_
+_Servicio de Nube_
 
 **Google Cloud Platform**
 
@@ -242,9 +272,9 @@ La capacidad de cómputo proveída por la empresa líder en servicios de Interne
 
 La curva de aprendizaje en el equipo es más reducida. 40% del equipo está familiarizado con GCP, a comparación de un 20% familiarizado con AWS y un 0% familiarizado con Azure - servicios de cómputo en la nube alternativos.
 
-1. _Servicios de Infraestructura_
+_Servicios de Infraestructura_
 
-  1. _Computación_
+_Computación_
 
 **Compute Engine**
 
@@ -260,7 +290,7 @@ Compute Engine utiliza la red de fibra global privada de Google, propagando así
 
 Compute Engine se financia frente al uso por minuto, es decir nunca se va a cobrar adicionales por cómputo no utilizado, o por cómputo imprevisto.
 
-  1. _Seguridad y Acceso_
+_Seguridad y Acceso_
 
 **Cloud Identity**
 
@@ -272,7 +302,7 @@ Además, permite a los usuarios del servicio inscribirse al sistema utilizando s
 
 Firewalls es el servicio de Cortafuegos de GCP. El nivel _Essential_ del servicio prueba ser suficiente para el servicio - permitiendo mantener una granularidad sencilla de control de cortafuegos para el servicio: ya que no es necesario mantener una revisión singular y específica.
 
-  1. _Almacenamiento_
+_Almacenamiento_
 
 **Cloud Storage**
 
@@ -282,7 +312,7 @@ Cloud Storage tiene una estructura de archivos superior a otros proveedores, ade
 
 Además Cloud Storage se incorpora fácilmente con el servicio de almacenamiento en nube comercial de Google - Drive: que es utilizado por múltiples empresas y corporaciones para sus soluciones de documentación, pudiendo así facilitar a los Grupos Automotrices el acceso a sus documentos, y al usuario con sus Derechos de Acceso (ARCO).
 
-  1. _Bases de Datos_
+_Bases de Datos_
 
 **CloudSQL**
 
@@ -304,7 +334,7 @@ Este servicio protege al sistema frente a un cambio erróneo, ataques y otros ri
 
 Este servicio protege no solo las bases de datos, si no también a las maquinas virtuales propuestas para la aplicación - haciendo así muy fácil restaurar el servicio inmediatamente después de un desastre.
 
-  1. _Servicios de Internet_
+_Servicios de Internet_
 
 **Cloud DNS**
 
@@ -332,7 +362,7 @@ Cloud Load Balancing ofrece gestiones automáticas para escalación - haciendo q
 
 Cloud Load Balancing puede admitir de más de un millón de peticiones por segundo, y es integrable con el CDN propuesto sin requerir esfuerzo absoluto.
 
-  1. _Inteligencia de Negocios_
+_Inteligencia de Negocios_
 
 **Cloud Functions**
 
@@ -356,7 +386,7 @@ Looker es un servicio de Inteligencia de Negocios de Google. Este servicio es tr
 
 Este servicio será aplicado a la plataforma para la generación de estadísticas en tiempo real de la plataforma. Aprovechando su utilidad de recolección, cómputo, y flujos de trabajo por evento: Looker generará estadísticas de uso para poder evaluar la sustentabilidad, rentabilidad y rendimiento de la plataforma: permitiendo al equipo generar cambios en la implementación a raíz del uso sin necesidad de generar un consenso o estudio tardado.
 
-  1. _Comunicación_
+_Comunicación_
 
 **Firebase**
 
@@ -378,64 +408,7 @@ SendGrid es un API de envío de correos electrónicos masivos de Twilio - una de
 
 Las habilidades y facultades de hacer de SendGrid una herramienta crítica para el desarrollo de la UX del servicio: confirmación de registro por correo, notificaciones de estatus, y correspondencia de marketing.
 
-Además SendGrid opera un financiamiento por evento, es decir se paga conforme se va utilizando el servicio - para así no pagar de mas en un momento que no llegase a estar usando. SendGrid API es ampliamente soportado por GCP y varios de sus productos - de tal manera que Google tiene manuales ya hechos para integración
-
-#### **Interacciones con la Aplicación**
-En cuanto a las interacciones con la aplicación, también consideradas ambiente de sistema, se plasman los actores principales (usuarios) mencionados anteriormente   la manera en la que tendrán acceso a las distintas funcionalidades de la plataforma.
-
-![Ambiente Del Sistema](Media/SRSmedia/AmbienteDelSistema.png)
-
-Figura 1. Ambiente del Sistema
-
-En la figura del ambiente del sistema, es posible observar que la administración del sistema (controlada por el usuario administrador de la plataforma) tiene acceso a todas las áreas del sistema. Por otro lado, se tiene la interfaz de ventas en donde el usuario vendedor puede tener un manejo de sus funciones de venta y su interacción con el usuario final en el área comercial. Finalmente, la administración de negocio (que gestiona el usuario grupo automotriz) involucra la revisión de estadísticas y la gestión de administración de ventas (utilizada por el usuario gerente).
-
-#### **Arquitectura**
-En cuanto a la arquitectura del sistema, se plantea una solución en la nube y se considera el uso de una estructura de microservicios.
-
-![Arquitectura en la Nube](Media/SRSmedia/ArquitecturaNube.png)
-Figura 2. Propuesta de Arquitectura en la Nube
-
-Es posible notar en el diagrama, el uso de distintas tecnologías en la nube. En primer lugar, se tienen los servidores web que servirán para correr la aplicación junto con el servidor de aplicación (lógica) de manera que pueda ser posible escalar tanto horizontal (agregando más servidores) como verticalmente (agregando recursos a los servidores). 
-
-Asimismo, se agregaron bases de datos tanto relacionales como no relacionales considerando que parte de los datos puede ser altamente flexible (por lo tanto escalabes) mientras otros datos son más fijos y se relacionan altamente entre ellos. Se plantea adicionalmente, un servicio que contenga copias de seguridad de los datos para protegerlos en caso de que algo suceda a las bases de datos.
-
-En cuanto a el análisis de datos, se planea tener seguimiento de funciones que responden a eventos (colección y warehouse) acompañados de un servicio de inteligencia de negocios para el análisis. 
-
-Considerando los servicios de mensajería se plantea agregar al servidor de la aplicación servicios tanto de correo electrónico como de chat. 
-
-Haciendo referencia a la salida al público, se planea tener un balanceador de carga con el fin de distribuir el tráfico a los servidores. De igual manera, se planea utilizar un servicio de firewall para monitorear el tráfico de la red y un servicio de autenticación de usuarios para la administración de identidad de los usuarios. Se quiere utilizar el servicio de CDN para, junto con un cache, alojar ahí los medios que se utilizarán en la plataforma. Finalmente, se tiene un proveedor de DNS para resolver los dominios de los sitios web a usar. 
-
-Asimismo se plantea el uso de una arquitectura enfocada en servicios (muy similar a microservicios pero con servicios compartiendo las bases de datos), se considera esto dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de la aruitectura orientada a servicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
-
-#### **Tech Stack**
-En la presente sección se definen las tecnologías que serán utilizadas para el desarrollo y operación del servicio propuesto. A su vez, cada tecnología definida muestra sus principales beneficios para el servicio propuesto por razones de soporte, operatividad y diseño.
-
-_Componentes de Desarrollo Frontal_
-
-Interfaz de usuario
-
-- HTML5, CSS3, ECMAScript 2021: Estos son los lenguajes y estándares a utilizar - son virtualmente el método universal de desarrollo en un ambiente web. HTML5 y CSS3 son las versiones más extendidas a través de los navegadores en actual uso. ECMAScript 2021 es el último versionamiento del estándar para JavaScript - extendido en múltiples navegadores modernos.
-
-Estructuras de Frontend
-
-- React: es una librería de JavaScript enfocada en el desarrollo frontal de aplicaciones Web. Está enfocada meramente en el desarrollo frontal, lo que la habilita en perder enfoque a otras partes del desarrollo y maximizar su potencial de uso para el mismo.
-A pesar de ser una librería de código abierto, es mantenida por Meta (anteriormente Facebook) - una empresa líder en servicios de redes sociales en Internet. Meta, utiliza esta librería para el desarrollo frontal de sus aplicaciones como Facebook e Instagram: servicios que son reconocidos por promover una UX/UI intuitiva, fácil de utilizar y escalable.
-El poder apalancarse del soporte y métodos de las redes sociales mas utilizadas en Internet - permite al equipo poder solventar la dirección de UX/UI del servicio - haciendo al servicio uno más familiar para el usuario.
-
-Estilo
-
-- React Bootstrap: Bootstrap es una librería de HTML/CSS enfocada en el diseño del desarrollo frontal de aplicaciones Web. Siendo una librería de código abierto, es utilizada por alrededor del 15% de los sitios de Internet disponibles.
-Su potencial está en la longevidad y soporte continuo en la comunidad de desarrollo - existen formatos y métodos probados por múltiples desarrolladores: quitándole al equipo el tiempo y esfuerzo necesario para planear la implementación de diseño y dar más tiempo al diseño mismo (que termina siendo una característica crítica en el servicio).
-
-_Componentes de Desarrollo de Servidor_
-
-Lenguajes de Programación y Ambiente de Ejecución
-- Node.JS:  es un ambiente de ejecución de JavaScript multiplataforma que opera código fuera del navegador utilizado.
-NodeJS se ha convertido en un estándar global para el desarrollo de aplicaciones tanto de escritorio como aplicaciones web. Operado y mantenido por OpenJS Foundation, el ambiente se apalanca del liderazgo de sus empresas fundadoras para su soporte.
-Corre sobre el motor V8 del proyecto Chromium - base de dos de los navegadores más populares en el mundo: Chrome y Edge.
-Su potencial está en el diseño del ambiente que permite una eficiente E/S asíncrona - permitiendo que el servicio pueda soportar múltiples peticiones de múltiples usuarios sin afectar el rendimiento y experiencia del usuario de los demás. La escalabilidad es un patrón en los servicios que corren en NodeJS.
-
-
+Además SendGrid opera un financiamiento por evento, es decir se paga conforme se va utilizando el servicio - para así no pagar de mas en un momento que no llegase a estar usando. SendGrid API es ampliamente soportado por GCP y varios de sus productos - de tal manera que Google tiene manuales ya hechos para integración.
 
 ### _Restricciones de Diseño e Implementación_
 En cuanto a las posibles restricciones que se tienen en el desarrollo de la aplicación, una de las más relevantes es el acceso a los servicios de la nube. En este caso, se tienen algunos créditos para AWS o Google Cloud, sin embargo, no necesariamente son suficientes. Similarmente, más adelante en el desarrollo, se podrían encontrar limitaciones de tecnologías tales como APIs que puedan no ser open source. 
