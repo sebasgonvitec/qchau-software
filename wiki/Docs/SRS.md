@@ -168,7 +168,7 @@ Asimismo se plantea el uso de una arquitectura enfocada en servicios (muy simila
 En la presente sección se definen las tecnologías que serán utilizadas para el desarrollo y operación del servicio propuesto. A su vez, cada tecnología definida muestra sus principales beneficios para el servicio propuesto por razones de soporte, operatividad y diseño.
 
 
-**Componentes de Desarrollo Frontal**
+1. **Componentes de Desarrollo Frontal**
 
 _Interfaz de Usuario_
 
@@ -194,7 +194,7 @@ Bootstrap es una librería de HTML/CSS enfocada en el diseño del desarrollo fro
 
 Su potencial está en la longevidad y soporte continuo en la comunidad de desarrollo - existen formatos y métodos probados por múltiples desarrolladores: quitándole al equipo el tiempo y esfuerzo necesario para planear la implementación de diseño y dar más tiempo al diseño mismo (que termina siendo una característica crítica en el servicio).
 
-**Componentes de Desarrollo Servidor**
+2. **Componentes de Desarrollo Servidor**
 
 _Lenguajes de Programación y Ambientes de Ejecución_
 
@@ -240,7 +240,7 @@ Una de las ventajas de MySQL es que los diferentes proveedores de nube permiten 
 
 Se usará MySQL en este proyecto para almacenar los datos que no necesiten constante actualización y que convenga, por su naturaleza, ser guardados con las relaciones necesarias para facilitar el acceso.
 
-**Componentes de Infraestructura**
+3. **Componentes de Infraestructura**
 
 _Virtualización_
 
