@@ -491,11 +491,35 @@ xiv. During the subsequent cycle, any defects fixed applied will be tested and r
 updated in Docs during the cycle.
 As per Process, final sign-off or project completion process will be followed
 
-## 4.2. Prueba de Riesgos y Factores de Mitigación
-| Riesgo | Prob. | Impacto | Plan de Mitigación|
-|------|-------|--------|-----------------|
+## 4.2. Riesgos de Prueba y Factores de Mitigación
 
---- 
+Riesgos Tecnológicos
+
+|**Riesgo**|**Probabilidad**|**Impacto**|**Plan de Mitigación**|
+| :- | :- | :- | :- |
+|Existe discrepancia de versiones entre las VMs implementadas.|Med.|Alto|La configuración de implementación debe definir un archivo de requerimientos con versiones específicas para todos los paquetes o librerías utilizadas.|
+|Diferentes instancias de VMs arrojan distintos resultados en pruebas.|Med.|Alto |La configuración de implementación debe estar estandarizada y certificada por el Tech Lead.|
+|Algún componente que requiera un servicio activo (bases de datos) no está disponible o deja de funcionar.|Alto|Med.|El equipo de desarrollo debe proveer un mantenimiento rutinario a estos componentes, así como proveer al equipo de pruebas con un *troubleshooting* de incidentes.|
+|Los recursos de cómputo requeridos por el ambiente de pruebas superan los recursos actuales.|Med.|Alto|El Tech Lead debe ajustar el ambiente de pruebas a la capacidad de los recursos, o solicitar y justificar un incremento al dueño de producto.|
+|Los métodos de pruebas no están bien configurados o construidos.|Bajo|Alto|El equipo de pruebas debe mantener revisiones en pareja (peer-reviews) sobre los métodos construidos.|
+|Los métodos de pruebas no son reproducibles.|Med.|Alto|El Test Lead debe definir un estándar para la construcción de métodos para que todo el equipo de pruebas pueda ajustarse a.|
+|La grabación de las pruebas es deficiente. |Alto|Alto|El método de grabación de pruebas debe ser estandarizado en el equipo, y debe ser probado antes de utilizarlo.|
+|Las grabaciones de las pruebas no son identificables.|Alto|Alto|El nombramiento y estructura de grabaciones debe ser definido por el Test Lead y debe por lo mínimo incluir: la fecha de ejecución y el ID de la prueba ejecutada.|
+|Las grabaciones de las pruebas están corruptas y no son distribuibles.|Med.|Alto|Deben existir copias de seguridad validadas de las grabaciones de la prueba, así como una validación de integridad del archivo antes de ser almacenado.|
+|Las grabaciones de las pruebas son accesibles a personal sin autorización.|Bajo|Med.|Debe haber un estándar de autenticación en el almacén de la documentación de pruebas: definido por el Test Lead.|
+
+Riesgos de Gestión de Proyectos
+
+|**Riesgo**|**Probabilidad**|**Impacto**|**Plan de Mitigación**|
+| :- | :- | :- | :- |
+|Se inicia una fase de pruebas sin haber acabado la anterior.|Bajo|Alto|Establecer el liderazgo del Test Lead y requerir su aprobación para cualquier inicio o fin de fase de pruebas.|
+|La retroalimentación del equipo de desarrollo es deficiente.|Med.|Med.|Establecer un estándar de reporte para el equipo de desarrollo, que cubra las necesidades del equipo de pruebas.|
+|La documentación del equipo de pruebas es deficiente.|Med.|Alto|Establecer un estándar de reporte para el equipo de pruebas, que cubra las necesidades del equipo de desarrollo.|
+|El equipo de desarrollo no recibe peticiones de cambios, a pesar de existir.|Bajo|Alto|El liderazgo del Tech Lead debe confirmar con el equipo de pruebas si existe alguna petición de cambio.|
+|El equipo de pruebas no recibe confirmación de cambios, a pesar de haberse reportado.|Bajo|Alto|El liderazgo del Test Lead debe confirmar rutinariamente con el equipo de desarrollo si existe alguna actualización en un cambio.|
+
+
+
 
 ## 4.3. Plan de Comunicación y Nómina del Equipo
 ### 4.3.1 Espectativas de Rol
