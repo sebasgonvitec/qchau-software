@@ -588,7 +588,18 @@ Todos los testers tendran acceso a la misma version de la base de datos y todos 
 
 # 7. CONCLUSIONES
 
----
+
+El presente documento demuestra la planeación de pruebas para el aplicativo propuesto. Este documento detalla la
+implementación de todas las pruebas a ejecutar sobre el aplicativo: desde su concepción, ejecución, y documentación.
+
+Las pruebas detalladas tienen pensado ejecutarse durante el desarrollo del aplicativo propuesto: para poder
+identificar, documentar, exhibir y corregir errores que surjan en el ambiente de desarrollo - así como para identificar riesgos en el diseño o implementación y poder emplear una solución.
+
+Estas pruebas serán ejecutadas por un equipo definido de pruebas - que trabaja de la mano con el equipo de desarrollo - esta comunicación entre equipos asegura un flujo de pruebas correcto y eficiente.
+
+La implementación exitosa de este documento será de gran beneficio para el equipo de desarollo, el cliente y 
+últimamente para el usuario: asegurando así la sustentabilidad y operabilidad del aplicativo - que se espera, sea un 
+gran producto.
 
 # 8. APROBACIIONES
 The Names and Titles of all persons who must approve this plan.
