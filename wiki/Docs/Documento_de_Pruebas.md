@@ -97,7 +97,7 @@ documentos adicionales para crear este, cronograma, excel, etc)
 
     4.4.[ Activities Cronogram]() 
 
-5. [TEST ENVIRONMENT]()
+5. [AMBIENTE PRUEBAS]()
 6. [TESTS]()
 7. [CONCLUSIONS]()
 8. [APPROVALS]()
@@ -705,12 +705,9 @@ based on the current schedule.
 creation of accurate defects.
 ● Implement fixes to defects according to schedule.
 Activities Cronogram
-5. TEST ENVIRONMENT
-The testing environment will consist of at minimum a windows environment, an intel i7 1.8 GHz core, 8GB
-RAM, along with Google Chrome version 99 at minimum.
-The application will be hosted through two instances, one to host the website and code, and another to
-host the database, both utilizing AWS instances.
-All testers will have access to the same version of the database and all necessary software
+5. AMBIENTE DE PRUEBAS
+El ambiente de pruebas local consistirá en un mínimo de un ambiente de windows 10 version, un intel i5 2.4 GHz, 8GB RAM 1333MHz, al igual que chrome versión 80 como mínimo. EL funcionamiento de la aplicacion web primero sera probado de manera local antes del despliegue en servicios de la nube.
+Todos los testers tendran acceso a la misma version de la base de datos y todos los programas necesarios.
 6. TESTS
 7. CONCLUSIONS
 The successful implementation of this test plan will greatly benefit the elaboration and future of the project.
