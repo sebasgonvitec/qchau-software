@@ -606,7 +606,19 @@ requirements.
 Data takes too long to send Medium Medium The testing team should do both
 performance and load tests.
 ### 4.3. Communications Plan and Team Roster
-**Expectativas de los roles**
+**Roles y sus Expectativas**
+
+Para el proceso de pruebas que se realizará, se tendrán los siguientes roles:
+
+| Rol | Detalle |
+|-----|---------|
+| Project Manager | Es el responsable de mantener un seguimiento y la organización de las actividades a realizar por el equipo durante el proyecto, de manera que se realicen los entregables en tiempo y forma. |
+| Líder de Pruebas | Es el responsable de las pruebas. Esto implica la planificación de pruebas, asignación de tareas, gestión de riesgos y cualquier otra actividad que involucre pruebas. |
+| Business Analyst | Es el responsable de comprender las necesidades y procesos de empresa y puede contribuir en el diseño de las pruebas considerando dichas necesidades. |
+| Product Owner | Es el responsable de representar las necesidades de los clientes por lo que  y en cerciorarse de que se cumplan los requerimientos. |
+| Equipo de Desarrollo | Es el responsable de crear el código (y modificarlo) conforme a los requerimientos y de manera correcta. En su alcance, se encuentra la realización de pruebas unitarias. |
+| Equipo de Pruebas | Es el responsable de ejecutar pruebas funcionales, no funcionales y todo lo que implican. Se encarga de asegurarse de que la calidad del producto sea la adecuada y necesaria. |
+
 
 The following list defines in general terms the expectations related to the roles directly involved in the
 management, planning or execution of the test for the project.
