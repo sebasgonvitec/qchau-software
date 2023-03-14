@@ -104,8 +104,8 @@ documentos adicionales para crear este, cronograma, excel, etc)
 
 ---
 
-## 1. INTRODUCTION
-### 1.1. Purpose
+## 1. Introducción
+### 1.1. Propósito
 
 El objetivo del presente documento, es proveer una propuesta respecto a las pruebas de software necesarias para el desarrollo y la funcionalidad correcta de la aplicación web de adquisión de autos. Estas contribuirán en la creación de un producto con un control de calidad alto por lo que serán detalladas y argumentadas en este escrito. 
 
@@ -119,14 +119,14 @@ En cuanto al plan de pruebas que se realizará, este incluirá la especificació
 - Riesgos
 - Calendario
 
-### 1.2. Project Overview
+### 1.2. Descripción del Proyecto
 
 El proyecto que será desarrollado por Qchau Software se trata de una solución para grupos automotices y compardores de autos en donde se permitirá digitalizar una parte del proceso de compra, evitando visitas excesivas a las agencias. Dicha solución está planteada como una aplicación web que permitirá a los usuarios interactuar con el agente, explorar distintas opciones de autos, obtener cotizaciones estimadas automáticamente, comparar autos, subir y editar sus documentos, solicitar pruebas de manejo y mantener un seguimiento adecuado (con la misma calidad de atención que en una agencia tradicional) de sus compras. 
 
 La aplicación beneficiará a los clientes de las agencias ya que les ahorrará tiempo, les proporcionará opciones de distintas marcas y agencias (con distintos planes de financiamiento) en una misma plataforma, y les permitirá tener una visión más clara de lo que quieren. Asimismo, beneficiará a las agencias y grupos automotrices, dándoles un espacio en el que tendrán visibilidad, la posibilidad de agilizar ciertos procesos (como lo es el de la entrega de documentos del cliente) para poder atender a más clientes y la posibilidad de obtener ciertas estadísticas que les podrán ayudar a analizar sus ventas. 
 
 
-### 1.3. Audience
+### 1.3. Audiencia
 
 El presente documento estará a la vista de los encargados del diseño de pruebas (quienes podrán cambiar ciertos componentes), los desarrolladores de software (quienes ejutarán las pruebas que se mencionarán), del Product Owner (quien tendrá una visión de la perspectiva del cliente y las necesidades de calidad), del Project Manager (quien supervisará que se lleven a cabo correctamente los casos de prueba) y de cualquier entidad involucrada en el proyecto (quienes podrán revisar que se cumplan los estándares del proyecto que se requieren). 
 
