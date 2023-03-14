@@ -494,34 +494,23 @@ As per Process, final sign-off or project completion process will be followed
 ## 4.2. Prueba de Riesgos y Factores de Mitigación
 | Riesgo | Prob. | Impacto | Plan de Mitigación|
 |------|-------|--------|-----------------|
-| Database Stops Working | Low | High | The maintenance team should constantly do data debugging to ensure the database works correctly. |
-| Database saturation of entry | Medium | High | A backend function that analyzes all of the input data before sending it to the database. |
-| Abuse of application in unintended ways | Medium | High | Create a cybersecurity team, which function would be to determine the security risks in order to mitigate them. |
-| Recordings sent to database with wrong tags | High | Medium | The administrators will be instructed to keep constant attention in the agents uploads. |
-| Too many Requests at Once | High | High | Create monitoring protocols to always make sure that the application is working within the resource utilization limits. |
-| Wrong People Access Recordings | Low | High | Continuous monitoring to make sure the application is working according to the requirements. | 
-| Desync of recording components | Low | Low | The testing team should make sure the application records the screen correctly. |
-| Recordings take up too much storage | Medium | High | The technical lead should choose a video format that satisfies the requirements. |
-| Data takes too long to send | Medium | Medium | The testing team should do both performance and load tests. |
 
----
+--- 
 
 ## 4.3. Plan de Comunicación y Nómina del Equipo
 ### 4.3.1 Espectativas de Rol
-The following list defines in general terms the expectations related to the roles directly involved in the
-management, planning or execution of the test for the project.
+Para el proceso de pruebas que se realizará, se tendrán los siguientes roles:
 
-|  | Roles | Descripción |
-|--|-------|-------------|
-| 1. | Project Manager | These members are in charge of directing a team to complete a specific project. They should both organize and plan the tasks required for the project to be successful, making sure they are all delivered according to the deathline, budget and requirements.
-| 2. | Test Lead | A test lead is responsible for directing the testing team. He should take into consideration the necessities of all the stakeholders to do all of the required tests to deliver a product that fits the requirements, time and budget given. |
-| 3. | Business Analyst | They have a key role in the project, since they have to understand the business necessities (which are defined by the client) and transmit them to the development team. They should perfectly understand both the business and the system. |
-| 4. | Development Lead | The lead developer(s) are in charge of designing, at least at a base level, the software architecture. They also are in charge of directing and organizing the development team to make sure the architecture is implemented correctly. |
-| 5. | Testing Team | Led by the test lead, they should make sure the software is developed according to the required quality standards. They should make tests before, while and after the development is done. |
-| 6. | Development Team | They should follow the architecture proposed by the development lead, and work continuously with the development team and the business analyst to make sure the system is being developed according to all the requirements. |
-| 7. | Technical Lead | This member is in charge of the most technical part of the project. He should also be part of the software architecture design, to ensure all of the technical aspects are taken into consideration. He mainly works with the development team. |
+| Rol | Detalle |
+|-----|---------|
+| Project Manager | Es el responsable de mantener un seguimiento y la organización de las actividades a realizar por el equipo durante el proyecto, de manera que se realicen los entregables en tiempo y forma. |
+| Líder de Pruebas | Es el responsable de las pruebas. Esto implica la planificación de pruebas, asignación de tareas, gestión de riesgos y cualquier otra actividad que involucre pruebas. |
+| Business Analyst | Es el responsable de comprender las necesidades y procesos de empresa y puede contribuir en el diseño de las pruebas considerando dichas necesidades. |
+| Product Owner | Es el responsable de representar las necesidades de los clientes por lo que  y en cerciorarse de que se cumplan los requerimientos. |
+| Equipo de Desarrollo | Es el responsable de crear el código (y modificarlo) conforme a los requerimientos y de manera correcta. En su alcance, se encuentra la realización de pruebas unitarias. |
+| Equipo de Pruebas | Es el responsable de ejecutar pruebas funcionales, no funcionales y todo lo que implican. Se encarga de asegurarse de que la calidad del producto sea la adecuada y necesaria. |
 
----
+--- 
 
 ### Gestión de Proyecto
 
