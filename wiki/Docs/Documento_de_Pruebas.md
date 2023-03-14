@@ -97,7 +97,7 @@ documentos adicionales para crear este, cronograma, excel, etc)
 
     4.4.[ Activities Cronogram]() 
 
-5. [TEST ENVIRONMENT]()
+5. [AMBIENTE PRUEBAS]()
 6. [TESTS]()
 7. [CONCLUSIONS]()
 8. [APPROVALS]()
@@ -677,7 +677,7 @@ based on the current schedule.
 creation of accurate defects.
 ● Implement fixes to defects according to schedule.
 Activities Cronogram
-5. TEST ENVIRONMENT
+5. AMBIENTE DE PRUEBAS
 The testing environment will consist of at minimum a windows environment, an intel i7 1.8 GHz core, 8GB
 RAM, along with Google Chrome version 99 at minimum.
 The application will be hosted through two instances, one to host the website and code, and another to
