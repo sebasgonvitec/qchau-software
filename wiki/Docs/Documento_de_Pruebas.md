@@ -684,14 +684,21 @@ Activities Cronogram
 El ambiente de pruebas local consistirá en un mínimo de un ambiente de windows 10 version, un intel i5 2.4 GHz, 8GB RAM 1333MHz, al igual que chrome versión 80 como mínimo. EL funcionamiento de la aplicacion web primero sera probado de manera local antes del despliegue en servicios de la nube.
 Todos los testers tendran acceso a la misma version de la base de datos y todos los programas necesarios.
 6. TESTS
-7. CONCLUSIONS
-The successful implementation of this test plan will greatly benefit the elaboration and future of the project.
-The tests will be conducted continuously during the entirety of the project’s development and will help
-identify potential problems and mitigate them before they can get out of hand. It is expected that this
-document will be accessed when need be, to help clarify any potential doubts about the tests and to find
-templates when applicable. It is expected that both the testers and developers that have helped shape this
-document and agreed to the contents within will do their best to adhere to it. All of these things should help
-the development run smoothly and fit the plans made prior to its implementation.
+## 7. CONCLUSIONES
+
+El presente documento demuestra la planeación de pruebas para el aplicativo propuesto. Este documento detalla la
+implementación de todas las pruebas a ejecutar sobre el aplicativo: desde su concepción, ejecución, y documentación.
+
+Las pruebas detalladas tienen pensado ejecutarse durante el desarrollo del aplicativo propuesto: para poder
+identificar, documentar, exhibir y corregir errores que surjan en el ambiente de desarrollo - así como para identificar riesgos en el diseño o implementación y poder emplear una solución.
+
+Estas pruebas serán ejecutadas por un equipo definido de pruebas - que trabaja de la mano con el equipo de desarrollo - esta comunicación entre equipos asegura un flujo de pruebas correcto y eficiente.
+
+La implementación exitosa de este documento será de gran beneficio para el equipo de desarollo, el cliente y 
+últimamente para el usuario: asegurando así la sustentabilidad y operabilidad del aplicativo - que se espera, sea un 
+gran producto.
+
+
 8. APPROVALS
 The Names and Titles of all persons who must approve this plan.
 Signature:
