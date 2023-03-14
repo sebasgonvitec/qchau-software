@@ -22,7 +22,7 @@ _Preparado por:_
     1. [Perspectiva de Producto](#perspectiva-del-producto)
     2. [Clases de Usuario y Características](#clases-de-usuario-y-características)
     3. [Ambiente de Operación](#ambiente-de-operación)
-        - [Interaccionescon la Aplicación](#interacciones-con-la-aplicación)
+        - [Interacciones con la Aplicación](#interacciones-con-la-aplicación)
         - [Arquitectura](#arquitectura)
         - [Tech Stack](#tech-stack)
     4. [Restricciones de Diseño e Implementación](#restricciones-de-diseño-e-implementación)
@@ -99,14 +99,26 @@ La aplicación será de gran utilidad no solo para los compradores que quieran r
 En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta es principalmente un medio de contacto digital y publicación de productos únicamente de agencias, por lo que no se gestionan procesos internos de cada agencia y grupo automotriz. Ahondando en lo anterior, las entidades involucradas en el desarrollo de la plataforma no tienen responsabilidades en cuanto a los acuerdos de pagos de mensualidades, las negociaciones realizadas por la agencia, la entrega ni el mantenimiento de los vehículos. 
 
 ### _Referencias_
+https://www.youtube.com/watch?v=9kRgVxULbag
 
+https://firebase.google.com/codelabs/firebase-android#0
+
+https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
+
+https://blog.logrocket.com/how-to-build-chatroom-app-react-firebase/ 
+
+https://nodejs.org/en/docs/
+
+https://www.freecodecamp.org/learn/back-end-development-and-apis/
+
+https://cloud.google.com/products#section-1
 
 ---
 ## _Descripción General_
 En la presente sección se incluyen las especificaciones generales del producto final, en donde se describirán detalles tales como los tipos de usuarios definidos para el proyecto, el ambiente del software, limitaciones, asunciones, y dependencias. Lo anterior con la finalidad de obtener una mejor idea de las características y las consideraciones que se tienen que tomar para un correcto desarrollo. 
 
 ### _Perspectiva del Producto_
-La necesidad del producto nace del proceso inconveniente que sufren muchos clientes en la adquisición de un auto. En muchos casos, los clientes tienen que asistir múltiples veces a las agencias para resolver temas que podrían ser solucionados de manera remota, ahorrando tiempo y recursos al cliente y generando la posibilidad de realizar más ventas por parte de los grupos automotrices. 
+La necesidad del producto nace del proceso inconveniente que sufren muchos clientes en la adquisición de un auto. En muchos casos, los clientes tienen que asistir múltiples veces a las agencias para resolver temas que podrían ser solucionados de manera remota. De esta manera, la solución le ahorrará tiempo y recursos al cliente y generará la posibilidad de realizar más ventas por parte de los grupos automotrices. 
 
 El producto propuesto, es nuevo (es decir, no es la extensión ni desarrollo de un proyecto ya iniciado), compartiendo características con páginas tales como la de Kavak o la de Tesla. Se planea tener una aplicación transparente e interactiva con los usuarios de manera que reciban la misma experiencia o una mejor que en las agencias. Más adelante, se describirán las funcionalidades del sistema y la manera en la que otorgarán un valor agregado a la aplicación.
 
@@ -119,7 +131,7 @@ En cuanto a los usuarios que utilizarían el sistema, se identificaron cinco pri
 - *Usuario Administrador de la Plataforma*: este usuario es el encargado de revisar todos los temas administrativos de la plataforma. Lo previo incluye verificar el alta de los distintos grupos automotrices con sus agencias, gestionar datos y visualizar información relevante del sistema. 
 
 ### _Ambiente de Operación_
-La presente sección contiene los aspectos técnicos que se requieren para la operación de la aplicación. Es relevante mencionar que se trata de una aplicación web que será albergada en la nube y será útil para la venta de coches en la República Mexicana.  
+La presente sección contiene los aspectos técnicos que se requieren para la operación de la aplicación. Es relevante mencionar que se trata de una aplicación web que será albergada en la nube y será útil para la venta de coches en la República Mexicana.
 
 #### **Interacciones con la Aplicación**
 En cuanto a las interacciones con la aplicación, también consideradas ambiente de sistema, se plasman los actores principales (usuarios) mencionados anteriormente   la manera en la que tendrán acceso a las distintas funcionalidades de la plataforma.
@@ -129,6 +141,8 @@ En cuanto a las interacciones con la aplicación, también consideradas ambiente
 Figura 1. Ambiente del Sistema
 
 En la figura del ambiente del sistema, es posible observar que la administración del sistema (controlada por el usuario administrador de la plataforma) tiene acceso a todas las áreas del sistema. Por otro lado, se tiene la interfaz de ventas en donde el usuario vendedor puede tener un manejo de sus funciones de venta y su interacción con el usuario final en el área comercial. Finalmente, la administración de negocio (que gestiona el usuario grupo automotriz) involucra la revisión de estadísticas y la gestión de administración de ventas (utilizada por el usuario gerente).
+
+---
 
 #### **Arquitectura**
 En cuanto a la arquitectura del sistema, se plantea una solución en la nube y se considera el uso de una estructura de microservicios.
@@ -146,18 +160,264 @@ Considerando los servicios de mensajería se plantea agregar al servidor de la a
 
 Haciendo referencia a la salida al público, se planea tener un balanceador de carga con el fin de distribuir el tráfico a los servidores. De igual manera, se planea utilizar un servicio de firewall para monitorear el tráfico de la red y un servicio de autenticación de usuarios para la administración de identidad de los usuarios. Se quiere utilizar el servicio de CDN para, junto con un cache, alojar ahí los medios que se utilizarán en la plataforma. Finalmente, se tiene un proveedor de DNS para resolver los dominios de los sitios web a usar. 
 
-Regresando a la idea de utilizar microservicios, se consideran los mismos dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de microservicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
+Asimismo se plantea el uso de una arquitectura enfocada en servicios (muy similar a microservicios pero con servicios compartiendo las bases de datos), se considera esto dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de la aruitectura orientada a servicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
+
+---
 
 #### **Tech Stack**
+En la presente sección se definen las tecnologías que serán utilizadas para el desarrollo y operación del servicio propuesto. A su vez, cada tecnología definida muestra sus principales beneficios para el servicio propuesto por razones de soporte, operatividad y diseño.
+
+
+1. **Componentes de Desarrollo Frontal**
+
+_Interfaz de Usuario_
+
+HTML5, CSS3, ECMAScript 2021
+
+Estos son los lenguajes y estándares a utilizar - son virtualmente el método universal de desarrollo en un ambiente web. HTML5 y CSS3 son las versiones más extendidas a través de los navegadores en actual uso. ECMAScript 2021 es el último versionamiento del estándar para JavaScript - extendido en múltiples navegadores modernos.
+
+_Estructuras de Front-End_
+
+**React**
+
+React es una librería de JavaScript enfocada en el desarrollo frontal de aplicaciones Web. Está enfocada meramente en el desarrollo frontal, lo que la habilita en perder enfoque a otras partes del desarrollo y maximizar su potencial de uso para el mismo.
+
+A pesar de ser una librería de código abierto, es mantenida por Meta (anteriormente Facebook) - una empresa líder en servicios de redes sociales en Internet. Meta, utiliza esta librería para el desarrollo frontal de sus aplicaciones como Facebook e Instagram: servicios que son reconocidos por promover una UX/UI intuitiva, fácil de utilizar y escalable.
+
+El poder apalancarse del soporte y métodos de las redes sociales mas utilizadas en Internet - permite al equipo poder solventar la dirección de UX/UI del servicio - haciendo al servicio uno más familiar para el usuario.
+
+_Estilo_
+
+**React-Bootstrap**
+
+Bootstrap es una librería de HTML/CSS enfocada en el diseño del desarrollo frontal de aplicaciones Web. Siendo una librería de código abierto, es utilizada por alrededor del 15% de los sitios de Internet disponibles.
+
+Su potencial está en la longevidad y soporte continuo en la comunidad de desarrollo - existen formatos y métodos probados por múltiples desarrolladores: quitándole al equipo el tiempo y esfuerzo necesario para planear la implementación de diseño y dar más tiempo al diseño mismo (que termina siendo una característica crítica en el servicio).
+
+2. **Componentes de Desarrollo Servidor**
+
+_Lenguajes de Programación y Ambientes de Ejecución_
+
+**Node.JS**
+
+NodeJS es un ambiente de ejecución de JavaScript multiplataforma que opera código fuera del navegador utilizado.
+
+NodeJS se ha convertido en un estándar global para el desarrollo de aplicaciones tanto de escritorio como aplicaciones web. Operado y mantenido por OpenJS Foundation, el ambiente se apalanca del liderazgo de sus empresas fundadoras para su soporte.
+
+Corre sobre el motor V8 del proyecto Chromium - base de dos de los navegadores más populares en el mundo: Chrome y Edge.
+
+Su potencial está en el diseño del ambiente que permite una eficiente E/S asíncrona - permitiendo que el servicio pueda soportar múltiples peticiones de múltiples usuarios sin afectar el rendimiento y experiencia del usuario de los demás. La escalabilidad es un patrón en los servicios que corren en NodeJS.
+
+_Estructuras de Aplicación Web_
+
+**Express**
+
+Express es una estructura de código abierto para desarrollar aplicaciones Web y APIs RESTful para comunicación con el servidor.
+
+Express es extremadamente popular con servicios web de gran escala - como PayPal y Uber: comprobando su utilidad para aplicaciones de servicio, contacto y proveo por Internet.
+
+La estructura es de código abierto y es mantenida regularmente por StrongLoop - una empresa de desarrollo respaldada por IBM; además, la última versión estable fue publicada hace 10 meses. Por esto, se comprueba su sustentabilidad de soporte y mantenimiento: minimizando así el riesgo de migración e incompatibilidad.
+
+Express es reconocido por su concentración en proveer alto rendimiento: considerando que el proyecto abarcaría toda la República Méxicana - un país con un porcentaje de penetración de 71% - es probable que el servicio requiera mantener la integralidad y accesibilidad a pesar del flujo de usuarios.
+
+_Base de Datos_
+
+**MongoDB**
+
+MongoDB es una base de datos de Software Libre de tipo no relacional. Es una de las bases de datos más populares para el desarrollo de aplicaciones y otros productos.
+
+MongoDB permite tener una base de datos flexible y fácil de adaptar a los requerimientos del usuario. Otro de los beneficios de esta base de datos es que existen muchos módulos y librerías para integrar esta base de datos con otras tecnologías de desarrollo de aplicaciones.
+
+Durante el desarrollo de este proyecto se utilizará MongoDB para el almacenamiento y acceso de datos que estén en constante actualización, como es el historial del usuario, las publicaciones guardadas del usuario, entre otras.
+
+**MySQL**
+
+MySQL es uno de los muchos sabores de bases de datos relacionales y el más popular de código abierto del mercado
+
+Esta base de datos permite tener los datos almacenados en tablas y con relaciones entre sí, de manera que el acceso a la información se hace mucho más fácil y eficiente.
+
+Una de las ventajas de MySQL es que los diferentes proveedores de nube permiten su fácil implementación con las herramientas y servicios que ofrece cada uno.
+
+Se usará MySQL en este proyecto para almacenar los datos que no necesiten constante actualización y que convenga, por su naturaleza, ser guardados con las relaciones necesarias para facilitar el acceso.
+
+3. **Componentes de Infraestructura**
+
+_Virtualización_
+
+**Docker**
+
+Docker es una herramienta de contenerización de aplicaciones de código abierto utilizada para el desarrollo y despliegue de aplicaciones web.
+
+Los contenedores ofrecen la ventaja de tener un ambiente de despliegue ajustado a las medidas de cada aplicación y de igual manera poder generar una imagen de esa configuración para facilitar el despliegue de varias instancias idénticas de la aplicación.
+
+Durante el proyecto se utilizará Docker como una opción de despliegue de los servicios que compongan el backend de la aplicación.
+
+**Kubernetes**
+
+Como se mencionó anteriormente, Docker se utiliza para generar empaquetar instancias de la aplicación en contenedores. Kubernetes trabaja de igual manera en la gestión de las instancias de estos contenedores.
+
+Es una herramienta de orquestación de despliegue y uso de contenedores que permite escalar, administrar e implementar múltiples contenedores.
+
+Se utilizará como opción de despliegue junto con Docker para asegurar la escalabilidad de la aplicación.
+
+_Servicio de Nube_
+
+**Google Cloud Platform**
+
+Google Cloud Platform o GCP es una suite de infraestructura de cómputo en la nube ofrecida y soportada por Google.
+
+Esta plataforma es utilizada de manera extensa en servicios de Internet - incluyendo el mismo Google: quien es virtualmente el servicio de Internet mas utilizado a nivel mundial.
+
+La capacidad de cómputo proveída por la empresa líder en servicios de Internet es suficiente validación y comprobación de la utilidad apreciable para el servicio a desarrollar. Además, poder apalancarse de los servicios de Google - que están presentes en la gran mayoría de sitios (Google, Gmail, Youtube, etc..) facilita la habilidad del servicio de crecer.
+
+La curva de aprendizaje en el equipo es más reducida. 40% del equipo está familiarizado con GCP, a comparación de un 20% familiarizado con AWS y un 0% familiarizado con Azure - servicios de cómputo en la nube alternativos.
+
+_Servicios de Infraestructura_
+
+_Computación_
+
+**Compute Engine**
+
+Compute Engine es el servicio de cómputo y hosting en la nube de GCP. Este servicio ofrece máquinas virtuales para ejecutar la aplicación en diferentes instancias o regiones para su acceso por los clientes.
+
+Es inherente a la implementación en la nube, pues sugiere que toda la aplicación corra en la misma.
+
+Compute Engine ofrece múltiples ventajas frente a otras alternativas disponibles, como AWS Elastic Compute.
+
+Las máquinas virtuales de Compute Engine ofrecen consistencia en rendimiento, haciéndolas sustentables para aplicaciones de alto rendimiento de Linux.
+
+Compute Engine utiliza la red de fibra global privada de Google, propagando así la aplicación sobre una red exclusiva y rápida.
+
+Compute Engine se financia frente al uso por minuto, es decir nunca se va a cobrar adicionales por cómputo no utilizado, o por cómputo imprevisto.
+
+_Seguridad y Acceso_
+
+**Cloud Identity**
+
+Cloud Identity es la plataforma de IAM/EMM de GCP - ofrece soluciones de administración de identidades para los administradores del servicio. Múltiples características maximizan la seguridad y experiencia de todos los usuarios de la plataforma: MFA y SSO.
+
+Además, permite a los usuarios del servicio inscribirse al sistema utilizando su cuenta de Google - el proveedor de correo electrónico más grande del mundo.
+
+**Firewalls**
+
+Firewalls es el servicio de Cortafuegos de GCP. El nivel _Essential_ del servicio prueba ser suficiente para el servicio - permitiendo mantener una granularidad sencilla de control de cortafuegos para el servicio: ya que no es necesario mantener una revisión singular y específica.
+
+_Almacenamiento_
+
+**Cloud Storage**
+
+Cloud Storage es el servicio de almacenamiento en cubetas de GCP. Teniendo múltiples niveles de servicio - todas pueden ser apalancadas para diferentes etapas del negocio.
+
+Cloud Storage tiene una estructura de archivos superior a otros proveedores, además de ofrecer recuperación de archivos rápida (esencial para mantener al cliente interesado en la plataforma). Del lado del desarrollo, la configuración de Cloud Storage es mucho más sencilla, y requiere menos aprendizaje que las alternativas como S3 de AWS.
+
+Además Cloud Storage se incorpora fácilmente con el servicio de almacenamiento en nube comercial de Google - Drive: que es utilizado por múltiples empresas y corporaciones para sus soluciones de documentación, pudiendo así facilitar a los Grupos Automotrices el acceso a sus documentos, y al usuario con sus Derechos de Acceso (ARCO).
+
+_Bases de Datos_
+
+**CloudSQL**
+
+CloudSQL es el producto de GCP para el manejo de bases de datos relacionales SQL. Cuenta con compatibilidad con varias bases de datos SQL como lo es MySQL, PostgreSQL, etc.
+
+Durante el proyecto se utilizará CloudSQL como el servicio en el que se montará la parte de nuestra base de datos relacional y se utilizarán funciones como su opción de MySQL completamente gestionado para facilitar la implementación.
+
+**Firestore**
+
+Firestore es un producto relativamente nuevo de GCP. Consiste en una base de datos gestionada y de tipo no relacional. Firestore es muy amigable para usuarios nuevos y no es muy costosa comparada con las demás alternativas.
+
+Se utilizará Firestore en el proyecto como la base de datos del servicio de mensajería instantánea, ya que cuenta con una base de datos en tiempo real que funciona a través de eventos disparados por los cambios hechos en los datos.
+
+**Backup and DR**
+
+Backup and DR es un servicio de protección de información para GCP.
+
+Este servicio protege al sistema frente a un cambio erróneo, ataques y otros riesgos que atenten contra la información almacenada.
+
+Este servicio protege no solo las bases de datos, si no también a las maquinas virtuales propuestas para la aplicación - haciendo así muy fácil restaurar el servicio inmediatamente después de un desastre.
+
+_Servicios de Internet_
+
+**Cloud DNS**
+
+Cloud DNS es un servicio de resolución de nombres de dominio desarrollado por Google.
+
+Este servicio es requerido para operar una aplicación web familiar, útil y agradable al usuario (tanto final, como los grupos automotrices).
+
+Cloud DNS tiene varias variables donde triunfa frente a otros servicios de DNS: por ejemplo, es el DNS más rápido disponible en internet, y tiene una precisión del 97.2%.
+
+**Cloud CDN**
+
+Cloud CDN es un servicio de entrega de contenido desarrollado por Google con las aplicaciones web implementadas en GCP en mente. Este servicio se utiliza para poder reducir el esfuerzo requerido por la aplicación para enviar contenido multimedia (fotos, videos, etc.)
+
+No usar un CDN puede resultar en una ralentización del servicio y afectar de forma severa a su escalabilidad y accesibilidad a muchos usuarios.
+
+Cloud CDN ofrece una integración fluida con GCP, e incluso apalanca otros servicios de Google para ofrecer una seguridad extendida - como Google Cloud Armor.
+
+Aunque Cloud CDN se queda muy corto frente a los CDNs mas populares - como CloudFlare - en cuanto a presencia (puntos en la red), es mucho mas rápido gracias a la utilización de protocolos exclusivos de Google que optimizan el rendimiento.
+
+**Cloud Load Balancing**
+
+Cloud Load Balancing es un servicio de distribución y balanceo de carga global desarrollado por Google. Este balanceador responde al tráfico de la aplicación en tiempo real para instancias nuevas virtualizaciones del equipo y aliviar el esfuerzo de las existentes en tiempo de uso masivo.
+
+Cloud Load Balancing ofrece gestiones automáticas para escalación - haciendo que en tiempo de estrés sobre la aplicación pueda escalar el servicio de manera instantánea.
+
+Cloud Load Balancing puede admitir de más de un millón de peticiones por segundo, y es integrable con el CDN propuesto sin requerir esfuerzo absoluto.
+
+_Inteligencia de Negocios_
+
+**Cloud Functions**
+
+Cloud Functions es uno de los servicios de cómputo que ofrece Google Cloud Platform. Consiste en un espacio de procesamiento para funciones individuales o pequeñas que se activan por medio de un trigger.
+
+En nuestro caso, este trigger será una llamada al API al que hagan referencia, y las usaremos en el desarrollo del proyecto para montar los diferentes servicios por los que se compone nuestra aplicación.
+
+**BigQuery**
+
+BigQuery es el servicio de almacén de datos de GCP por excelencia. Este servicio está diseñado para almacenar datos crudos y específicos que agrupados forjan big data sobre el servicio.
+
+BigQuery permite la fácil administración del almacén puesto que deshace la necesidad de tener un administrador de base de datos asignado al automáticamente gestionar la administración.
+
+Además esta solución es amigable con los procesos operativos del desarrollo y de la administración de la implementación: ofrece la capacidad de estimar el costo previo a una consulta, y a setear cuotas y límites así como notificaciones del mismo.
+
+Este servicio se utilizaría para el almacenamiento de datos de uso de la plataforma (clicks, scrolls, etc) para su limpieza, y análisis con herramientas de BI. Estos datos son recopilados de manera extensa por lo que generan demasiada información que no es sustentable en los servicios de BD mencionados anteriormente.
+
+**Looker**
+
+Looker es un servicio de Inteligencia de Negocios de Google. Este servicio es traducible con múltiples bases y almacenes de datos (incluida BigQuery - la propuesta para este servicio) para la generación de estadísticas de inteligencia con base en big data.
+
+Este servicio será aplicado a la plataforma para la generación de estadísticas en tiempo real de la plataforma. Aprovechando su utilidad de recolección, cómputo, y flujos de trabajo por evento: Looker generará estadísticas de uso para poder evaluar la sustentabilidad, rentabilidad y rendimiento de la plataforma: permitiendo al equipo generar cambios en la implementación a raíz del uso sin necesidad de generar un consenso o estudio tardado.
+
+_Comunicación_
+
+**Firebase**
+
+Firebase es una suite de servicios de hosting de Google. Estos servicios de hosting se enfocan principalmente en soluciones de tiempo-real, ya sea contenido, notificaciones o autenticación.
+
+Siendo una suite de Google, es fácilmente integrable a los servicios de GCP. Además operando como un Backend-as-a-Service, se encarga de la gestión automática de algunas configuraciones críticas para lo que se utilice.
+
+En este caso, el servicio puede apalancarse para crear el sistema de Chat en Vivo sin tener que involucrar directamente el backend del servicio - segmentando así el servicio de una de las funcionalidades críticas y más complejas del desarrollo.
+
+**Natural Language Processing AI API**
+
+NLP API es un producto de GCP que apalanca los esfuerzos de aprendizaje automatizado de Google para desarrollar un modelo que traduzca I/O natural en algo mas discreto.
+
+Esta herramienta podrá utilizarse para darle una familiaridad y experiencia increíble al proceso de buscar un automóvil en el servicio - ingresando la búsqueda sin estructuración del cliente y devolviéndole en filtros útiles para el esquema de datos del servicio.
+
+**SendGrid**
+
+SendGrid es un API de envío de correos electrónicos masivos de Twilio - una de las empresas de comunicación por Internet más grandes del mundo. Este servicio es utilizado por miles de plataformas de usuarios por Internet: Uber, Airbnb, etc - para sus servicios de correspondencia de mercado y transaccional.
+
+Las habilidades y facultades de hacer de SendGrid una herramienta crítica para el desarrollo de la UX del servicio: confirmación de registro por correo, notificaciones de estatus, y correspondencia de marketing.
+
+Además SendGrid opera un financiamiento por evento, es decir se paga conforme se va utilizando el servicio - para así no pagar de mas en un momento que no llegase a estar usando. SendGrid API es ampliamente soportado por GCP y varios de sus productos - de tal manera que Google tiene manuales ya hechos para integración.
 
 ### _Restricciones de Diseño e Implementación_
 En cuanto a las posibles restricciones que se tienen en el desarrollo de la aplicación, una de las más relevantes es el acceso a los servicios de la nube. En este caso, se tienen algunos créditos para AWS o Google Cloud, sin embargo, no necesariamente son suficientes. Similarmente, más adelante en el desarrollo, se podrían encontrar limitaciones de tecnologías tales como APIs que puedan no ser open source. 
 
 ### _Supuestos y Dependencias_
 En el caso de las suposiciones y dependencias que se consideran para la creación del presente documento son las siguientes: 
-- Las agencias y grupos automotrices tienen la disposición de transformar digitalmente sus negocios. 
-- Una sección creciente de clientes prefieren hacer sus compras de coches en línea.
-- Se buscarán ciertas tecnologías externas tales como verificadores de INE o procesadores de pago. 
+1.  Las agencias y grupos automotrices tienen la disposición de transformar digitalmente sus negocios. 
+2. Una sección creciente de clientes prefieren hacer sus compras de coches en línea.
+3. Se buscarán ciertas tecnologías externas tales como verificadores de INE o procesadores de pago. 
 
 ---
 ## _Características del Sistema_
