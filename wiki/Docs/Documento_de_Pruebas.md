@@ -105,56 +105,31 @@ documentos adicionales para crear este, cronograma, excel, etc)
 
 ## 1. INTRODUCTION
 ### 1.1. Purpose
-This document will describe the reasoning behind the testing approach and general planning for the
-development of Datamatics. In particular it includes:
 
-● Testing Strategy for each aspect of the application and why it was chosen
+El objetivo del presente documento, es proveer una propuesta respecto a las pruebas de software necesarias para el desarrollo y la funcionalidad correcta de la aplicación web de adquisión de autos. Estas contribuirán en la creación de un producto con un control de calidad alto por lo que serán detalladas y argumentadas en este escrito. 
 
-● The application’s scope and reach
-
-● Acceptance criteria for each aspect of the application and its tests
-
-● The execution strategy describing how each test will transpire and what will be done to
-identify and document defects, along with the implementation of fixes
-
-● The test management plan to help understand what to do in the case of test failure, along
-with a schedule to maintain control over when specific tests should be held and repeated
-if necessary
-
-● Scenario description to fully understand the members of the testing team, their role in the
-process and what equipment and software will be used for testing purposes
+En cuanto al plan de pruebas que se realizará, este incluirá la especificación de elementos de software que serán probados, el nivel y la secuencia en la que serán probados, los criterios de salida y la manera en la que se aplicará la estrategia en el ambiente de pruebas. Junto con lo anterior, se considerarán los siguientes puntos:
+- Lo que está dentro y fuera del alcance
+- Supuestos
+- Roles y responsabilidades del equipo QA
+- Herramientas
+- Entregables
+- Gestión de Defectos
+- Riesgos
+- Calendario
 
 ### 1.2. Project Overview
-Datamatics is a web application that provides a call center the unique tool to keep track of their agents’
-calls and easily identify their key characteristics. This includes the client satisfaction of a call, its
-duration, and the topic discussed.
-It is especially useful for a call center to train its agents through previously successful calls, along with
-easily identifying agents who are doing well along with those who might need some help.
-Agents will not have to worry about intrusive software stopping their work, as Datamatics works in the
-background and only requires opening on startup, while their supervisors will be able to enjoy their
-personalized dashboard showcasing statistical information from all their agents, along with the ability
-to view their recordings with ease.
+
+El proyecto que será desarrollado por Qchau Software se trata de una solución para grupos automotices y compardores de autos en donde se permitirá digitalizar una parte del proceso de compra, evitando visitas excesivas a las agencias. Dicha solución está planteada como una aplicación web que permitirá a los usuarios interactuar con el agente, explorar distintas opciones de autos, obtener cotizaciones estimadas automáticamente, comparar autos, subir y editar sus documentos, solicitar pruebas de manejo y mantener un seguimiento adecuado (con la misma calidad de atención que en una agencia tradicional) de sus compras. 
+
+La aplicación beneficiará a los clientes de las agencias ya que les ahorrará tiempo, les proporcionará opciones de distintas marcas y agencias (con distintos planes de financiamiento) en una misma plataforma, y les permitirá tener una visión más clara de lo que quieren. Asimismo, beneficiará a las agencias y grupos automotrices, dándoles un espacio en el que tendrán visibilidad, la posibilidad de agilizar ciertos procesos (como lo es el de la entrega de documentos del cliente) para poder atender a más clientes y la posibilidad de obtener ciertas estadísticas que les podrán ayudar a analizar sus ventas. 
+
 
 ### 1.3. Audience
--  The document will be viewed primarily by the project team members, along with the stakeholders
-and other such participants
 
-i. The document is a guideline for the project team members, providing the tasks they should be
-conducting for the purpose of successful testing and development
+El presente documento estará a la vista de los encargados del diseño de pruebas (quienes podrán cambiar ciertos componentes), los desarrolladores de software (quienes ejutarán las pruebas que se mencionarán), del Product Owner (quien tendrá una visión de la perspectiva del cliente y las necesidades de calidad), del Project Manager (quien supervisará que se lleven a cabo correctamente los casos de prueba) y de cualquier entidad involucrada en el proyecto (quienes podrán revisar que se cumplan los estándares del proyecto que se requieren). 
 
-ii. The project manager will use the document to adhere to the schedule agreed upon, along with
-constant monitoring of progress based on what is expected and written below. They are
-accountable for the results and performance of each test
-
-iii. The stakeholders or their representatives may monitor the document to ensure the development is
-adhering to the s requirements and their interests
-
-iv. The development team must ensure that the test plan and deliverables stated within the document are
-the same that were previously agreed upon during the design phase, along with fixing any defects of
-failed tests that are stated
-
-v. The Business analyst will provide inputs on functional changes and ensure the stakeholders are
-informed and agree with any potential changes
+En este caso, los desarrolladores utilizarán el documento como una guía para la ejecución adecuada de las pruebas, para la comprensión de los elementos relevantes a probar, y para la aclaración del proceso en general. 
 
 ## 2. TEST STRATEGY
 ### 2.1. Test Description
