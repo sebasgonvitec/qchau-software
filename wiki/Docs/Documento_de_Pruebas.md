@@ -605,8 +605,9 @@ video format that satisfies the
 requirements.
 Data takes too long to send Medium Medium The testing team should do both
 performance and load tests.
-4.3. Communications Plan and Team Roster
-Role Expectations
+### 4.3. Communications Plan and Team Roster
+**Expectativas de los roles**
+
 The following list defines in general terms the expectations related to the roles directly involved in the
 management, planning or execution of the test for the project.
 Roles Description
