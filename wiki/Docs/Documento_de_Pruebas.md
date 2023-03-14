@@ -510,33 +510,61 @@ QA DEPARTMENT IMAGE
 The document can be visualized here and in the appendix
 Note: this estimate is for the TCOE team only Testing Schedule
 
-## 3. EXECUTION STRATEGY
+## 3. ESTRATEGÍA DE EJECUCIÓN
 
-### 3.1. Entry and Exit Criteria
-- The entry criteria refer to the desirable conditions in order to start test execution; only the
-migration of the code and fixes need to be assessed at the end of each cycle.
+### 3.1. Criterios de Entrada y Salida
 
-i. The exit criteria are the desirable conditions that need to be met in order proceed with the
-implementation.
-ii. Entry and exit criteria are flexible benchmarks. If they are not met, the test team will assess the
-risk, identify mitigation actions and provide a recommendation. All this is input to the project
-manager for a final “go-no go” decision.
-iii. Entry criteria to start the execution phase of the test: the activities listed in the Test Planning
-section of the schedule are 100% completed.
-iv. Entry criteria to start each cycle: the activities listed in the Test Execution section of the schedule
-are 100% completed at each cycle.
-Exit Criteria 
-Test Team
-Technical Team 
-Notes
-100% Test Scripts executed
-95% pass rate of Test Scripts
-No open Critical and High severity defects
-95% of Medium severity defects have been closed
-All remaining defects are either canceled or
-documented as Change Requests for a future release
-All expected and actual results are captured and
-documented with the test script
+**Criterio de Entrada**
+
+Unitarias
+
+
+|*Criterio de Entrada*|*Equipo de Prueba*|*Equipo Técnico*|*Notas*|
+| :- | :- | :- | :- |
+|- El equipo de cómputo es completamente funcional, y configuración.||||
+|<p></p><p>- Los paquetes requeridos están instalados y disponibles en el equipo de computo.</p>||||
+|- La librería de pruebas está disponible y funcional en el equipo de cómputo.||||
+|- El ambiente de pruebas está configurado y funcional en el equipo de cómputo.||||
+
+Integración
+
+
+|*Criterio de Entrada*|*Equipo de Prueba*|*Equipo Técnico*|*Notas*|
+| :- | :- | :- | :- |
+|- Las máquinas virtuales (GCP Compute Engine) están disponibles y corriendo.||||
+|- Los paquetes requeridos están instalados y disponibles en las máquinas virtuales.||||
+|- Las bases de datos están instanciadas, y con el esquema.  ||||
+|- La librería de pruebas está disponible en el equipo de computo.||||
+|- El ambiente de pruebas está configurado y corriendo.||||
+
+Aceptación
+
+
+
+|*Criterio de Entrada*|*Equipo de Prueba*|*Equipo Técnico*|*Notas*|
+| :- | :- | :- | :- |
+|- Las máquinas virtuales (GCP Compute Engine) están disponibles y corriendo.||||
+|- Los paquetes requeridos están instalados y disponibles en las máquinas virtuales.||||
+|- Las bases de datos están instaladas, y con el esquema.  ||||
+|- La librería de pruebas está disponible en el equipo de computo.||||
+|- El ambiente de pruebas está configurado y corriendo.||||
+
+**Criterio de Salida**
+
+Unitarias, Integración, Aceptación
+
+
+|*Criterio de Salida*|*Equipo de Prueba*|*Equipo Técnico*|*Notas*|
+| :- | :- | :- | :- |
+|- Se probaron el 100% de las pruebas establecidas.||||
+|- No existen problemas de nivel severo o crítico.||||
+|- Los problemas de nivel severo o crítico se documentan, así como su solución o delegación.||||
+|- El 100% de los componentes tiene un mínimo de 90% de índice de aprobación.||||
+|- Todas las pruebas arrojan un resultado legible, que después es documentado como su resultado.||||
+|- El equipo de cómputo, así como los componentes involucrados, sigue funcional después de la ejecución de las pruebas.||||
+
+
+
 4. TEST MANAGEMENT PROCESS
 4.1. Test Execution Process
 . Once all Test cases are approved and the test environment is ready for testing,
