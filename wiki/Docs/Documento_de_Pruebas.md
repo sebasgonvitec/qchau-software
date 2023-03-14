@@ -403,7 +403,6 @@ QA DEPARTMENT IMAGE
 The document can be visualized here and in the appendix
 Note: this estimate is for the TCOE team only Testing Schedule
 
-=======
 # 3. ESTRATEGÍA DE EJECUCIÓN
 
 ## 3.1. Criterios de Entrada y Salida
