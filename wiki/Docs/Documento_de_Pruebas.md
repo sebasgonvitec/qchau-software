@@ -1,14 +1,14 @@
-# Test Plan
+# Plan de Pruebas
 
 ## Qchau
 
 ---
 
-### Revision and Sign Off Sheet
+### Hoja de Revisión
 
-**Document History** - To maintain a list of changes being made
+**Historial del Documento** - Para mantener un seguimiento de los cambios realizados en el documento
 
-| Version | Date | Author | Description of Change |
+| Versión | Fecha | Autor | Descripción del Cambio |
 |---------|------|--------|-----------------------|
 <!-- | 1 | 10/03/2022 | Leonardo Ramírez Landa | Draft |
 | 2 | 11/03/2022 | Ian Seidman | Introduction, Test Objectives | 
@@ -24,22 +24,21 @@
 
 ---
 
-**Approvers List** - To track who has reviewed and signoff on the Test plan
+**Lista de Supervisores** - Mantener un seguimiento de las personas que han revisado el documento
 
-| Name | Role | Approver / Reviewer | Approval / Review Date |
+| Nombre | Rol | Supervisor | Aceptación / Fecha de supervisión |
 |------|------|---------------------|------------------------|
 | Gilberto Echeverria | Instructor | 
 
-**Reference Documents** - Clearly mark the document used as an input to create the test plan (todos los
-documentos adicionales para crear este, cronograma, excel, etc)
+**Documentos de Referencias** - Documentos adicionales para crear el presente documento (incluye cronograma, excel, etc)
 
-| Version | Date | Document Name |
+| Versión | Feca | Nombre de Documento |
 |---------|------|---------------|
 | 1.0 | 14/3/2022 | Test specification document |
  
 ---
 
-## Table of Contents
+## Tabla de Contenidos
 
 1. [INTRODUCCIÓN](#1-introducción)
 
@@ -561,6 +560,8 @@ creation of accurate defects.
 ---
 
 ### 4.4. Cronograma de Actividades
+
+
 
 ---
 
