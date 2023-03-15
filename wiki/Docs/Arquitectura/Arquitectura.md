@@ -21,3 +21,7 @@ Haciendo referencia a la salida al público, se planea tener un balanceador de c
 Asimismo, se planea utilizar una implementación orientada a servicios (muy parecida a la de microservicios, pero con bases de datos compartidas entre servicios), se consideran los mismos dadas las múltiples funcionalidades y la complejidad del sistema requerido. El uso de una arquitectura orientada a servicios contribuirá a la eficiencia de desarrollo puesto a que facilita que muchas personas trabajen en distintos módulos al mismo tiempo, en la diversidad de tecnologías permitiendo utilizar las mejores dependiendo de la funcionalidad y haciendo que tanto la escalabilidad, el mantenimiento y las pruebas sean más simples dado lo seccionado que se vuelve. 
 
 Para revisar la Especificación de Requerimientos de Software (en donde también se explica la presente arquitectura), hacer click [aquí](https://github.com/sebasgonvitec/qchau-software/blob/64dc167b2890f2f646820183c583b56852540ea3/wiki/Docs/SRS.md)
+
+## Arquitectura en GCP
+A continuación, se muestra la misma arquitectura, utilizando los servicios de Google Cloud:
+![Diagrama de Arquitectura GCP](https://github.com/sebasgonvitec/qchau-software/blob/1f2c13d1272906fba8443d11afdea426388b5804/wiki/Docs/Arquitectura/ArquitecturaGCP.png)
