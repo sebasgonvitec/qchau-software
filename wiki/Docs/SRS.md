@@ -99,6 +99,9 @@ La aplicación será de gran utilidad no solo para los compradores que quieran r
 En cuanto a las limitaciones de la aplicación, es relevante mencionar que ésta es principalmente un medio de contacto digital y publicación de productos únicamente de agencias, por lo que no se gestionan procesos internos de cada agencia y grupo automotriz. Ahondando en lo anterior, las entidades involucradas en el desarrollo de la plataforma no tienen responsabilidades en cuanto a los acuerdos de pagos de mensualidades, las negociaciones realizadas por la agencia, la entrega ni el mantenimiento de los vehículos. 
 
 ### _Referencias_
+
+ISO/IEC 15288:2008 (IEEE Std 15288-2008), Systems and software engineering — System life cycle processes
+
 https://www.youtube.com/watch?v=9kRgVxULbag
 
 https://firebase.google.com/codelabs/firebase-android#0
