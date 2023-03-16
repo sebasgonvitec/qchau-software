@@ -305,37 +305,40 @@ able to log in, record a video, save it, and log out; while Administrators and
 Supervisors can log in, see their analysis, and log out.
 
 ## 2.8. Pruebas del Entregable
-| S.No. | Deliverable Name | Author | Reviewer |
+| Nu. | Nombre de Entregable | Autor | Reviewer |
 |-------|------------------|--------|----------|
-| 1. | Test Plan | Test Lead | Project Manager/Business Analyst’s |
-2. Unit Test Cases Test Team Business Analyst’s
-Sign off
-3. Formal Technical Review Test Lead Project Manager/
-Business Analyst’s
-4. Inspection Test Lead Business Analyst’s
-Sign off
-3. Examples of Successful Tests Test Team Test Lead/ Business
-ANalyst’s Sign off
-4. Logging Defects in DataMatics Test Team Test Lead/
-Programming
-Lead(Vijay)
-5. Daily/weekly status report Test Team/ Test Lead Test Lead/ Project
-Manager
-6. Test Closure report Test Lead Project Manager
+| 1. | Plan de Pruebas | Lider pruebas  | Project Manager/Analista de Negocio |
+| 2. | Reporte de Pruebas unitarias | Equipo de pruebas | Lider pruebas/Analista de Negocio |
+| 3. | Reporte de Pruebas de integración | Equipo de pruebas | Lider pruebas/Analista de Negocio |
+| 4. | Reporte de Pruebas de validación | Equipo de pruebas | Lider pruebas/Analista de Negocio |
+| 5. | Reporte de Pruebas de sistema | Equipo de pruebas | Lider pruebas/Analista de Negocio |
+| 6. | Reporte de cierre de pruebas | Lider pruebas | Project Manager |
+
 
 ## 2.9. Lista de Hitos
-The milestone list is tentative and may change due to below reasons
+Esta lista de hitos es tentativa y puede cambiar debido a las siguientes razones:
 
-a) Any issues in the System environment readiness
+a) Problemas en el ambiente de desarrollo
 
-b) Any change in scope/addition in scope
+b) Cambios en el alcance
 
-c) Any other dependency that impacts efforts and timelines
+c) Dependencias que impacten los esfuerzos y tiempos
 
-|  | Tipo de Prueba | Ejemplo de Prueba (SUT) | Dependencias (DOC) |
+| Nu. | Tipo de Prueba | Ejemplo de Prueba (SUT) | Dependencias (DOC) |
 |--|-----------|--------------------|------------------|
-| 1 | Unit Testing | DB Connection Test | Completed database. |
-| 2 | Unit Testing | Call Recording |  | 
+| 1 | Pruebas Unitarias | Conexion a BD  | Base de datos completa & API |
+| 2 | Pruebas Unitarias | Login de usuario | Base de datos completa & API |
+| 3 | Pruebas Unitarias | Registro de usuario | Base de datos completa & API |
+| 4 | Pruebas de integracion | Chat entre usuarios | Los usuarios se pueden comunicar de manera exitosa |
+| 5 | Pruebas de integracion | Compra de usuario | El usuario puede realizar compras de manera exitosa |
+| 6 | Pruebas de validacion | La interfaz de usuario es agradable y facil de usar |  Diseño de interface completo|
+| 7 | Pruebas de validacion | El sistema esta completo y el cliente esta satisfecho con su funcionamiento | El sistema esta completo|
+| 8| Prueba de sistema | El usuario final puede iniciar sesion, navegar la pagina, realizar compras y comunicarse con vendedores por medio de chat | Base de datos completa, Conexiones API completas, Frontend de usuario final completo|
+| 9 | Prueba de sistema | EL usuario administrador puede iniciar sesion, entrar a la vista de administrador, y administrar los usuarios de la pagina | Base de datos completa, Conexiones API completas Frontend de usuario administrador completo | 
+| 10 | Prueba de sistema | El usuario vendedor puede iniciar sesion, entrar a la vista de vendedor, y administrar sus productos | Base de datos completa, Conexiones API completas, Frontend de usuario vendedor completo |
+| 11 | Prueba de sistema | El usuario de grupo automotriz puede iniciar sesion, entrar a la vista de grupo automotriz, y asignar agencias asociadas | Base de datos completa, Conexiones API completas, Frontend de grupo automotriz completo |
+| 12 | Prueba de sistema | El usuario de agencia puede iniciar sesio, entrar a la vista de agencia, y asignar vendedores asociados | Base de datos completa, Conexiones API completas, Frontend de grupo automotriz completo |
+
 
 <!-- 3
 Integration Testing
