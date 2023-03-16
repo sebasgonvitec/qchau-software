@@ -2,5 +2,6 @@
 
 ## Directorio
 
-Vicente Cubells
+- Vicente Cubells
 vcubells@ndscognitivelabs.com
+- Rubén Raya rraya@ndscognitivelabs.com
