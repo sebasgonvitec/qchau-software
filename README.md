@@ -15,4 +15,8 @@
 - Teamwork
 - Customer-Centricity
 
+### Presentation
+**Haga click en la imagen para visualizar el video de presentación**
+[![QChau Software](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/InfoGeneral/img/QChau_Software.png)](https://www.youtube.com/watch?v=WTkRasVWe3w "QChau")
+</br>
 Repository for the class TC3004B Planeación de Sistemas de Software. Team 3.
