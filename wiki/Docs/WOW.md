@@ -4,15 +4,7 @@ Versión 1.0
 
 Por
 
-Ana Paula Katsuda
-
-Sebastián González
-
-Gerardo Gutiérrez
-
-Francisco Salcedo
-
-Luis Javier Karam
+Ana Paula Katsuda, Sebastián González, Gerardo Gutiérrez, Francisco Salcedo, Luis Javier Karam
 
 Al 16 de Marzo del 2023
 
