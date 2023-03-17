@@ -1,22 +1,22 @@
 # QChau Software
 
 ![company logo](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/InfoGeneral/Logo.png)
-### Mission
-- Facilitate the process of buying a car with different agencies in Mexico
-- Generate High Quality State of the Art Software Products
+### Misión
+- Facilitar el proceso de adquisición de autos con distintas agencias en México
+- Generar productos de software de última generación y alta calidad
 
-### Vision
-- Become the best, most reliable and innovative software company in Mexico
-- Update and create new industry standards for software development
+### Visión
+- Convertirnos en la mejor, más confiable e innovadora empresa de software en México
+- Actualizar y crear nuevos estándares de industria para el desarrollo de software
 
-### Values
-- Quality
-- Innovation
-- Teamwork
-- Customer-Centricity
+### Valores
+- Calidad
+- Innovación
+- Trabajo en Equipo
+- Orientación al cliente
 
-### Presentation
+### Presentación
 **Haga click en la imagen para visualizar el video de presentación**
 [![QChau Software](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/InfoGeneral/img/QChau_Software.png)](https://www.youtube.com/watch?v=WTkRasVWe3w "QChau")
 </br>
-Repository for the class TC3004B Planeación de Sistemas de Software. Team 3.
+Repositorio para la clase TC3004B Planeación de Sistemas de Software. Equipo 3.
