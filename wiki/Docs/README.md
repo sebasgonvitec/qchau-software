@@ -4,7 +4,7 @@ En la presente sección, se encuentra la documentación realizada para la realiz
 
 ## Kanban y Backlog
 En cuanto al Kanban y Backlog, estos se trabajaron en una herramienta llamada Trello y se encuentran en el siguiente link. Su acomodo está dividido en distintos Sprints.
-- https://trello.com/invite/b/kz8vcSgD/ATTI7d68616fcdb63ffdbda56cb81f87a672F4498CFB/sprint-3
+- https://trello.com/invite/qchausoftware/ATTI7caee8896b68ae1413709a536c1dd22a916AF3AE
 
 ---
 
@@ -57,4 +57,4 @@ El acomodo de la interfaz así como el workflow (el recorrido por las pantallas)
 
 ## Presentación Final
 La presentación final resepecto al presente reto se encuentra a continuación: 
-[Evidencia de la Presentación Final]()
+[Evidencia de la Presentación Final](https://github.com/sebasgonvitec/qchau-software/blob/fc3ddae41bddf11d859cd6acfd42e5d755d49acb/wiki/Docs/Presentacio%CC%81n%20Final%20QChau%20%20(1).pdf)
