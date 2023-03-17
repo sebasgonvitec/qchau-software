@@ -22,7 +22,7 @@ El Teck Stack propuesto por QChau Software se encuentra en su sección correspon
 
 ## Administración
 En cuanto a la administración del proyecto, es posible acceder al WBS, Gantt, análisis de riesgos y análisis de márgen en la siguiente liga: 
-- [Evidencia de Administración](https://github.com/sebasgonvitec/qchau-software/blob/060be2e6dd6a4e5e3f8152e6c5686e5ddec42775/wiki/Docs/Administraci%C3%B3n/README.md)
+- [Evidencia de Administración](https://github.com/sebasgonvitec/qchau-software/blob/aaed7facf3659ec61fe896e605ed3a78b0f2f0e0/wiki/Docs/Administraci%C3%B3n/README.md)
 
 --- 
 
