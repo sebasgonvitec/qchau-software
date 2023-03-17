@@ -11,7 +11,7 @@
 
 [**Introducción**](#introducción)
 
-[Propósito](#propósito)
+[Objetivo](#objetivo)
 
 [Descripción del Proyecto](#descripción-del-proyecto)
 
@@ -20,6 +20,8 @@
 [Dinámicas](#dinámicas)
 
 [Estáticas](#estáticas)
+
+[Dependencias](#dependencias)
 
 [**Estrategia de Pruebas**](#estrategia-de-pruebas)
 
@@ -49,7 +51,7 @@
 
 [Estáticas](#estc3a1ticas-2)
 
-[En que sprint (Gantt)](#en-que-sprint-gantt)
+[Gantt](#gantt)
 
 [Estimación de Tiempo de Pruebas](#estimación-de-tiempo-de-pruebas)
 
@@ -68,7 +70,7 @@
 [**Conclusiones**](#conclusiones)
 
 # Introducción
-## Propósito
+## Objetivo
 El objetivo del presente documento, es proveer una propuesta respecto a las pruebas de software necesarias para el desarrollo y la funcionalidad correcta de la aplicación web de adquisición de autos. Estas contribuirán en la creación de un producto con un control de calidad alto por lo que serán detalladas y argumentadas en este escrito.
 
 En cuanto al plan de pruebas que se realizará, este incluirá la especificación de elementos de software que serán probados, el nivel y la secuencia en la que serán probados, los criterios de salida y la manera en la que se aplicará la estrategia en el ambiente de pruebas. Junto con lo anterior, se considerarán los siguientes puntos:
@@ -93,11 +95,36 @@ En cuanto a la audiencia, es necesario separar claramente a las entidades involu
 Puesto a que las pruebas dinámicas requieren de la ejecución del código, su audiencia principal son los desarrolladores (quienes generan en código, lo modifican y verifican que funcione dicho código). De igual manera, aquellos encargados de diseñar las pruebas estarán involucrados en las pruebas dinámicas ya que tendrán que planearlas. 
 ### Estáticas
 En cuanto a las pruebas estáticas - que se basan en la revisión de productos de trabajo sin código -, estas involucrarán a los encargados de diseñar las pruebas (ya que mediante la revisión del trabajo podrán planear mejores pruebas), al Product Owner (quien tiene la visión de la perspectiva del cliente por lo que puede evaluar si se cumplen las necesidades del mismo), el Project Manager (quien supervisará que se lleve a cabo el proyecto correctamente y se entreguen las pruebas adecuadas), y cualquier otro participante del producto que quiera revisar los documentos y asegurar la calidad del mismo. 
+
+### Dependencias
+Esta lista de hitos es tentativa y puede cambiar debido a las siguientes razones:
+
+a) Problemas en el ambiente de desarrollo
+
+b) Cambios en el alcance
+
+c) Dependencias que impacten los esfuerzos y tiempos
+
+| Nu. | Tipo de Prueba | Ejemplo de Prueba (SUT) | Dependencias (DOC) |
+|--|-----------|--------------------|------------------|
+| 1 | Pruebas Unitarias | Conexion a BD  | Base de datos completa & API |
+| 2 | Pruebas Unitarias | Login de usuario | Base de datos completa & API |
+| 3 | Pruebas Unitarias | Registro de usuario | Base de datos completa & API |
+| 4 | Pruebas de integracion | Chat entre usuarios | Los usuarios se pueden comunicar de manera exitosa |
+| 5 | Pruebas de integracion | Compra de usuario | El usuario puede realizar compras de manera exitosa |
+| 6 | Pruebas de validacion | La interfaz de usuario es agradable y facil de usar |  Diseño de interface completo|
+| 7 | Pruebas de validacion | El sistema esta completo y el cliente esta satisfecho con su funcionamiento | El sistema esta completo|
+| 8| Prueba de sistema | El usuario final puede iniciar sesion, navegar la pagina, realizar compras y comunicarse con vendedores por medio de chat | Base de datos completa, Conexiones API completas, Frontend de usuario final completo|
+| 9 | Prueba de sistema | EL usuario administrador puede iniciar sesion, entrar a la vista de administrador, y administrar los usuarios de la pagina | Base de datos completa, Conexiones API completas Frontend de usuario administrador completo | 
+| 10 | Prueba de sistema | El usuario vendedor puede iniciar sesion, entrar a la vista de vendedor, y administrar sus productos | Base de datos completa, Conexiones API completas, Frontend de usuario vendedor completo |
+| 11 | Prueba de sistema | El usuario de grupo automotriz puede iniciar sesion, entrar a la vista de grupo automotriz, y asignar agencias asociadas | Base de datos completa, Conexiones API completas, Frontend de grupo automotriz completo |
+| 12 | Prueba de sistema | El usuario de agencia puede iniciar sesio, entrar a la vista de agencia, y asignar vendedores asociados | Base de datos completa, Conexiones API completas, Frontend de grupo automotriz completo |
+
 # Estrategia de Pruebas
 ## Dinámicas
 Para asegurar la calidad y funcionalidad del producto, se llevarán a cabo diferentes tipos de pruebas en dinámicas en varias etapas del proyecto. Es importante recalcar que NO se harán pruebas de tipo no funcional, tales como pruebas de rendimientos, pruebas de escalabilidad, etc. por cuestiones de tiempo y recursos con los que se cuentan para el desarrollo. Sin embargo el sistema se diseñará y desarrollará tratando de cumplir con los requerimientos no funcionales previamente establecidos.
 ### Funcionales
-Se realizarán distintas pruebas funcionales para asegurar que todos los componentes del sistema funcionen correctamente. Estas se llevarán a cabo de la siguiente manera
+Se realizarán distintas pruebas funcionales para asegurar que todos los componentes del sistema funcionen correctamente. Estas se llevarán a cabo de la siguiente manera:
 
 1. Informales
 
@@ -140,8 +167,9 @@ Se realizarán pruebas de validación en donde se corroborará el correcto funci
 - Se hará una validación previa de los casos de prueba.
 - Se documentarán todas las pruebas menos las informales.
 - Se llevará a cabo una revisión de los entregables de cada prueba
+
 #### Objetos de Prueba
-A continuación se muestran unas tablas con todos los objetos que se probarán durante los procesos de pruebas y desarrollo.
+A continuación se muestran el alcance a través de unas tablas con todos los objetos que se probarán durante los procesos de pruebas y desarrollo.
 
 **Caja Negra**
 
@@ -207,7 +235,6 @@ RESPONSABLES: Equipo de Pruebas/Desarrolladores.
 MÉTODO: Pruebas de Caja Negra, específicamente utilizando entradas y salidas. Las baterías serían 5 positivas y 5 negativas evaluando funcionalidad y alcance del módulo que se prueba.
 
 MOMENTO: Hacer pruebas al inicio de cada Sprint.
-**
 
 
 **Pruebas de Caja Blanca**
@@ -221,7 +248,7 @@ RESPONSABLES: Equipo de Pruebas / desarrolladores.
 MÉTODO Pruebas de Caja blanca, específicamente utilizando cobertura y camino básico según indique el caso.
 
 MOMENTO: Hacer pruebas en caso de encontrar un resultado no deseado en las primeras evaluaciones.
-**
+
 
 
 **Pruebas de Integración**
@@ -235,20 +262,21 @@ RESPONSABLES: Equipo de Pruebas / desarrolladores
 MÉTODO: Integración ascendente, Bottom-top.
 
 MOMENTO: Cuando se tengan subfunciones o piezas de una funcionalidad más grande juntas en un sistema.
-**
+
 
 
 **Pruebas de Validación**
 
 PROPÓSITO: Las pruebas de validación son necesarias para poder confirmar que el producto es el acordado y cumple con el funcionamiento descrito previamente.
 
-PROPÓSITO: Todas las partes del producto a entregar debe ser validado en estas pruebas.
+ALCANCE: Todas las partes del producto a entregar debe ser validado en estas pruebas.
 
 RESPONSABLES: Cliente (NDS) junto con el equipo de prueba.
 
-METHODO: Compartir los avances de funcionalidades con el Socio-Formador semana con semana recibiendo retroalimentación.
+MÉTODO: Compartir los avances de funcionalidades con el Socio-Formador semana con semana recibiendo retroalimentación.
 
 MOMENTO: Durante la sesión semanal, avances de funcionalidades completas. Al igual que al final del periodo de todo el desarrollo del software.
+
 #### Criterios de Entrada y Salida
 De Caja Negra
 
@@ -402,7 +430,7 @@ En cuanto a las pruebas estáticas
 |Equipo de Desarrollo|<p>- Proveen retroalimentación respecto a las especificaciones técnicas de los documentos. </p><p>- Revisan los documentos y se encargan de que su código se alinee a los mismos.</p>|Documento SRS, Documento de Pruebas, Documentación de las APIs|
 |Equipo de Pruebas|<p>- Generan el Documento de Especificación de Pruebas conforme a los requisitos establecidos. </p><p>- Contribuyen al diseño de pruebas.</p><p>- Documentan los resultados de las pruebas.</p><p>- Generan el reporte de pruebas.</p>|Documento SRS, Documento de Pruebas, Documentación de las APIs|
 
-## En que sprint (Gantt)
+## Gantt
 
 ![Gantt de pruebas](/wiki/Docs/Media/docPruebasMedia/gantt_de_pruebas.png)
 <!-- ![Flujo de pruebas](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Media/docPruebasMedia/gantt_de_pruebas.png) -->
