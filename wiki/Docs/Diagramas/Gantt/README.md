@@ -14,4 +14,4 @@ Está dividido en 3 secciones que corresponden a las etapas por las que pasará 
 
 - **Entrega**: En esta etapa se realizarán las actividades de entrega del proyecto, como la entrega de la aplicación terminada, los manuales de uso, los videos de demostración, etc.
 
-![Diagrama de Gantt](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Diagramas/Gantt/gantt3.png)
+![Diagrama de Gantt](https://github.com/sebasgonvitec/qchau-software/blob/main/wiki/Docs/Diagramas/Gantt/gantt3png.png)
