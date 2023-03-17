@@ -24,4 +24,4 @@ Para revisar la Especificación de Requerimientos de Software (en donde también
 
 ## Arquitectura en GCP
 A continuación, se muestra la misma arquitectura, utilizando los servicios de Google Cloud:
-![Diagrama de Arquitectura GCP](https://github.com/sebasgonvitec/qchau-software/blob/1f2c13d1272906fba8443d11afdea426388b5804/wiki/Docs/Arquitectura/ArquitecturaGCP.png)
+![Diagrama de Arquitectura GCP](https://github.com/sebasgonvitec/qchau-software/blob/25109835ca8c8430c092a94803f8cbc0fc59886f/wiki/Docs/Arquitectura/ArquitecturaGCP.png)
