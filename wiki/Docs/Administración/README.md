@@ -7,7 +7,7 @@ En la presente sección, se introducen los documentos utilizados para la planeac
 ## WBS
 En este documento, se especifican las actividades que se llevarán a cabo en el proyecto. Las fases especificadas son Planeación, Desarrollo, Validación y Entrega. 
 
-Es posible ingresar al documento aquí: [Evidencia WBS](https://github.com/sebasgonvitec/qchau-software/blob/29e41c37c4c177502ae147ff3bc0cf0db8912895/wiki/Docs/Diagramas/WBS/README.md)
+Es posible ingresar al documento aquí: [Evidencia WBS](https://github.com/sebasgonvitec/qchau-software/blob/cc919e29b75c6acdf129bedfb7ba94546a686329/wiki/Docs/Diagramas/WBS/README.md)
 
 --- 
 
