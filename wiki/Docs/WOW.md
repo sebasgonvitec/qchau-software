@@ -89,7 +89,7 @@ Cabe destacar que, al ser una metodología ágil, se tienen daily standups (en d
 
 El trabajo se distribuirá en tres principales etapas y cada miembro del equipo trabajará una carga distinta de días en las actividades como se muestra a continuación:
 
-## ![](RackMultipart20230317-1-93f9ez_html_1dc95c284a0a2c37.png)
+## ![Distribución MD](https://github.com/sebasgonvitec/qchau-software/blob/ba5deb6a0b33b6dc58c66a3c65b34797b3449d7c/wiki/Docs/Media/Distribucio%CC%81nMD.png)
 
 Debido a la naturaleza del proyecto, todos los miembros del equipo tomarán distintos roles a lo largo del desarrollo y la planeación. Con lo mostrado en la imagen, es posible notar la distribución de horas que tendrá cada integrante, cumpliendo con roles distintos respecto a las actividades.
 
