@@ -14,7 +14,7 @@ Es posible ingresar al documento aquí: [Evidencia WBS](https://github.com/sebas
 ## Gantt
 En este documento se logra visualizar la temporalidad en la que se realizarán los entregables y las actividades. Esto contribuirá al seguimiento del plan en los tiempos establecidos. 
 
-Es posible ingresar al documento aquí: [Evidencia Gantt](https://github.com/sebasgonvitec/qchau-software/blob/aaed7facf3659ec61fe896e605ed3a78b0f2f0e0/wiki/Docs/Diagramas/Gantt/README.md)
+Es posible ingresar al documento aquí: [Evidencia Gantt](https://github.com/sebasgonvitec/qchau-software/blob/e96759bcd6e6709948fa926794c50844dabea840/wiki/Docs/Diagramas/Gantt/README.md)
 
 ---
 
